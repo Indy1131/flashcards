@@ -1,0 +1,102 @@
+@import "tailwindcss";
+@plugin 'tailwind-scrollbar';
+
+@keyframes shuffle {
+  0% {
+    right: 0;
+    z-index: 10;
+  }
+
+  49.9% {
+    z-index: 10;
+  }
+
+  50% {
+    right: 500px;
+    transform: rotateY(45deg);
+    z-index: 0;
+  }
+
+  100% {
+    right: 0;
+    z-index: 0;
+    opacity: 0.6;
+  }
+}
+
+@keyframes shuffleBack {
+  0% {
+    right: 0;
+    z-index: 0;
+    opacity: 0.6;
+  }
+
+  49.9% {
+    z-index: 0;
+    opacity: 0.6;
+  }
+
+  50% {
+    right: 450px;
+    transform: rotateY(45deg);
+    z-index: 10;
+  }
+
+  100% {
+    right: 0;
+    z-index: 10;
+    opacity: 1;
+  }
+}
+
+.card {
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card-back,
+.card-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.shuffle {
+  box-shadow: none;
+  animation: shuffle 0.5s ease-in-out forwards;
+}
+
+.shuffle-back {
+  animation: shuffleBack 0.5s ease-in-out forwards;
+}
+
+.always-scrollbar {
+  /* scrollbar-gutter: stable !important; */
+  overflow-y: auto;
+}
+
+.always-scrollbar::-webkit-scrollbar {
+  width: 12px !important;
+}
+
+.always-scrollbar::-webkit-scrollbar-track {
+  background: #bfdbfe !important;
+  border-radius: 10px;
+
+}
+
+.always-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box !important;
+  
+}
