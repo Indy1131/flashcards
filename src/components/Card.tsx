@@ -186,7 +186,7 @@ export default function Card({
         <div className="card-back cursor-pointer" onClick={handleUnFlip}>
           <div className="absolute bottom-5 w-full px-5 flex flex-col gap-3">
             {data.mode == "pinyin" || data.mode == "sentence" ? (
-              <Scrollable scrollAccent={scrollAccent}>
+              <Scrollable scrollAccent={scrollAccent} className="max-h-[200px]">
                 <div
                   className={`w-full rounded-md p-3 border-1 ${accent} transition-colors duration-500 font-medium break-words`}
                 >
@@ -213,7 +213,7 @@ export default function Card({
                 </p>
               </Scrollable>
             ) : (
-              <Scrollable scrollAccent={scrollAccent}>
+              <Scrollable scrollAccent={scrollAccent} className="max-h-[200px]">
                 {data.readings &&
                   data.readings.map((reading, i) => {
                     return (
@@ -238,11 +238,14 @@ export default function Card({
         </div>
       </div>
 
-      <h1
-        className={`absolute font-medium text-6xl ${accent} z-4 transition-colors duration-500 pointer-events-none px-6 bottom-[250px]`}
-      >
-        {data.term}
-      </h1>
+      <div className="absolute h-[250px] bottom-[230px] w-full px-6">
+        <Scrollable
+          scrollAccent={scrollAccent}
+          className={`h-full w-full font-medium text-6xl ${accent} z-4 transition-colors duration-500 items-center`}
+        >
+          {data.term}
+        </Scrollable>
+      </div>
 
       <h1
         className={`absolute top-3 right-4 font-medium ${accent} transition-colors duration-500`}

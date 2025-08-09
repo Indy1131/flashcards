@@ -3,6 +3,3375 @@
 import type { Decks } from "./utilities";
 
 export const decks: Decks = {
+  "Dialogue11": {
+    "name": "Dialogue 11",
+    "folder": "Class",
+    "desc": "Dialogue 11",
+    "cards": [
+      {
+        "term": "喂？",
+        "pinyin": "wèi ？",
+        "toneless": "wei ？",
+        "definition": "Hello?,",
+        "mode": "sentence"
+      },
+      {
+        "term": "喂，请问，常老师在吗",
+        "pinyin": "wèi, qǐngwèn, cháng lǎoshī zài ma",
+        "toneless": "wei, qingwen, chang laoshi zai ma",
+        "definition": "Hello, excuse me, is this Teacher Chang?\",",
+        "mode": "sentence"
+      },
+      {
+        "term": "我就是。您是哪位？",
+        "pinyin": "wǒ jiùshì. nín shì nǎwèi ？",
+        "toneless": "wo jiushi. nin shi nawei ？",
+        "definition": "It is exactly. Which person is this?,",
+        "mode": "sentence"
+      },
+      {
+        "term": "老师，您好。我是李友。",
+        "pinyin": "lǎoshī, nínhǎo. wǒ shì lǐ yǒu 。",
+        "toneless": "laoshi, ninhao. wo shi li you 。",
+        "definition": "Teacher, hello. I'm Li You.\",",
+        "mode": "sentence"
+      },
+      {
+        "term": "李友，有事儿吗？",
+        "pinyin": "lǐ yǒu, yǒu shìér ma ？",
+        "toneless": "li you, you shier ma ？",
+        "definition": "Li You, do you need something?\",",
+        "mode": "sentence"
+      },
+      {
+        "term": "老师，今天下午您有时间吗？",
+        "pinyin": "lǎoshī, jīntiānxiàwǔ nín yǒu shíjiān ma ？",
+        "toneless": "laoshi, jintianxiawu nin you shijian ma ？",
+        "definition": "Teacher, this afternoon do you have time?\",",
+        "mode": "sentence"
+      },
+      {
+        "term": "我想问您几个问题。",
+        "pinyin": "wǒ xiǎng wèn nín jǐgè wèntí 。",
+        "toneless": "wo xiang wen nin jige wenti 。",
+        "definition": "I want to ask you some questions.,",
+        "mode": "sentence"
+      },
+      {
+        "term": "对不起，今天下午我要开会。",
+        "pinyin": "duìbùqǐ, jīntiānxiàwǔ wǒ yào kāihuì 。",
+        "toneless": "duibuqi, jintianxiawu wo yao kaihui 。",
+        "definition": "Sorry, this afternoon I have to attend a meeting.\",",
+        "mode": "sentence"
+      },
+      {
+        "term": "明天呢?",
+        "pinyin": "míngtiān ne ?",
+        "toneless": "mingtian ne ?",
+        "definition": "What about tomorrow?,",
+        "mode": "sentence"
+      },
+      {
+        "term": "明天上午我有两节课，下午三点要给二年级考试。",
+        "pinyin": "míngtiān shàngwǔ wǒ yǒu liǎngjiékè, xiàwǔ sāndiǎn yào gěi èrniánjí kǎoshì 。",
+        "toneless": "mingtian shangwu wo you liangjieke, xiawu sandian yao gei ernianji kaoshi 。",
+        "definition": "Tomorrow morning I have two classes, in the afternoon at three I have to give the second graders an exam.\",",
+        "mode": "sentence"
+      },
+      {
+        "term": "您什么时候有空儿？",
+        "pinyin": "nín shénme shíhòu yǒu kònger ？",
+        "toneless": "nin shenme shihou you konger ？",
+        "definition": "What time are you free?,",
+        "mode": "sentence"
+      },
+      {
+        "term": "明天四点以后才有空儿。",
+        "pinyin": "míngtiān sìdiǎn yǐhòu cái yǒu kònger 。",
+        "toneless": "mingtian sidian yihou cai you konger 。",
+        "definition": "I won't be free until tomorrow after four.,",
+        "mode": "sentence"
+      },
+      {
+        "term": "要是您方便，四点半我到您的办公室去，行吗？",
+        "pinyin": "yàoshi nín fāngbiàn, sìdiǎn bàn wǒ dào nín de bàngōngshì qù, xíng ma ？",
+        "toneless": "yaoshi nin fangbian, sidian ban wo dao nin de bangongshi qu, xing ma ？",
+        "definition": "If convenient, at four thirty I will arrive at your office, okay?\",",
+        "mode": "sentence"
+      },
+      {
+        "term": "四点半，没问题。我在办公室等你。",
+        "pinyin": "sìdiǎn bàn, méi wèntí. wǒ zài bàngōngshì děng nǐ 。",
+        "toneless": "sidian ban, mei wenti. wo zai bangongshi deng ni 。",
+        "definition": "Four thirty, no problem. I will wait for you at my office.\",",
+        "mode": "sentence"
+      },
+      {
+        "term": "谢谢您",
+        "pinyin": "xièxiènín",
+        "toneless": "xiexienin",
+        "definition": "Thank you.,",
+        "mode": "sentence"
+      },
+      {
+        "term": "别客气。",
+        "pinyin": "bié kèqì 。",
+        "toneless": "bie keqi 。",
+        "definition": "You're welcome.,",
+        "mode": "sentence"
+      },
+      {
+        "term": "喂",
+        "readings": [
+          {
+            "pinyin": "wéi",
+            "definition": "hello (when answering the phone)"
+          },
+          {
+            "pinyin": "wèi",
+            "definition": "hey / to feed (an animal, baby, invalid etc)"
+          },
+          {
+            "pinyin": "wèi",
+            "definition": "variant of 餵|喂[wei4]"
+          },
+          {
+            "pinyin": "wèi",
+            "definition": "to feed"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "请",
+        "readings": [
+          {
+            "pinyin": "qǐng",
+            "definition": "to ask / to invite / please (do sth) / to treat (to a meal etc) / to request"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "问",
+        "readings": [
+          {
+            "pinyin": "wèn",
+            "definition": "to ask; to inquire"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "常",
+        "readings": [
+          {
+            "pinyin": "háng",
+            "definition": "surname Chang"
+          },
+          {
+            "pinyin": "cháng",
+            "definition": "always / ever / often / frequently / common / general / constant"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "老",
+        "readings": [
+          {
+            "pinyin": "lǎo",
+            "definition": "prefix used before the surname of a person or a numeral indicating the order of birth of the children in a family or to indicate affection or familiarity / old (of people) / venerable (person) / experienced / of long standing / always / all the time / of the past / very / outdated / (of meat etc) tough"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "师",
+        "readings": [
+          {
+            "pinyin": "hī",
+            "definition": "surname Shi"
+          },
+          {
+            "pinyin": "shī",
+            "definition": "teacher / master / expert / model / army division / (old) troops / to dispatch troops"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "在",
+        "readings": [
+          {
+            "pinyin": "zài",
+            "definition": "to exist; to be alive / (of sb or sth) to be (located) at / (used before a verb to indicate an action in progress)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "吗",
+        "readings": [
+          {
+            "pinyin": "má",
+            "definition": "(coll.) what?"
+          },
+          {
+            "pinyin": "mǎ",
+            "definition": "used in 嗎啡|吗啡[ma3fei1]"
+          },
+          {
+            "pinyin": "ma",
+            "definition": "(question particle for \"yes-no\" questions)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "我",
+        "readings": [
+          {
+            "pinyin": "wǒ",
+            "definition": "I; me; my"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "就",
+        "readings": [
+          {
+            "pinyin": "jiù",
+            "definition": "(after a suppositional clause) in that case; then / (after a clause of action) as soon as; immediately after / (same as 就是[jiu4 shi4]) merely; nothing else but; simply; just; precisely; exactly / only; as little as / as much as; as many as / to approach; to move towards / to undertake; to engage in / (often followed by 著|着[zhe5]) taking advantage of / (of food) to go with / with regard to; concerning / (pattern: 就[jiu4] ... 也[ye3] ...) even if ... still ... / (pattern: 不[bu4] ... 就[jiu4] ...) if not ... then must be ..."
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "是",
+        "readings": [
+          {
+            "pinyin": "shì",
+            "definition": "to be (followed by substantives only) / correct; right; true / (respectful acknowledgement of a command) very well / (adverb for emphatic assertion)"
+          },
+          {
+            "pinyin": "shì",
+            "definition": "variant of 是[shi4]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "您",
+        "readings": [
+          {
+            "pinyin": "nín",
+            "definition": "you (courteous, as opposed to informal 你[ni3])"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "哪",
+        "readings": [
+          {
+            "pinyin": "nǎ",
+            "definition": "how / which"
+          },
+          {
+            "pinyin": "na",
+            "definition": "(emphatic sentence-final particle, used instead of 啊[a5] after a word ending in \"n\")"
+          },
+          {
+            "pinyin": "né",
+            "definition": "used in 哪吒[Ne2 zha1] / Taiwan pr. [nuo2]"
+          },
+          {
+            "pinyin": "něi",
+            "definition": "which? (interrogative, followed by classifier or numeral-classifier)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "位",
+        "readings": [
+          {
+            "pinyin": "wèi",
+            "definition": "position / location / place / seat / classifier for people (honorific) / classifier for binary bits (e.g. 十六位 16-bit or 2 bytes) / (physics) potential"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "好",
+        "readings": [
+          {
+            "pinyin": "hǎo",
+            "definition": "good / appropriate; proper / all right! / (before a verb) easy to / (before a verb) good to / (before an adjective for exclamatory effect) so / (verb complement indicating completion) / (of two people) close; on intimate terms / (after a personal pronoun) hello"
+          },
+          {
+            "pinyin": "hào",
+            "definition": "to be fond of; to have a tendency to; to be prone to"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "李",
+        "readings": [
+          {
+            "pinyin": "ǐ",
+            "definition": "surname Li"
+          },
+          {
+            "pinyin": "lǐ",
+            "definition": "plum"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "友",
+        "readings": [
+          {
+            "pinyin": "yǒu",
+            "definition": "friend"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "有",
+        "readings": [
+          {
+            "pinyin": "yǒu",
+            "definition": "to have; there is / (bound form) having; with; -ful; -ed; -al (as in 有意[you3yi4] intentional)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "事",
+        "readings": [
+          {
+            "pinyin": "shì",
+            "definition": "matter / thing / item / work / affair / CL:件[jian4],樁|桩[zhuang1],回[hui2]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "儿",
+        "readings": [
+          {
+            "pinyin": "rén",
+            "definition": "variant of 人[ren2] / \"person\" radical in Chinese characters (Kangxi radical 10), occurring in 兒, 兀, 兄 etc"
+          },
+          {
+            "pinyin": "ér",
+            "definition": "child / son"
+          },
+          {
+            "pinyin": "r",
+            "definition": "non-syllabic diminutive suffix / retroflex final"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "今",
+        "readings": [
+          {
+            "pinyin": "jīn",
+            "definition": "now / the present time / current / contemporary / this (day, year etc)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "天",
+        "readings": [
+          {
+            "pinyin": "tiān",
+            "definition": "day / sky / heaven"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "下",
+        "readings": [
+          {
+            "pinyin": "xià",
+            "definition": "down / downwards / below / lower / later / next (week etc) / second (of two parts) / to decline / to go down / to arrive at (a decision, conclusion etc) / measure word to show the frequency of an action"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "午",
+        "readings": [
+          {
+            "pinyin": "wǔ",
+            "definition": "7th earthly branch: 11 a.m.-1 p.m., noon, 5th solar month (6th June-6th July), year of the Horse / ancient Chinese compass point: 180° (south)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "时",
+        "readings": [
+          {
+            "pinyin": "shí",
+            "definition": "old variant of 時|时[shi2]"
+          },
+          {
+            "pinyin": "hí",
+            "definition": "surname Shi"
+          },
+          {
+            "pinyin": "shí",
+            "definition": "o'clock / time / when / hour / season / period"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "间",
+        "readings": [
+          {
+            "pinyin": "jiān",
+            "definition": "between / among / within a definite time or space / room / section of a room or lateral space between two pairs of pillars / classifier for rooms"
+          },
+          {
+            "pinyin": "jiàn",
+            "definition": "gap / to separate / to thin out (seedlings) / to sow discontent"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "想",
+        "readings": [
+          {
+            "pinyin": "xiǎng",
+            "definition": "to think (about) / to think of; to devise / to think (that); to believe (that) / to desire; to want (to) / to miss (feel wistful about the absence of)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "几",
+        "readings": [
+          {
+            "pinyin": "jī",
+            "definition": "small table"
+          },
+          {
+            "pinyin": "jī",
+            "definition": "almost"
+          },
+          {
+            "pinyin": "jǐ",
+            "definition": "how much / how many / several / a few"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "个",
+        "readings": [
+          {
+            "pinyin": "gě",
+            "definition": "used in 自個兒|自个儿[zi4 ge3 r5]"
+          },
+          {
+            "pinyin": "gè",
+            "definition": "(classifier used before a noun that has no specific classifier) / (bound form) individual"
+          },
+          {
+            "pinyin": "gè",
+            "definition": "variant of 個|个[ge4]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "题",
+        "readings": [
+          {
+            "pinyin": "í",
+            "definition": "surname Ti"
+          },
+          {
+            "pinyin": "tí",
+            "definition": "topic / problem for discussion / exam question / subject / to inscribe / to mention / CL:個|个[ge4],道[dao4]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "对",
+        "readings": [
+          {
+            "pinyin": "duì",
+            "definition": "right; correct / towards; at; for / concerning; regarding / to treat (sb a certain way) / to face / (bound form) opposite; facing; matching / to match together; to adjust / to fit; to suit / to answer; to reply / to add; to pour in (a fluid) / to check; to compare / classifier: couple; pair"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "不",
+        "readings": [
+          {
+            "pinyin": "bù",
+            "definition": "no; not so / (bound form) not; un-"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "起",
+        "readings": [
+          {
+            "pinyin": "qǐ",
+            "definition": "to rise / to raise / to get up / to set out / to start / to appear / to launch / to initiate (action) / to draft / to establish / to get (from a depot or counter) / verb suffix, to start / starting from (a time, place, price etc) / classifier for occurrences or unpredictable events: case, instance / classifier for groups: batch, group"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "要",
+        "readings": [
+          {
+            "pinyin": "yāo",
+            "definition": "(bound form) to demand; to coerce"
+          },
+          {
+            "pinyin": "yào",
+            "definition": "to want; to need; to ask for / will; shall; about to / need to; should / if (same as 要是[yao4 shi5]) / (bound form) important"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "开",
+        "readings": [
+          {
+            "pinyin": "kāi",
+            "definition": "to open (transitive or intransitive) / (of ships, vehicles, troops etc) to start / to turn on; to put in operation; to operate; to run / to boil / to write out (a prescription, check, invoice etc) / (directional complement) away; off / carat (gold) / abbr. for Kelvin, 開爾文|开尔文[Kai1er3wen2] / abbr. for 開本|开本[kai1ben3], book format"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "会",
+        "readings": [
+          {
+            "pinyin": "huì",
+            "definition": "can; to have the skill; to know how to / to be likely to; to be sure to / to meet; to get together / meeting; gathering / (suffix) union; group; association / (bound form) a moment (Taiwan pr. [hui3])"
+          },
+          {
+            "pinyin": "kuài",
+            "definition": "(bound form) to reckon accounts"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "明",
+        "readings": [
+          {
+            "pinyin": "íng",
+            "definition": "Ming Dynasty (1368-1644) / surname Ming / Ming (c. 2000 BC), fourth of the legendary Flame Emperors, 炎帝[Yan2di4] descended from Shennong 神農|神农[Shen2nong2] Farmer God"
+          },
+          {
+            "pinyin": "míng",
+            "definition": "bright / opposite: dark 暗[an4] / (of meaning) clear / to understand / next / public or open / wise / generic term for a sacrifice to the gods"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "呢",
+        "readings": [
+          {
+            "pinyin": "ne",
+            "definition": "particle indicating that a previously asked question is to be applied to the preceding word (\"What about ...?\", \"And ...?\") / particle for inquiring about location (\"Where is ...?\") / particle signaling a pause, to emphasize the preceding words and allow the listener time to take them on board (\"ok?\", \"are you with me?\") / (at the end of a declarative sentence) particle indicating continuation of a state or action / particle indicating strong affirmation"
+          },
+          {
+            "pinyin": "ní",
+            "definition": "dense wool fabric (used for coats and jackets)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "上",
+        "readings": [
+          {
+            "pinyin": "shǎng",
+            "definition": "used in 上聲|上声[shang3 sheng1]"
+          },
+          {
+            "pinyin": "shàng",
+            "definition": "(bound form) up; upper; above; previous / first (of multiple parts) / to climb; to get onto; to go up / to attend (class or university) / (directional complement) up / (noun suffix) on; above"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "两",
+        "readings": [
+          {
+            "pinyin": "liǎng",
+            "definition": "two / both / some / a few / tael, unit of weight equal to 50 grams (modern) or 1⁄16 of a catty 斤[jin1] (old)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "节",
+        "readings": [
+          {
+            "pinyin": "jiē",
+            "definition": "see 節骨眼|节骨眼[jie1 gu5 yan3]"
+          },
+          {
+            "pinyin": "jié",
+            "definition": "joint; node / (bound form) section; segment / solar term (one of the 24 divisions of the year in the traditional Chinese calendar) / seasonal festival / (bound form) to economize; to save / (bound form) moral integrity; chastity / classifier for segments: lessons, train wagons, biblical verses etc / knot (nautical miles per hour)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "课",
+        "readings": [
+          {
+            "pinyin": "kè",
+            "definition": "subject / course / CL:門|门[men2] / class / lesson / CL:堂[tang2],節|节[jie2] / to levy / tax / form of divination"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "三",
+        "readings": [
+          {
+            "pinyin": "ān",
+            "definition": "surname San"
+          },
+          {
+            "pinyin": "sān",
+            "definition": "three / 3"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "点",
+        "readings": [
+          {
+            "pinyin": "diǎn",
+            "definition": "to touch briefly; to tap / to mark with a dot; to check off (on a list) / to order (food etc); to select / to mention; to bring up (a topic or person) / to hint at; to imply / to administer (eye medicine etc) in drops / to light (a fire, a lamp etc); to ignite / to nod (one's head) in agreement; to beckon by moving (one's hand) up and down / point; dot; spot; speck / dot stroke in Chinese characters / (math.) decimal point / point in time or space / (after a number) o'clock / a small amount; a bit; (after a verb or adjective) a bit more / classifier for small amounts"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "给",
+        "readings": [
+          {
+            "pinyin": "gěi",
+            "definition": "to / for / for the benefit of / to give / to allow / to do sth (for sb) / (grammatical equivalent of 被) / (grammatical equivalent of 把) / (sentence intensifier)"
+          },
+          {
+            "pinyin": "jǐ",
+            "definition": "to supply / to provide"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "二",
+        "readings": [
+          {
+            "pinyin": "èr",
+            "definition": "two / 2 / (Beijing dialect) stupid"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "年",
+        "readings": [
+          {
+            "pinyin": "ián",
+            "definition": "surname Nian"
+          },
+          {
+            "pinyin": "nián",
+            "definition": "year / CL:個|个[ge4]"
+          },
+          {
+            "pinyin": "nián",
+            "definition": "grain / harvest (old) / variant of 年[nian2]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "级",
+        "readings": [
+          {
+            "pinyin": "jí",
+            "definition": "level / grade / rank / step (of stairs) / CL:個|个[ge4] / classifier: step, level"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "考",
+        "readings": [
+          {
+            "pinyin": "kǎo",
+            "definition": "to beat / to hit / variant of 考[kao3] / to inspect / to test / to take an exam"
+          },
+          {
+            "pinyin": "kǎo",
+            "definition": "to check / to verify / to test / to examine / to take an exam / to take an entrance exam for / deceased father"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "试",
+        "readings": [
+          {
+            "pinyin": "shì",
+            "definition": "to test / to try / experiment / examination / test"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "什",
+        "readings": [
+          {
+            "pinyin": "shén",
+            "definition": "what"
+          },
+          {
+            "pinyin": "shí",
+            "definition": "ten (used in fractions, writing checks etc) / assorted / miscellaneous"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "么",
+        "readings": [
+          {
+            "pinyin": "má",
+            "definition": "exclamatory final particle"
+          },
+          {
+            "pinyin": "ma",
+            "definition": "interrogative final particle"
+          },
+          {
+            "pinyin": "me",
+            "definition": "suffix, used to form interrogative 什麼|什么[shen2 me5], what?, indefinite 這麼|这么[zhe4 me5] thus, etc"
+          },
+          {
+            "pinyin": "me",
+            "definition": "variant of 麼|么[me5]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "候",
+        "readings": [
+          {
+            "pinyin": "hòu",
+            "definition": "to wait / to inquire after / to watch / season / climate / (old) period of five days"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "空",
+        "readings": [
+          {
+            "pinyin": "kōng",
+            "definition": "empty / air / sky / in vain"
+          },
+          {
+            "pinyin": "kòng",
+            "definition": "to empty / vacant / unoccupied / space / leisure / free time"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "四",
+        "readings": [
+          {
+            "pinyin": "sì",
+            "definition": "four / 4"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "以",
+        "readings": [
+          {
+            "pinyin": "yǐ",
+            "definition": "old variant of 以[yi3]"
+          },
+          {
+            "pinyin": "yǐ",
+            "definition": "old variant of 以[yi3]"
+          },
+          {
+            "pinyin": "ǐ",
+            "definition": "abbr. for Israel 以色列[Yi3 se4 lie4]"
+          },
+          {
+            "pinyin": "yǐ",
+            "definition": "to use / by means of / according to / in order to / because of / at (a certain date or place)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "后",
+        "readings": [
+          {
+            "pinyin": "òu",
+            "definition": "surname Hou"
+          },
+          {
+            "pinyin": "hòu",
+            "definition": "empress / queen / (archaic) monarch / ruler"
+          },
+          {
+            "pinyin": "hòu",
+            "definition": "back / behind / rear / afterwards / after / later / post-"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "才",
+        "readings": [
+          {
+            "pinyin": "cái",
+            "definition": "ability; talent / sb of a certain type / a capable individual / then and only then / just now / (before an expression of quantity) only"
+          },
+          {
+            "pinyin": "cái",
+            "definition": "(variant of 才[cai2]) just now / (variant of 才[cai2]) (before an expression of quantity) only"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "方",
+        "readings": [
+          {
+            "pinyin": "āng",
+            "definition": "surname Fang"
+          },
+          {
+            "pinyin": "fāng",
+            "definition": "square / power or involution (math.) / upright / honest / fair and square / direction / side / party (to a contract, dispute etc) / place / method / prescription (medicine) / just when / only or just / classifier for square things / abbr. for square or cubic meter"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "便",
+        "readings": [
+          {
+            "pinyin": "biàn",
+            "definition": "plain / informal / suitable / convenient / opportune / to urinate or defecate / equivalent to 就[jiu4]: then / in that case / even if / soon afterwards"
+          },
+          {
+            "pinyin": "pián",
+            "definition": "used in 便宜[pian2yi5] / used in 便便[pian2pian2] / used in 便嬛[pian2xuan1]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "半",
+        "readings": [
+          {
+            "pinyin": "bàn",
+            "definition": "half / semi- / incomplete / (after a number) and a half"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "到",
+        "readings": [
+          {
+            "pinyin": "dào",
+            "definition": "to reach; to arrive / to leave for; to go to / to (a place); until (a time); up to (a point) / (verb complement indicating arriving at a place or reaching a point) / considerate; thoughtful; thorough"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "的",
+        "readings": [
+          {
+            "pinyin": "de",
+            "definition": "of; ~'s (possessive particle) / (used after an attribute when it modifies a noun) / (used at the end of a declarative sentence for emphasis) / (used after a noun, verb or adjective to form a nominal expression, as in 皮革的[pi2ge2 de5] \"one made of leather\" or 跑堂兒的|跑堂儿的[pao3tang2r5de5] \"a waiter (literally, one who runs back and forth in a restaurant)\" or 新的[xin1 de5] \"new one\") / also pr. [di4] or [di5] in poetry and songs"
+          },
+          {
+            "pinyin": "dī",
+            "definition": "a taxi; a cab (abbr. for 的士[di1shi4])"
+          },
+          {
+            "pinyin": "dí",
+            "definition": "really and truly"
+          },
+          {
+            "pinyin": "dì",
+            "definition": "(bound form) bull's-eye; target"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "办",
+        "readings": [
+          {
+            "pinyin": "bàn",
+            "definition": "to take care of (a matter); to deal with (a task, procedure etc); to organize (an event) / to establish; to set up; to manage; to run (an enterprise) / (law) to handle; to investigate; to prosecute (a case or suspect) / (bound form) office (as in 招辦|招办[zhao1ban4], admissions office) (abbr. for 辦公室|办公室[ban4gong1shi4])"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "公",
+        "readings": [
+          {
+            "pinyin": "gōng",
+            "definition": "public / collectively owned / common / international (e.g. high seas, metric system, calendar) / make public / fair / just / Duke, highest of five orders of nobility 五等爵位[wu3 deng3 jue2 wei4] / honorable (gentlemen) / father-in-law / male (animal)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "室",
+        "readings": [
+          {
+            "pinyin": "hì",
+            "definition": "surname Shi"
+          },
+          {
+            "pinyin": "shì",
+            "definition": "room / work unit / grave / scabbard / family or clan / one of the 28 constellations of Chinese astronomy"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "去",
+        "readings": [
+          {
+            "pinyin": "qù",
+            "definition": "to go / to go to (a place) / (of a time etc) last / just passed / to send / to remove / to get rid of / to reduce / to be apart from in space or time / to die (euphemism) / to play (a part) / (when used either before or after a verb) to go in order to do sth / (after a verb of motion indicates movement away from the speaker) / (used after certain verbs to indicate detachment or separation)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "行",
+        "readings": [
+          {
+            "pinyin": "háng",
+            "definition": "(bound form) row; line / (bound form) line of business; trade; profession / (bound form) commercial firm / (bound form) to rank (first, second etc) among one's siblings (by age) / (in data tables) row; (Tw) column / classifier for rows or lines"
+          },
+          {
+            "pinyin": "héng",
+            "definition": "used in 道行[dao4heng2]"
+          },
+          {
+            "pinyin": "xíng",
+            "definition": "(bound form) to walk; to go; to travel / (literary) trip; journey; visit / (bound form) temporary; makeshift / (bound form) current; in circulation / (bound form) to do; to perform / capable; competent / all right; OK!; will do / behavior; conduct (Taiwan pr. [xing4]) / (literary) about to; soon"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "没",
+        "readings": [
+          {
+            "pinyin": "méi",
+            "definition": "(negative prefix for verbs) have not; not"
+          },
+          {
+            "pinyin": "mò",
+            "definition": "drowned / to end / to die / to inundate"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "等",
+        "readings": [
+          {
+            "pinyin": "děng",
+            "definition": "to wait for; to await / by the time; when; till / and so on; etc.; et al. / (bound form) class; rank; grade / (bound form) equal to; same as / (used to end an enumeration) / (literary) (plural suffix attached to a personal pronoun or noun)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "你",
+        "readings": [
+          {
+            "pinyin": "nǐ",
+            "definition": "you (informal, as opposed to courteous 您[nin2])"
+          },
+          {
+            "pinyin": "nǐ",
+            "definition": "you (Note: In Taiwan, 妳 is used to address females, but in mainland China, it is not commonly used. Instead, 你 is used to address both males and females.)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "谢",
+        "readings": [
+          {
+            "pinyin": "iè",
+            "definition": "surname Xie"
+          },
+          {
+            "pinyin": "xiè",
+            "definition": "to thank / (bound form) to apologize / (bound form) to decline; to refuse / (bound form) (of flowers, leaves etc) to wither"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "别",
+        "readings": [
+          {
+            "pinyin": "ié",
+            "definition": "surname Bie"
+          },
+          {
+            "pinyin": "bié",
+            "definition": "to leave; to part (from) / (literary) to differentiate; to distinguish / (dialect) to turn away; to turn aside; to avert (one's face, gaze etc) / (bound form) other; another; different / don't ...! / to fasten with a pin or clip / to stick in; to insert (in order to hinder movement) / (noun suffix) category (as in 性別|性别[xing4 bie2], 派別|派别[pai4 bie2])"
+          },
+          {
+            "pinyin": "biè",
+            "definition": "to make sb change their ways, opinions etc"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "客",
+        "readings": [
+          {
+            "pinyin": "kè",
+            "definition": "customer; visitor; guest / classifier for servings or portions (when ordering food)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "气",
+        "readings": [
+          {
+            "pinyin": "qì",
+            "definition": "gas; air / smell / weather / to make angry; to annoy; to get angry / vital energy; qi"
+          }
+        ],
+        "mode": "hanzi"
+      }
+    ]
+  },
+  "Dialogue12": {
+    "name": "Dialogue 12",
+    "folder": "Class",
+    "desc": "Dialogue 12",
+    "cards": [
+      {
+        "term": "喂，请问，王鹏在吗？",
+        "pinyin": "wèi, qǐngwèn, wáng péng zài ma ？",
+        "toneless": "wei, qingwen, wang peng zai ma ？",
+        "definition": "Hello, excuse me, is this Wang Peng?\",",
+        "mode": "sentence"
+      },
+      {
+        "term": "我就是。你是李友吧？",
+        "pinyin": "wǒ jiùshì. nǐ shì lǐ yǒu ba ？",
+        "toneless": "wo jiushi. ni shi li you ba ？",
+        "definition": "It is exactly. You are Li You?,",
+        "mode": "sentence"
+      },
+      {
+        "term": "王朋，我下个星期要考中文，你帮我准备一下，跟我练习说中文，好吗？",
+        "pinyin": "wáng péng, wǒ xiàgèxīngqī yào kǎo zhōngwén, nǐ bāng wǒ zhǔnbèi yíxià, gēn wǒ liànxí shuō zhōngwén, hǎo ma ？",
+        "toneless": "wang peng, wo xiagexingqi yao kao zhongwen, ni bang wo zhunbei yixia, gen wo lianxi shuo zhongwen, hao ma ？",
+        "definition": "Wang Peng, next week I will take a Chinese test, you will help me prepare and with me practice speaking Chinese, good?\",",
+        "mode": "sentence"
+      },
+      {
+        "term": "好啊，但是你得请我喝咖啡。",
+        "pinyin": "hǎo a, dànshì nǐ dé qǐng wǒ hēkāfēi 。",
+        "toneless": "hao a, danshi ni de qing wo hekafei 。",
+        "definition": "Ok, but you have to invite me to drink coffee.\",",
+        "mode": "sentence"
+      },
+      {
+        "term": "喝咖啡，没问题。那我什么时候跟你见面？",
+        "pinyin": "hēkāfēi, méi wèntí. nà wǒ shénme shíhòu gēn nǐ jiànmiàn ？",
+        "toneless": "hekafei, mei wenti. na wo shenme shihou gen ni jianmian ？",
+        "definition": "Drinking coffee, no problem. Then what time will you meet with me?\",",
+        "mode": "sentence"
+      },
+      {
+        "term": "你今天晚上有空儿吗？",
+        "pinyin": "nǐ jīntiān wǎnshàng yǒu kònger ma ？",
+        "toneless": "ni jintian wanshang you konger ma ？",
+        "definition": "Are you free tonight?,",
+        "mode": "sentence"
+      },
+      {
+        "term": "今天晚上白英爱请我吃饭。",
+        "pinyin": "jīntiān wǎnshàng bái yīng ài qǐng wǒ chīfàn 。",
+        "toneless": "jintian wanshang bai ying ai qing wo chifan 。",
+        "definition": "Bai Yingai invited me to eat tonight.,",
+        "mode": "sentence"
+      },
+      {
+        "term": "是吗？白英爱请你吃饭？",
+        "pinyin": "shì ma ？ bái yīng ài qǐng nǐ chīfàn ？",
+        "toneless": "shi ma ？ bai ying ai qing ni chifan ？",
+        "definition": "Really? Bai Yingai invited you to eat?,",
+        "mode": "sentence"
+      },
+      {
+        "term": "对。我回来以后给你打电话。",
+        "pinyin": "duì. wǒ huílái yǐhòu gěi nǐ dǎdiànhuà 。",
+        "toneless": "dui. wo huilai yihou gei ni dadianhua 。",
+        "definition": "Right. After I come back I will give you a phone call.,",
+        "mode": "sentence"
+      },
+      {
+        "term": "好，我等你的电话。",
+        "pinyin": "hǎo, wǒ děng nǐ de diànhuà 。",
+        "toneless": "hao, wo deng ni de dianhua 。",
+        "definition": "Ok, I will wait for your call.\",",
+        "mode": "sentence"
+      },
+      {
+        "term": "喂",
+        "readings": [
+          {
+            "pinyin": "wéi",
+            "definition": "hello (when answering the phone)"
+          },
+          {
+            "pinyin": "wèi",
+            "definition": "hey / to feed (an animal, baby, invalid etc)"
+          },
+          {
+            "pinyin": "wèi",
+            "definition": "variant of 餵|喂[wei4]"
+          },
+          {
+            "pinyin": "wèi",
+            "definition": "to feed"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "请",
+        "readings": [
+          {
+            "pinyin": "qǐng",
+            "definition": "to ask / to invite / please (do sth) / to treat (to a meal etc) / to request"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "问",
+        "readings": [
+          {
+            "pinyin": "wèn",
+            "definition": "to ask; to inquire"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "王",
+        "readings": [
+          {
+            "pinyin": "áng",
+            "definition": "surname Wang"
+          },
+          {
+            "pinyin": "wáng",
+            "definition": "king or monarch / best or strongest of its type / grand / great"
+          },
+          {
+            "pinyin": "wàng",
+            "definition": "(literary) (of a monarch) to reign over (a kingdom)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "鹏",
+        "readings": [
+          {
+            "pinyin": "éng",
+            "definition": "Peng, large fabulous bird / roc"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "在",
+        "readings": [
+          {
+            "pinyin": "zài",
+            "definition": "to exist; to be alive / (of sb or sth) to be (located) at / (used before a verb to indicate an action in progress)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "吗",
+        "readings": [
+          {
+            "pinyin": "má",
+            "definition": "(coll.) what?"
+          },
+          {
+            "pinyin": "mǎ",
+            "definition": "used in 嗎啡|吗啡[ma3fei1]"
+          },
+          {
+            "pinyin": "ma",
+            "definition": "(question particle for \"yes-no\" questions)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "我",
+        "readings": [
+          {
+            "pinyin": "wǒ",
+            "definition": "I; me; my"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "就",
+        "readings": [
+          {
+            "pinyin": "jiù",
+            "definition": "(after a suppositional clause) in that case; then / (after a clause of action) as soon as; immediately after / (same as 就是[jiu4 shi4]) merely; nothing else but; simply; just; precisely; exactly / only; as little as / as much as; as many as / to approach; to move towards / to undertake; to engage in / (often followed by 著|着[zhe5]) taking advantage of / (of food) to go with / with regard to; concerning / (pattern: 就[jiu4] ... 也[ye3] ...) even if ... still ... / (pattern: 不[bu4] ... 就[jiu4] ...) if not ... then must be ..."
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "是",
+        "readings": [
+          {
+            "pinyin": "shì",
+            "definition": "to be (followed by substantives only) / correct; right; true / (respectful acknowledgement of a command) very well / (adverb for emphatic assertion)"
+          },
+          {
+            "pinyin": "shì",
+            "definition": "variant of 是[shi4]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "你",
+        "readings": [
+          {
+            "pinyin": "nǐ",
+            "definition": "you (informal, as opposed to courteous 您[nin2])"
+          },
+          {
+            "pinyin": "nǐ",
+            "definition": "you (Note: In Taiwan, 妳 is used to address females, but in mainland China, it is not commonly used. Instead, 你 is used to address both males and females.)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "李",
+        "readings": [
+          {
+            "pinyin": "ǐ",
+            "definition": "surname Li"
+          },
+          {
+            "pinyin": "lǐ",
+            "definition": "plum"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "友",
+        "readings": [
+          {
+            "pinyin": "yǒu",
+            "definition": "friend"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "吧",
+        "readings": [
+          {
+            "pinyin": "bā",
+            "definition": "bar (loanword) (serving drinks, or providing Internet access etc) / to puff (on a pipe etc) / (onom.) bang / abbr. for 貼吧|贴吧[tie1 ba1]"
+          },
+          {
+            "pinyin": "ba",
+            "definition": "(modal particle indicating suggestion or surmise) / ...right? / ...OK? / ...I presume."
+          },
+          {
+            "pinyin": "biā",
+            "definition": "(onom.) smack!"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "朋",
+        "readings": [
+          {
+            "pinyin": "péng",
+            "definition": "friend"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "下",
+        "readings": [
+          {
+            "pinyin": "xià",
+            "definition": "down / downwards / below / lower / later / next (week etc) / second (of two parts) / to decline / to go down / to arrive at (a decision, conclusion etc) / measure word to show the frequency of an action"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "个",
+        "readings": [
+          {
+            "pinyin": "gě",
+            "definition": "used in 自個兒|自个儿[zi4 ge3 r5]"
+          },
+          {
+            "pinyin": "gè",
+            "definition": "(classifier used before a noun that has no specific classifier) / (bound form) individual"
+          },
+          {
+            "pinyin": "gè",
+            "definition": "variant of 個|个[ge4]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "星",
+        "readings": [
+          {
+            "pinyin": "xīng",
+            "definition": "star / heavenly body / satellite / small amount"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "期",
+        "readings": [
+          {
+            "pinyin": "qī",
+            "definition": "variant of 期[qi1] / period / cycle"
+          },
+          {
+            "pinyin": "qī",
+            "definition": "a period of time / phase / stage / classifier for issues of a periodical, courses of study / time / term / period / to hope / Taiwan pr. [qi2]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "要",
+        "readings": [
+          {
+            "pinyin": "yāo",
+            "definition": "(bound form) to demand; to coerce"
+          },
+          {
+            "pinyin": "yào",
+            "definition": "to want; to need; to ask for / will; shall; about to / need to; should / if (same as 要是[yao4 shi5]) / (bound form) important"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "考",
+        "readings": [
+          {
+            "pinyin": "kǎo",
+            "definition": "to beat / to hit / variant of 考[kao3] / to inspect / to test / to take an exam"
+          },
+          {
+            "pinyin": "kǎo",
+            "definition": "to check / to verify / to test / to examine / to take an exam / to take an entrance exam for / deceased father"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "中",
+        "readings": [
+          {
+            "pinyin": "hōng",
+            "definition": "(bound form) China; Chinese / surname Zhong"
+          },
+          {
+            "pinyin": "zhōng",
+            "definition": "within; among; in / middle; center / while (doing sth); during / (dialect) OK; all right"
+          },
+          {
+            "pinyin": "zhòng",
+            "definition": "to hit (a target) / to be struck by (a bullet, illness etc) / to win (a prize or lottery)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "文",
+        "readings": [
+          {
+            "pinyin": "én",
+            "definition": "surname Wen"
+          },
+          {
+            "pinyin": "wén",
+            "definition": "language / culture / writing / formal / literary / gentle / (old) classifier for coins / Kangxi radical 67"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "帮",
+        "readings": [
+          {
+            "pinyin": "bāng",
+            "definition": "old variant of 幫|帮[bang1]"
+          },
+          {
+            "pinyin": "bāng",
+            "definition": "old variant of 幫|帮[bang1]"
+          },
+          {
+            "pinyin": "bāng",
+            "definition": "to help / to assist / to support / for sb (i.e. as a help) / hired (as worker) / side (of pail, boat etc) / outer layer / upper (of a shoe) / group / gang / clique / party / secret society"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "准",
+        "readings": [
+          {
+            "pinyin": "zhǔn",
+            "definition": "to allow / to grant / in accordance with / in the light of"
+          },
+          {
+            "pinyin": "zhǔn",
+            "definition": "accurate / standard / definitely / certainly / about to become (bride, son-in-law etc) / quasi- / para-"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "备",
+        "readings": [
+          {
+            "pinyin": "bèi",
+            "definition": "variant of 備|备[bei4]"
+          },
+          {
+            "pinyin": "bèi",
+            "definition": "(bound form) to prepare; to equip / (literary) fully; completely"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "一",
+        "readings": [
+          {
+            "pinyin": "yī",
+            "definition": "one / single / a (article) / as soon as / entire; whole; all; throughout / \"one\" radical in Chinese characters (Kangxi radical 1) / also pr. [yao1] for greater clarity when spelling out numbers digit by digit"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "跟",
+        "readings": [
+          {
+            "pinyin": "gēn",
+            "definition": "heel / to follow closely / to go with / (of a woman) to marry sb / with / compared with / to / towards / and (joining two nouns)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "练",
+        "readings": [
+          {
+            "pinyin": "liàn",
+            "definition": "to practice / to train / to drill / to perfect (one's skill) / exercise / (literary) white silk / to boil and scour raw silk"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "习",
+        "readings": [
+          {
+            "pinyin": "í",
+            "definition": "surname Xi"
+          },
+          {
+            "pinyin": "xí",
+            "definition": "(bound form) to practice / to study / habit / custom"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "说",
+        "readings": [
+          {
+            "pinyin": "shuì",
+            "definition": "to persuade"
+          },
+          {
+            "pinyin": "shuō",
+            "definition": "to speak; to talk; to say / to explain; to comment / to scold; to tell off / (bound form) theory; doctrine"
+          },
+          {
+            "pinyin": "shuō",
+            "definition": "variant of 說|说[shuo1]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "好",
+        "readings": [
+          {
+            "pinyin": "hǎo",
+            "definition": "good / appropriate; proper / all right! / (before a verb) easy to / (before a verb) good to / (before an adjective for exclamatory effect) so / (verb complement indicating completion) / (of two people) close; on intimate terms / (after a personal pronoun) hello"
+          },
+          {
+            "pinyin": "hào",
+            "definition": "to be fond of; to have a tendency to; to be prone to"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "啊",
+        "readings": [
+          {
+            "pinyin": "ā",
+            "definition": "interjection of surprise / Ah! / Oh!"
+          },
+          {
+            "pinyin": "á",
+            "definition": "interjection expressing doubt or requiring answer / Eh? / what?"
+          },
+          {
+            "pinyin": "ǎ",
+            "definition": "interjection of surprise or doubt / Eh? / My! / what's up?"
+          },
+          {
+            "pinyin": "à",
+            "definition": "interjection or grunt of agreement / uhm / Ah, OK / expression of recognition / Oh, it's you!"
+          },
+          {
+            "pinyin": "a",
+            "definition": "modal particle ending sentence, showing affirmation, approval, or consent"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "但",
+        "readings": [
+          {
+            "pinyin": "dàn",
+            "definition": "but; yet; however; still / merely; only; just"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "得",
+        "readings": [
+          {
+            "pinyin": "dé",
+            "definition": "to obtain / to get / to gain / to catch (a disease) / proper / suitable / proud / contented / to allow / to permit / ready / finished"
+          },
+          {
+            "pinyin": "de",
+            "definition": "structural particle: used after a verb (or adjective as main verb), linking it to following phrase indicating effect, degree, possibility etc"
+          },
+          {
+            "pinyin": "děi",
+            "definition": "to have to / must / ought to / to need to"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "喝",
+        "readings": [
+          {
+            "pinyin": "hē",
+            "definition": "to drink / variant of 嗬[he1]"
+          },
+          {
+            "pinyin": "hè",
+            "definition": "to shout"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "咖",
+        "readings": [
+          {
+            "pinyin": "gā",
+            "definition": "used in 咖喱[ga1li2]"
+          },
+          {
+            "pinyin": "kā",
+            "definition": "coffee / class / grade"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "啡",
+        "readings": [
+          {
+            "pinyin": "fēi",
+            "definition": "(used in loanwords for its phonetic value)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "没",
+        "readings": [
+          {
+            "pinyin": "méi",
+            "definition": "(negative prefix for verbs) have not; not"
+          },
+          {
+            "pinyin": "mò",
+            "definition": "drowned / to end / to die / to inundate"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "题",
+        "readings": [
+          {
+            "pinyin": "í",
+            "definition": "surname Ti"
+          },
+          {
+            "pinyin": "tí",
+            "definition": "topic / problem for discussion / exam question / subject / to inscribe / to mention / CL:個|个[ge4],道[dao4]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "那",
+        "readings": [
+          {
+            "pinyin": "ā",
+            "definition": "surname Na"
+          },
+          {
+            "pinyin": "uó",
+            "definition": "surname Nuo"
+          },
+          {
+            "pinyin": "nǎ",
+            "definition": "variant of 哪[na3]"
+          },
+          {
+            "pinyin": "nà",
+            "definition": "(specifier) that; the; those (colloquial pr. [nei4]) / (pronoun) that (referring to persons, things or situations) / then (in that case)"
+          },
+          {
+            "pinyin": "nuó",
+            "definition": "(archaic) many / beautiful / how / old variant of 挪[nuo2]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "什",
+        "readings": [
+          {
+            "pinyin": "shén",
+            "definition": "what"
+          },
+          {
+            "pinyin": "shí",
+            "definition": "ten (used in fractions, writing checks etc) / assorted / miscellaneous"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "么",
+        "readings": [
+          {
+            "pinyin": "má",
+            "definition": "exclamatory final particle"
+          },
+          {
+            "pinyin": "ma",
+            "definition": "interrogative final particle"
+          },
+          {
+            "pinyin": "me",
+            "definition": "suffix, used to form interrogative 什麼|什么[shen2 me5], what?, indefinite 這麼|这么[zhe4 me5] thus, etc"
+          },
+          {
+            "pinyin": "me",
+            "definition": "variant of 麼|么[me5]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "时",
+        "readings": [
+          {
+            "pinyin": "shí",
+            "definition": "old variant of 時|时[shi2]"
+          },
+          {
+            "pinyin": "hí",
+            "definition": "surname Shi"
+          },
+          {
+            "pinyin": "shí",
+            "definition": "o'clock / time / when / hour / season / period"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "候",
+        "readings": [
+          {
+            "pinyin": "hòu",
+            "definition": "to wait / to inquire after / to watch / season / climate / (old) period of five days"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "见",
+        "readings": [
+          {
+            "pinyin": "jiàn",
+            "definition": "to see / to meet / to appear (to be sth) / to interview / opinion / view"
+          },
+          {
+            "pinyin": "xiàn",
+            "definition": "to appear / also written 現|现[xian4]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "面",
+        "readings": [
+          {
+            "pinyin": "miàn",
+            "definition": "face / side / surface / aspect / top / classifier for objects with flat surfaces such as drums, mirrors, flags etc"
+          },
+          {
+            "pinyin": "miàn",
+            "definition": "variant of 麵|面[mian4]"
+          },
+          {
+            "pinyin": "miàn",
+            "definition": "flour / noodles / (of food) soft (not crunchy) / (slang) (of a person) ineffectual / spineless"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "今",
+        "readings": [
+          {
+            "pinyin": "jīn",
+            "definition": "now / the present time / current / contemporary / this (day, year etc)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "天",
+        "readings": [
+          {
+            "pinyin": "tiān",
+            "definition": "day / sky / heaven"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "晚",
+        "readings": [
+          {
+            "pinyin": "wǎn",
+            "definition": "evening / night / late"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "上",
+        "readings": [
+          {
+            "pinyin": "shǎng",
+            "definition": "used in 上聲|上声[shang3 sheng1]"
+          },
+          {
+            "pinyin": "shàng",
+            "definition": "(bound form) up; upper; above; previous / first (of multiple parts) / to climb; to get onto; to go up / to attend (class or university) / (directional complement) up / (noun suffix) on; above"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "有",
+        "readings": [
+          {
+            "pinyin": "yǒu",
+            "definition": "to have; there is / (bound form) having; with; -ful; -ed; -al (as in 有意[you3yi4] intentional)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "空",
+        "readings": [
+          {
+            "pinyin": "kōng",
+            "definition": "empty / air / sky / in vain"
+          },
+          {
+            "pinyin": "kòng",
+            "definition": "to empty / vacant / unoccupied / space / leisure / free time"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "儿",
+        "readings": [
+          {
+            "pinyin": "rén",
+            "definition": "variant of 人[ren2] / \"person\" radical in Chinese characters (Kangxi radical 10), occurring in 兒, 兀, 兄 etc"
+          },
+          {
+            "pinyin": "ér",
+            "definition": "child / son"
+          },
+          {
+            "pinyin": "r",
+            "definition": "non-syllabic diminutive suffix / retroflex final"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "白",
+        "readings": [
+          {
+            "pinyin": "ái",
+            "definition": "surname Bai"
+          },
+          {
+            "pinyin": "bái",
+            "definition": "white / snowy / pure / bright / empty / blank / plain / clear / to make clear / in vain / gratuitous / free of charge / reactionary / anti-communist / funeral / to stare coldly / to write wrong character / to state / to explain / vernacular / spoken lines in opera"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "英",
+        "readings": [
+          {
+            "pinyin": "īng",
+            "definition": "United Kingdom / British / England / English / abbr. for 英國|英国[Ying1 guo2]"
+          },
+          {
+            "pinyin": "yīng",
+            "definition": "hero / outstanding / excellent / (literary) flower / blossom"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "爱",
+        "readings": [
+          {
+            "pinyin": "ài",
+            "definition": "to love; to be fond of; to like / affection / to be inclined (to do sth); to tend to (happen)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "吃",
+        "readings": [
+          {
+            "pinyin": "chī",
+            "definition": "to eat; to consume / to eat at (a cafeteria etc) / to eradicate; to destroy / to absorb / to suffer (shock, injury, defeat etc)"
+          },
+          {
+            "pinyin": "chī",
+            "definition": "variant of 吃[chi1]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "饭",
+        "readings": [
+          {
+            "pinyin": "fàn",
+            "definition": "cooked rice / CL:碗[wan3] / meal / CL:頓|顿[dun4] / (loanword) fan / devotee"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "对",
+        "readings": [
+          {
+            "pinyin": "duì",
+            "definition": "right; correct / towards; at; for / concerning; regarding / to treat (sb a certain way) / to face / (bound form) opposite; facing; matching / to match together; to adjust / to fit; to suit / to answer; to reply / to add; to pour in (a fluid) / to check; to compare / classifier: couple; pair"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "回",
+        "readings": [
+          {
+            "pinyin": "huí",
+            "definition": "to circle / to go back / to turn around / to answer / to return / to revolve / Hui ethnic group (Chinese Muslims) / time / classifier for acts of a play / section or chapter (of a classic book)"
+          },
+          {
+            "pinyin": "huí",
+            "definition": "to curve / to return / to revolve"
+          },
+          {
+            "pinyin": "huí",
+            "definition": "variant of 迴|回[hui2]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "来",
+        "readings": [
+          {
+            "pinyin": "lái",
+            "definition": "to come / (used as a substitute for a more specific verb) / hither (directional complement for motion toward the speaker, as in 回來|回来[hui2lai5]) / ever since (as in 自古以來|自古以来[zi4gu3 yi3lai2]) / for the past (amount of time) / (prefix) the coming ...; the next ... (as in 來世|来世[lai2shi4]) / (between two verbs) in order to / (after a round number) approximately / (used after 得[de2] to indicate possibility, as in 談得來|谈得来[tan2de5lai2], or after 不[bu4] to indicate impossibility, as in 吃不來|吃不来[chi1bu5lai2])"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "以",
+        "readings": [
+          {
+            "pinyin": "yǐ",
+            "definition": "old variant of 以[yi3]"
+          },
+          {
+            "pinyin": "yǐ",
+            "definition": "old variant of 以[yi3]"
+          },
+          {
+            "pinyin": "ǐ",
+            "definition": "abbr. for Israel 以色列[Yi3 se4 lie4]"
+          },
+          {
+            "pinyin": "yǐ",
+            "definition": "to use / by means of / according to / in order to / because of / at (a certain date or place)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "后",
+        "readings": [
+          {
+            "pinyin": "òu",
+            "definition": "surname Hou"
+          },
+          {
+            "pinyin": "hòu",
+            "definition": "empress / queen / (archaic) monarch / ruler"
+          },
+          {
+            "pinyin": "hòu",
+            "definition": "back / behind / rear / afterwards / after / later / post-"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "给",
+        "readings": [
+          {
+            "pinyin": "gěi",
+            "definition": "to / for / for the benefit of / to give / to allow / to do sth (for sb) / (grammatical equivalent of 被) / (grammatical equivalent of 把) / (sentence intensifier)"
+          },
+          {
+            "pinyin": "jǐ",
+            "definition": "to supply / to provide"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "打",
+        "readings": [
+          {
+            "pinyin": "dá",
+            "definition": "(loanword) dozen / Taiwan pr. [da3]"
+          },
+          {
+            "pinyin": "dǎ",
+            "definition": "a semantically light, transitive verb that is combined with various grammatical objects to form compound verbs and verb-object phrases with a diverse range of meanings (e.g. 打傘|打伞[da3san3] \"to hold an umbrella\", 打電話|打电话[da3 dian4hua4] \"to make a phone call\", 打針|打针[da3zhen1] \"to get an injection\", 打手套[da3 shou3tao4] \"to knit gloves\", 打氣|打气[da3qi4] \"to inflate\") / to hit; to strike / to fight / (coll.) from; since (as in 打那以後|打那以后[da3 na4 yi3hou4] \"since then\")"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "电",
+        "readings": [
+          {
+            "pinyin": "diàn",
+            "definition": "lightning / electricity / electric (bound form) / to get (or give) an electric shock / phone call or telegram etc / to send via telephone or telegram etc"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "话",
+        "readings": [
+          {
+            "pinyin": "huà",
+            "definition": "dialect / language / spoken words / speech / talk / words / conversation / what sb said / CL:種|种[zhong3],席[xi2],句[ju4],口[kou3],番[fan1]"
+          },
+          {
+            "pinyin": "huà",
+            "definition": "old variant of 話|话[hua4]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "等",
+        "readings": [
+          {
+            "pinyin": "děng",
+            "definition": "to wait for; to await / by the time; when; till / and so on; etc.; et al. / (bound form) class; rank; grade / (bound form) equal to; same as / (used to end an enumeration) / (literary) (plural suffix attached to a personal pronoun or noun)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "的",
+        "readings": [
+          {
+            "pinyin": "de",
+            "definition": "of; ~'s (possessive particle) / (used after an attribute when it modifies a noun) / (used at the end of a declarative sentence for emphasis) / (used after a noun, verb or adjective to form a nominal expression, as in 皮革的[pi2ge2 de5] \"one made of leather\" or 跑堂兒的|跑堂儿的[pao3tang2r5de5] \"a waiter (literally, one who runs back and forth in a restaurant)\" or 新的[xin1 de5] \"new one\") / also pr. [di4] or [di5] in poetry and songs"
+          },
+          {
+            "pinyin": "dī",
+            "definition": "a taxi; a cab (abbr. for 的士[di1shi4])"
+          },
+          {
+            "pinyin": "dí",
+            "definition": "really and truly"
+          },
+          {
+            "pinyin": "dì",
+            "definition": "(bound form) bull's-eye; target"
+          }
+        ],
+        "mode": "hanzi"
+      }
+    ]
+  },
+  "Vocab11": {
+    "name": "Vocab 11",
+    "folder": "Class",
+    "desc": "Vocab 11",
+    "cards": [
+      {
+        "term": "给",
+        "pinyin": "gěi",
+        "toneless": "gei",
+        "definition": "to give",
+        "mode": "pinyin"
+      },
+      {
+        "term": "打电话",
+        "pinyin": "dǎdiànhuà",
+        "toneless": "dadianhua",
+        "definition": "to make a phone call",
+        "mode": "pinyin"
+      },
+      {
+        "term": "电话",
+        "pinyin": "diànhuà",
+        "toneless": "dianhua",
+        "definition": "telephone",
+        "mode": "pinyin"
+      },
+      {
+        "term": "喂",
+        "pinyin": "wèi",
+        "toneless": "wei",
+        "definition": "Hello (on the phone, to get someone's attention)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "在",
+        "pinyin": "zài",
+        "toneless": "zai",
+        "definition": "at",
+        "mode": "pinyin"
+      },
+      {
+        "term": "就",
+        "pinyin": "jiù",
+        "toneless": "jiu",
+        "definition": "exactly",
+        "mode": "pinyin"
+      },
+      {
+        "term": "您",
+        "pinyin": "nín",
+        "toneless": "nin",
+        "definition": "you (polite)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "哪",
+        "pinyin": "nǎ",
+        "toneless": "na",
+        "definition": "which",
+        "mode": "pinyin"
+      },
+      {
+        "term": "位",
+        "pinyin": "wèi",
+        "toneless": "wei",
+        "definition": "measure word (polite for people)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "下午",
+        "pinyin": "xiàwǔ",
+        "toneless": "xiawu",
+        "definition": "afternoon",
+        "mode": "pinyin"
+      },
+      {
+        "term": "时间",
+        "pinyin": "shíjiān",
+        "toneless": "shijian",
+        "definition": "time",
+        "mode": "pinyin"
+      },
+      {
+        "term": "问题",
+        "pinyin": "wèntí",
+        "toneless": "wenti",
+        "definition": "question (problem)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "要",
+        "pinyin": "yào",
+        "toneless": "yao",
+        "definition": "to want (will)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "开会",
+        "pinyin": "kāihuì",
+        "toneless": "kaihui",
+        "definition": "to have a meeting",
+        "mode": "pinyin"
+      },
+      {
+        "term": "开",
+        "pinyin": "kāi",
+        "toneless": "kai",
+        "definition": "to open (to hold an x)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "会",
+        "pinyin": "huì",
+        "toneless": "hui",
+        "definition": "meeting",
+        "mode": "pinyin"
+      },
+      {
+        "term": "上午",
+        "pinyin": "shàngwǔ",
+        "toneless": "shangwu",
+        "definition": "morning",
+        "mode": "pinyin"
+      },
+      {
+        "term": "节",
+        "pinyin": "jié",
+        "toneless": "jie",
+        "definition": "measure word  (class periods)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "课",
+        "pinyin": "kè",
+        "toneless": "ke",
+        "definition": "class (course, lesson)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "年级",
+        "pinyin": "niánjí",
+        "toneless": "nianji",
+        "definition": "grade (year in school)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "考试",
+        "pinyin": "kǎoshì",
+        "toneless": "kaoshi",
+        "definition": "to take a test (to give a test, test)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "考",
+        "pinyin": "kǎo",
+        "toneless": "kao",
+        "definition": "to take a test  (to give a test)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "试",
+        "pinyin": "shì",
+        "toneless": "shi",
+        "definition": "test (to try, to experiment)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "以后",
+        "pinyin": "yǐhòu",
+        "toneless": "yihou",
+        "definition": "after (from now on, later on)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "空",
+        "pinyin": "kōng",
+        "toneless": "kong",
+        "definition": "free time",
+        "mode": "pinyin"
+      },
+      {
+        "term": "空儿",
+        "pinyin": "kònger",
+        "toneless": "konger",
+        "definition": "free time",
+        "mode": "pinyin"
+      },
+      {
+        "term": "要是",
+        "pinyin": "yàoshi",
+        "toneless": "yaoshi",
+        "definition": "if",
+        "mode": "pinyin"
+      },
+      {
+        "term": "方便",
+        "pinyin": "fāngbiàn",
+        "toneless": "fangbian",
+        "definition": "convenient",
+        "mode": "pinyin"
+      },
+      {
+        "term": "到",
+        "pinyin": "dào",
+        "toneless": "dao",
+        "definition": "to go to (to arrive)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "办公室",
+        "pinyin": "bàngōngshì",
+        "toneless": "bangongshi",
+        "definition": "office",
+        "mode": "pinyin"
+      },
+      {
+        "term": "行",
+        "pinyin": "xíng",
+        "toneless": "xing",
+        "definition": "all right (ok)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "等",
+        "pinyin": "děng",
+        "toneless": "deng",
+        "definition": "to wait (to wait for)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "别",
+        "pinyin": "bié",
+        "toneless": "bie",
+        "definition": "don't",
+        "mode": "pinyin"
+      },
+      {
+        "term": "客气",
+        "pinyin": "kèqì",
+        "toneless": "keqi",
+        "definition": "polite",
+        "mode": "pinyin"
+      },
+      {
+        "term": "给",
+        "readings": [
+          {
+            "pinyin": "gěi",
+            "definition": "to / for / for the benefit of / to give / to allow / to do sth (for sb) / (grammatical equivalent of 被) / (grammatical equivalent of 把) / (sentence intensifier)"
+          },
+          {
+            "pinyin": "jǐ",
+            "definition": "to supply / to provide"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "打",
+        "readings": [
+          {
+            "pinyin": "dá",
+            "definition": "(loanword) dozen / Taiwan pr. [da3]"
+          },
+          {
+            "pinyin": "dǎ",
+            "definition": "a semantically light, transitive verb that is combined with various grammatical objects to form compound verbs and verb-object phrases with a diverse range of meanings (e.g. 打傘|打伞[da3san3] \"to hold an umbrella\", 打電話|打电话[da3 dian4hua4] \"to make a phone call\", 打針|打针[da3zhen1] \"to get an injection\", 打手套[da3 shou3tao4] \"to knit gloves\", 打氣|打气[da3qi4] \"to inflate\") / to hit; to strike / to fight / (coll.) from; since (as in 打那以後|打那以后[da3 na4 yi3hou4] \"since then\")"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "电",
+        "readings": [
+          {
+            "pinyin": "diàn",
+            "definition": "lightning / electricity / electric (bound form) / to get (or give) an electric shock / phone call or telegram etc / to send via telephone or telegram etc"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "话",
+        "readings": [
+          {
+            "pinyin": "huà",
+            "definition": "dialect / language / spoken words / speech / talk / words / conversation / what sb said / CL:種|种[zhong3],席[xi2],句[ju4],口[kou3],番[fan1]"
+          },
+          {
+            "pinyin": "huà",
+            "definition": "old variant of 話|话[hua4]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "喂",
+        "readings": [
+          {
+            "pinyin": "wéi",
+            "definition": "hello (when answering the phone)"
+          },
+          {
+            "pinyin": "wèi",
+            "definition": "hey / to feed (an animal, baby, invalid etc)"
+          },
+          {
+            "pinyin": "wèi",
+            "definition": "variant of 餵|喂[wei4]"
+          },
+          {
+            "pinyin": "wèi",
+            "definition": "to feed"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "在",
+        "readings": [
+          {
+            "pinyin": "zài",
+            "definition": "to exist; to be alive / (of sb or sth) to be (located) at / (used before a verb to indicate an action in progress)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "就",
+        "readings": [
+          {
+            "pinyin": "jiù",
+            "definition": "(after a suppositional clause) in that case; then / (after a clause of action) as soon as; immediately after / (same as 就是[jiu4 shi4]) merely; nothing else but; simply; just; precisely; exactly / only; as little as / as much as; as many as / to approach; to move towards / to undertake; to engage in / (often followed by 著|着[zhe5]) taking advantage of / (of food) to go with / with regard to; concerning / (pattern: 就[jiu4] ... 也[ye3] ...) even if ... still ... / (pattern: 不[bu4] ... 就[jiu4] ...) if not ... then must be ..."
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "您",
+        "readings": [
+          {
+            "pinyin": "nín",
+            "definition": "you (courteous, as opposed to informal 你[ni3])"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "哪",
+        "readings": [
+          {
+            "pinyin": "nǎ",
+            "definition": "how / which"
+          },
+          {
+            "pinyin": "na",
+            "definition": "(emphatic sentence-final particle, used instead of 啊[a5] after a word ending in \"n\")"
+          },
+          {
+            "pinyin": "né",
+            "definition": "used in 哪吒[Ne2 zha1] / Taiwan pr. [nuo2]"
+          },
+          {
+            "pinyin": "něi",
+            "definition": "which? (interrogative, followed by classifier or numeral-classifier)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "位",
+        "readings": [
+          {
+            "pinyin": "wèi",
+            "definition": "position / location / place / seat / classifier for people (honorific) / classifier for binary bits (e.g. 十六位 16-bit or 2 bytes) / (physics) potential"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "下",
+        "readings": [
+          {
+            "pinyin": "xià",
+            "definition": "down / downwards / below / lower / later / next (week etc) / second (of two parts) / to decline / to go down / to arrive at (a decision, conclusion etc) / measure word to show the frequency of an action"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "午",
+        "readings": [
+          {
+            "pinyin": "wǔ",
+            "definition": "7th earthly branch: 11 a.m.-1 p.m., noon, 5th solar month (6th June-6th July), year of the Horse / ancient Chinese compass point: 180° (south)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "时",
+        "readings": [
+          {
+            "pinyin": "shí",
+            "definition": "old variant of 時|时[shi2]"
+          },
+          {
+            "pinyin": "hí",
+            "definition": "surname Shi"
+          },
+          {
+            "pinyin": "shí",
+            "definition": "o'clock / time / when / hour / season / period"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "间",
+        "readings": [
+          {
+            "pinyin": "jiān",
+            "definition": "between / among / within a definite time or space / room / section of a room or lateral space between two pairs of pillars / classifier for rooms"
+          },
+          {
+            "pinyin": "jiàn",
+            "definition": "gap / to separate / to thin out (seedlings) / to sow discontent"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "问",
+        "readings": [
+          {
+            "pinyin": "wèn",
+            "definition": "to ask; to inquire"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "题",
+        "readings": [
+          {
+            "pinyin": "í",
+            "definition": "surname Ti"
+          },
+          {
+            "pinyin": "tí",
+            "definition": "topic / problem for discussion / exam question / subject / to inscribe / to mention / CL:個|个[ge4],道[dao4]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "要",
+        "readings": [
+          {
+            "pinyin": "yāo",
+            "definition": "(bound form) to demand; to coerce"
+          },
+          {
+            "pinyin": "yào",
+            "definition": "to want; to need; to ask for / will; shall; about to / need to; should / if (same as 要是[yao4 shi5]) / (bound form) important"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "开",
+        "readings": [
+          {
+            "pinyin": "kāi",
+            "definition": "to open (transitive or intransitive) / (of ships, vehicles, troops etc) to start / to turn on; to put in operation; to operate; to run / to boil / to write out (a prescription, check, invoice etc) / (directional complement) away; off / carat (gold) / abbr. for Kelvin, 開爾文|开尔文[Kai1er3wen2] / abbr. for 開本|开本[kai1ben3], book format"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "会",
+        "readings": [
+          {
+            "pinyin": "huì",
+            "definition": "can; to have the skill; to know how to / to be likely to; to be sure to / to meet; to get together / meeting; gathering / (suffix) union; group; association / (bound form) a moment (Taiwan pr. [hui3])"
+          },
+          {
+            "pinyin": "kuài",
+            "definition": "(bound form) to reckon accounts"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "上",
+        "readings": [
+          {
+            "pinyin": "shǎng",
+            "definition": "used in 上聲|上声[shang3 sheng1]"
+          },
+          {
+            "pinyin": "shàng",
+            "definition": "(bound form) up; upper; above; previous / first (of multiple parts) / to climb; to get onto; to go up / to attend (class or university) / (directional complement) up / (noun suffix) on; above"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "节",
+        "readings": [
+          {
+            "pinyin": "jiē",
+            "definition": "see 節骨眼|节骨眼[jie1 gu5 yan3]"
+          },
+          {
+            "pinyin": "jié",
+            "definition": "joint; node / (bound form) section; segment / solar term (one of the 24 divisions of the year in the traditional Chinese calendar) / seasonal festival / (bound form) to economize; to save / (bound form) moral integrity; chastity / classifier for segments: lessons, train wagons, biblical verses etc / knot (nautical miles per hour)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "课",
+        "readings": [
+          {
+            "pinyin": "kè",
+            "definition": "subject / course / CL:門|门[men2] / class / lesson / CL:堂[tang2],節|节[jie2] / to levy / tax / form of divination"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "年",
+        "readings": [
+          {
+            "pinyin": "ián",
+            "definition": "surname Nian"
+          },
+          {
+            "pinyin": "nián",
+            "definition": "year / CL:個|个[ge4]"
+          },
+          {
+            "pinyin": "nián",
+            "definition": "grain / harvest (old) / variant of 年[nian2]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "级",
+        "readings": [
+          {
+            "pinyin": "jí",
+            "definition": "level / grade / rank / step (of stairs) / CL:個|个[ge4] / classifier: step, level"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "考",
+        "readings": [
+          {
+            "pinyin": "kǎo",
+            "definition": "to beat / to hit / variant of 考[kao3] / to inspect / to test / to take an exam"
+          },
+          {
+            "pinyin": "kǎo",
+            "definition": "to check / to verify / to test / to examine / to take an exam / to take an entrance exam for / deceased father"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "试",
+        "readings": [
+          {
+            "pinyin": "shì",
+            "definition": "to test / to try / experiment / examination / test"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "以",
+        "readings": [
+          {
+            "pinyin": "yǐ",
+            "definition": "old variant of 以[yi3]"
+          },
+          {
+            "pinyin": "yǐ",
+            "definition": "old variant of 以[yi3]"
+          },
+          {
+            "pinyin": "ǐ",
+            "definition": "abbr. for Israel 以色列[Yi3 se4 lie4]"
+          },
+          {
+            "pinyin": "yǐ",
+            "definition": "to use / by means of / according to / in order to / because of / at (a certain date or place)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "后",
+        "readings": [
+          {
+            "pinyin": "òu",
+            "definition": "surname Hou"
+          },
+          {
+            "pinyin": "hòu",
+            "definition": "empress / queen / (archaic) monarch / ruler"
+          },
+          {
+            "pinyin": "hòu",
+            "definition": "back / behind / rear / afterwards / after / later / post-"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "空",
+        "readings": [
+          {
+            "pinyin": "kōng",
+            "definition": "empty / air / sky / in vain"
+          },
+          {
+            "pinyin": "kòng",
+            "definition": "to empty / vacant / unoccupied / space / leisure / free time"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "儿",
+        "readings": [
+          {
+            "pinyin": "rén",
+            "definition": "variant of 人[ren2] / \"person\" radical in Chinese characters (Kangxi radical 10), occurring in 兒, 兀, 兄 etc"
+          },
+          {
+            "pinyin": "ér",
+            "definition": "child / son"
+          },
+          {
+            "pinyin": "r",
+            "definition": "non-syllabic diminutive suffix / retroflex final"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "是",
+        "readings": [
+          {
+            "pinyin": "shì",
+            "definition": "to be (followed by substantives only) / correct; right; true / (respectful acknowledgement of a command) very well / (adverb for emphatic assertion)"
+          },
+          {
+            "pinyin": "shì",
+            "definition": "variant of 是[shi4]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "方",
+        "readings": [
+          {
+            "pinyin": "āng",
+            "definition": "surname Fang"
+          },
+          {
+            "pinyin": "fāng",
+            "definition": "square / power or involution (math.) / upright / honest / fair and square / direction / side / party (to a contract, dispute etc) / place / method / prescription (medicine) / just when / only or just / classifier for square things / abbr. for square or cubic meter"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "便",
+        "readings": [
+          {
+            "pinyin": "biàn",
+            "definition": "plain / informal / suitable / convenient / opportune / to urinate or defecate / equivalent to 就[jiu4]: then / in that case / even if / soon afterwards"
+          },
+          {
+            "pinyin": "pián",
+            "definition": "used in 便宜[pian2yi5] / used in 便便[pian2pian2] / used in 便嬛[pian2xuan1]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "到",
+        "readings": [
+          {
+            "pinyin": "dào",
+            "definition": "to reach; to arrive / to leave for; to go to / to (a place); until (a time); up to (a point) / (verb complement indicating arriving at a place or reaching a point) / considerate; thoughtful; thorough"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "办",
+        "readings": [
+          {
+            "pinyin": "bàn",
+            "definition": "to take care of (a matter); to deal with (a task, procedure etc); to organize (an event) / to establish; to set up; to manage; to run (an enterprise) / (law) to handle; to investigate; to prosecute (a case or suspect) / (bound form) office (as in 招辦|招办[zhao1ban4], admissions office) (abbr. for 辦公室|办公室[ban4gong1shi4])"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "公",
+        "readings": [
+          {
+            "pinyin": "gōng",
+            "definition": "public / collectively owned / common / international (e.g. high seas, metric system, calendar) / make public / fair / just / Duke, highest of five orders of nobility 五等爵位[wu3 deng3 jue2 wei4] / honorable (gentlemen) / father-in-law / male (animal)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "室",
+        "readings": [
+          {
+            "pinyin": "hì",
+            "definition": "surname Shi"
+          },
+          {
+            "pinyin": "shì",
+            "definition": "room / work unit / grave / scabbard / family or clan / one of the 28 constellations of Chinese astronomy"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "行",
+        "readings": [
+          {
+            "pinyin": "háng",
+            "definition": "(bound form) row; line / (bound form) line of business; trade; profession / (bound form) commercial firm / (bound form) to rank (first, second etc) among one's siblings (by age) / (in data tables) row; (Tw) column / classifier for rows or lines"
+          },
+          {
+            "pinyin": "héng",
+            "definition": "used in 道行[dao4heng2]"
+          },
+          {
+            "pinyin": "xíng",
+            "definition": "(bound form) to walk; to go; to travel / (literary) trip; journey; visit / (bound form) temporary; makeshift / (bound form) current; in circulation / (bound form) to do; to perform / capable; competent / all right; OK!; will do / behavior; conduct (Taiwan pr. [xing4]) / (literary) about to; soon"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "等",
+        "readings": [
+          {
+            "pinyin": "děng",
+            "definition": "to wait for; to await / by the time; when; till / and so on; etc.; et al. / (bound form) class; rank; grade / (bound form) equal to; same as / (used to end an enumeration) / (literary) (plural suffix attached to a personal pronoun or noun)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "别",
+        "readings": [
+          {
+            "pinyin": "ié",
+            "definition": "surname Bie"
+          },
+          {
+            "pinyin": "bié",
+            "definition": "to leave; to part (from) / (literary) to differentiate; to distinguish / (dialect) to turn away; to turn aside; to avert (one's face, gaze etc) / (bound form) other; another; different / don't ...! / to fasten with a pin or clip / to stick in; to insert (in order to hinder movement) / (noun suffix) category (as in 性別|性别[xing4 bie2], 派別|派别[pai4 bie2])"
+          },
+          {
+            "pinyin": "biè",
+            "definition": "to make sb change their ways, opinions etc"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "客",
+        "readings": [
+          {
+            "pinyin": "kè",
+            "definition": "customer; visitor; guest / classifier for servings or portions (when ordering food)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "气",
+        "readings": [
+          {
+            "pinyin": "qì",
+            "definition": "gas; air / smell / weather / to make angry; to annoy; to get angry / vital energy; qi"
+          }
+        ],
+        "mode": "hanzi"
+      }
+    ]
+  },
+  "Vocab12": {
+    "name": "Vocab 12",
+    "folder": "Class",
+    "desc": "Vocab 12",
+    "cards": [
+      {
+        "term": "下个",
+        "pinyin": "xià gè",
+        "toneless": "xia ge",
+        "definition": "next",
+        "mode": "pinyin"
+      },
+      {
+        "term": "下",
+        "pinyin": "xià",
+        "toneless": "xia",
+        "definition": "below (next)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "中文",
+        "pinyin": "zhōngwén",
+        "toneless": "zhongwen",
+        "definition": "Chinese language",
+        "mode": "pinyin"
+      },
+      {
+        "term": "文",
+        "pinyin": "wén",
+        "toneless": "wen",
+        "definition": "language (script, written language)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "帮",
+        "pinyin": "bāng",
+        "toneless": "bang",
+        "definition": "to help",
+        "mode": "pinyin"
+      },
+      {
+        "term": "准备",
+        "pinyin": "zhǔnbèi",
+        "toneless": "zhunbei",
+        "definition": "to prepare",
+        "mode": "pinyin"
+      },
+      {
+        "term": "练习",
+        "pinyin": "liànxí",
+        "toneless": "lianxi",
+        "definition": "to practice",
+        "mode": "pinyin"
+      },
+      {
+        "term": "说",
+        "pinyin": "shuō",
+        "toneless": "shuo",
+        "definition": "to speak (to say)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "啊",
+        "pinyin": "a",
+        "toneless": "a",
+        "definition": "sentence final particle (exclamation)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "但是",
+        "pinyin": "dànshì",
+        "toneless": "danshi",
+        "definition": "but",
+        "mode": "pinyin"
+      },
+      {
+        "term": "得",
+        "pinyin": "dé",
+        "toneless": "de",
+        "definition": "must (have to)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "跟",
+        "pinyin": "gēn",
+        "toneless": "gen",
+        "definition": "with",
+        "mode": "pinyin"
+      },
+      {
+        "term": "见面",
+        "pinyin": "jiànmiàn",
+        "toneless": "jianmian",
+        "definition": "to meet up",
+        "mode": "pinyin"
+      },
+      {
+        "term": "面",
+        "pinyin": "miàn",
+        "toneless": "mian",
+        "definition": "face",
+        "mode": "pinyin"
+      },
+      {
+        "term": "回来",
+        "pinyin": "huílái",
+        "toneless": "huilai",
+        "definition": "to come back",
+        "mode": "pinyin"
+      },
+      {
+        "term": "下",
+        "readings": [
+          {
+            "pinyin": "xià",
+            "definition": "down / downwards / below / lower / later / next (week etc) / second (of two parts) / to decline / to go down / to arrive at (a decision, conclusion etc) / measure word to show the frequency of an action"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "个",
+        "readings": [
+          {
+            "pinyin": "gě",
+            "definition": "used in 自個兒|自个儿[zi4 ge3 r5]"
+          },
+          {
+            "pinyin": "gè",
+            "definition": "(classifier used before a noun that has no specific classifier) / (bound form) individual"
+          },
+          {
+            "pinyin": "gè",
+            "definition": "variant of 個|个[ge4]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "中",
+        "readings": [
+          {
+            "pinyin": "hōng",
+            "definition": "(bound form) China; Chinese / surname Zhong"
+          },
+          {
+            "pinyin": "zhōng",
+            "definition": "within; among; in / middle; center / while (doing sth); during / (dialect) OK; all right"
+          },
+          {
+            "pinyin": "zhòng",
+            "definition": "to hit (a target) / to be struck by (a bullet, illness etc) / to win (a prize or lottery)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "文",
+        "readings": [
+          {
+            "pinyin": "én",
+            "definition": "surname Wen"
+          },
+          {
+            "pinyin": "wén",
+            "definition": "language / culture / writing / formal / literary / gentle / (old) classifier for coins / Kangxi radical 67"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "帮",
+        "readings": [
+          {
+            "pinyin": "bāng",
+            "definition": "old variant of 幫|帮[bang1]"
+          },
+          {
+            "pinyin": "bāng",
+            "definition": "old variant of 幫|帮[bang1]"
+          },
+          {
+            "pinyin": "bāng",
+            "definition": "to help / to assist / to support / for sb (i.e. as a help) / hired (as worker) / side (of pail, boat etc) / outer layer / upper (of a shoe) / group / gang / clique / party / secret society"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "准",
+        "readings": [
+          {
+            "pinyin": "zhǔn",
+            "definition": "to allow / to grant / in accordance with / in the light of"
+          },
+          {
+            "pinyin": "zhǔn",
+            "definition": "accurate / standard / definitely / certainly / about to become (bride, son-in-law etc) / quasi- / para-"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "备",
+        "readings": [
+          {
+            "pinyin": "bèi",
+            "definition": "variant of 備|备[bei4]"
+          },
+          {
+            "pinyin": "bèi",
+            "definition": "(bound form) to prepare; to equip / (literary) fully; completely"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "练",
+        "readings": [
+          {
+            "pinyin": "liàn",
+            "definition": "to practice / to train / to drill / to perfect (one's skill) / exercise / (literary) white silk / to boil and scour raw silk"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "习",
+        "readings": [
+          {
+            "pinyin": "í",
+            "definition": "surname Xi"
+          },
+          {
+            "pinyin": "xí",
+            "definition": "(bound form) to practice / to study / habit / custom"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "说",
+        "readings": [
+          {
+            "pinyin": "shuì",
+            "definition": "to persuade"
+          },
+          {
+            "pinyin": "shuō",
+            "definition": "to speak; to talk; to say / to explain; to comment / to scold; to tell off / (bound form) theory; doctrine"
+          },
+          {
+            "pinyin": "shuō",
+            "definition": "variant of 說|说[shuo1]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "啊",
+        "readings": [
+          {
+            "pinyin": "ā",
+            "definition": "interjection of surprise / Ah! / Oh!"
+          },
+          {
+            "pinyin": "á",
+            "definition": "interjection expressing doubt or requiring answer / Eh? / what?"
+          },
+          {
+            "pinyin": "ǎ",
+            "definition": "interjection of surprise or doubt / Eh? / My! / what's up?"
+          },
+          {
+            "pinyin": "à",
+            "definition": "interjection or grunt of agreement / uhm / Ah, OK / expression of recognition / Oh, it's you!"
+          },
+          {
+            "pinyin": "a",
+            "definition": "modal particle ending sentence, showing affirmation, approval, or consent"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "但",
+        "readings": [
+          {
+            "pinyin": "dàn",
+            "definition": "but; yet; however; still / merely; only; just"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "是",
+        "readings": [
+          {
+            "pinyin": "shì",
+            "definition": "to be (followed by substantives only) / correct; right; true / (respectful acknowledgement of a command) very well / (adverb for emphatic assertion)"
+          },
+          {
+            "pinyin": "shì",
+            "definition": "variant of 是[shi4]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "得",
+        "readings": [
+          {
+            "pinyin": "dé",
+            "definition": "to obtain / to get / to gain / to catch (a disease) / proper / suitable / proud / contented / to allow / to permit / ready / finished"
+          },
+          {
+            "pinyin": "de",
+            "definition": "structural particle: used after a verb (or adjective as main verb), linking it to following phrase indicating effect, degree, possibility etc"
+          },
+          {
+            "pinyin": "děi",
+            "definition": "to have to / must / ought to / to need to"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "跟",
+        "readings": [
+          {
+            "pinyin": "gēn",
+            "definition": "heel / to follow closely / to go with / (of a woman) to marry sb / with / compared with / to / towards / and (joining two nouns)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "见",
+        "readings": [
+          {
+            "pinyin": "jiàn",
+            "definition": "to see / to meet / to appear (to be sth) / to interview / opinion / view"
+          },
+          {
+            "pinyin": "xiàn",
+            "definition": "to appear / also written 現|现[xian4]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "面",
+        "readings": [
+          {
+            "pinyin": "miàn",
+            "definition": "face / side / surface / aspect / top / classifier for objects with flat surfaces such as drums, mirrors, flags etc"
+          },
+          {
+            "pinyin": "miàn",
+            "definition": "variant of 麵|面[mian4]"
+          },
+          {
+            "pinyin": "miàn",
+            "definition": "flour / noodles / (of food) soft (not crunchy) / (slang) (of a person) ineffectual / spineless"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "回",
+        "readings": [
+          {
+            "pinyin": "huí",
+            "definition": "to circle / to go back / to turn around / to answer / to return / to revolve / Hui ethnic group (Chinese Muslims) / time / classifier for acts of a play / section or chapter (of a classic book)"
+          },
+          {
+            "pinyin": "huí",
+            "definition": "to curve / to return / to revolve"
+          },
+          {
+            "pinyin": "huí",
+            "definition": "variant of 迴|回[hui2]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "来",
+        "readings": [
+          {
+            "pinyin": "lái",
+            "definition": "to come / (used as a substitute for a more specific verb) / hither (directional complement for motion toward the speaker, as in 回來|回来[hui2lai5]) / ever since (as in 自古以來|自古以来[zi4gu3 yi3lai2]) / for the past (amount of time) / (prefix) the coming ...; the next ... (as in 來世|来世[lai2shi4]) / (between two verbs) in order to / (after a round number) approximately / (used after 得[de2] to indicate possibility, as in 談得來|谈得来[tan2de5lai2], or after 不[bu4] to indicate impossibility, as in 吃不來|吃不来[chi1bu5lai2])"
+          }
+        ],
+        "mode": "hanzi"
+      }
+    ]
+  },
   "dialogue1": {
     "name": "Dialogue 1",
     "folder": "Class",
@@ -304,6 +3673,786 @@ export const decks: Decks = {
           {
             "pinyin": "péng",
             "definition": "friend"
+          }
+        ],
+        "mode": "hanzi"
+      }
+    ]
+  },
+  "dialogue10": {
+    "name": "Dialogue 10",
+    "folder": "Class",
+    "desc": "Dialogue 10",
+    "cards": [
+      {
+        "term": "昨天晚上，王朋和李友去高文中家玩儿。",
+        "pinyin": "zuótiānwǎnshàng, wáng péng hé lǐ yǒu qù gāo wénzhōng jiā wánér 。",
+        "toneless": "zuotianwanshang, wang peng he li you qu gao wenzhong jia waner 。",
+        "definition": "Yesterday, Wang Peng and Li You went to Gao Wenzhong's house to have fun.\",",
+        "mode": "sentence"
+      },
+      {
+        "term": "在高文中家，他们认识了高文中的姐姐。",
+        "pinyin": "zài gāo wénzhōng jiā, tāmen rènshi liǎo gāo wénzhōng de jiějie 。",
+        "toneless": "zai gao wenzhong jia, tamen renshi liao gao wenzhong de jiejie 。",
+        "definition": "At Gao Wenzhong's house, they met Gao Wenzhong's older sister.\",",
+        "mode": "sentence"
+      },
+      {
+        "term": "她叫高小音，在学校的图书馆工作。",
+        "pinyin": "tā jiào gāo xiǎo yīn, zài xuéxiào de túshūguǎn gōngzuò 。",
+        "toneless": "ta jiao gao xiao yin, zai xuexiao de tushuguan gongzuo 。",
+        "definition": "Her name is Gao Xiaoyin, she works at the school library.\",",
+        "mode": "sentence"
+      },
+      {
+        "term": "她请王朋喝茶，王朋喝了两杯。",
+        "pinyin": "tā qǐng wáng péng hēchá, wáng péng hē liǎo liǎngbēi 。",
+        "toneless": "ta qing wang peng hecha, wang peng he liao liangbei 。",
+        "definition": "She invited Wang Peng to drink tea, Wang Peng drank two glasses.\",",
+        "mode": "sentence"
+      },
+      {
+        "term": "李友不喝茶，只喝了一杯水",
+        "pinyin": "lǐ yǒu bù hēchá, zhī hē liǎo yìbēi shuǐ",
+        "toneless": "li you bu hecha, zhi he liao yibei shui",
+        "definition": "Li You didn't drink tea, she only drank a glass of water.\",",
+        "mode": "sentence"
+      },
+      {
+        "term": "他们一起聊天儿，看电视。",
+        "pinyin": "tāmen yìqǐ liáotiānér, kàndiànshì 。",
+        "toneless": "tamen yiqi liaotianer, kandianshi 。",
+        "definition": "Together they chatted and watched TV.,",
+        "mode": "sentence"
+      },
+      {
+        "term": "王朋和李友晚上十二点才回家。",
+        "pinyin": "wáng péng hé lǐ yǒu wǎnshàng shíèrdiǎn cái huíjiā 。",
+        "toneless": "wang peng he li you wanshang shierdian cai huijia 。",
+        "definition": "Wang Peng and Li You only returned home at twelve o'clock at night.,",
+        "mode": "sentence"
+      },
+      {
+        "term": "昨",
+        "readings": [
+          {
+            "pinyin": "zuó",
+            "definition": "yesterday"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "天",
+        "readings": [
+          {
+            "pinyin": "tiān",
+            "definition": "day / sky / heaven"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "晚",
+        "readings": [
+          {
+            "pinyin": "wǎn",
+            "definition": "evening / night / late"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "上",
+        "readings": [
+          {
+            "pinyin": "shǎng",
+            "definition": "used in 上聲|上声[shang3 sheng1]"
+          },
+          {
+            "pinyin": "shàng",
+            "definition": "(bound form) up; upper; above; previous / first (of multiple parts) / to climb; to get onto; to go up / to attend (class or university) / (directional complement) up / (noun suffix) on; above"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "王",
+        "readings": [
+          {
+            "pinyin": "áng",
+            "definition": "surname Wang"
+          },
+          {
+            "pinyin": "wáng",
+            "definition": "king or monarch / best or strongest of its type / grand / great"
+          },
+          {
+            "pinyin": "wàng",
+            "definition": "(literary) (of a monarch) to reign over (a kingdom)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "朋",
+        "readings": [
+          {
+            "pinyin": "péng",
+            "definition": "friend"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "和",
+        "readings": [
+          {
+            "pinyin": "hé",
+            "definition": "old variant of 和[he2]"
+          },
+          {
+            "pinyin": "é",
+            "definition": "surname He"
+          },
+          {
+            "pinyin": "hé",
+            "definition": "(joining two nouns) and; together with; with (Taiwan pr. [han4]) / (math.) sum / to make peace / (sports) to draw; to tie / (bound form) harmonious / (bound form) Japan; Japanese"
+          },
+          {
+            "pinyin": "hè",
+            "definition": "to compose a poem in reply (to sb's poem) using the same rhyme sequence / to join in the singing / to chime in with others"
+          },
+          {
+            "pinyin": "hú",
+            "definition": "to complete a set in mahjong or playing cards"
+          },
+          {
+            "pinyin": "huó",
+            "definition": "to combine a powdery substance (flour, plaster etc) with water / Taiwan pr. [huo4]"
+          },
+          {
+            "pinyin": "huò",
+            "definition": "to mix (ingredients) together / to blend / classifier for rinses of clothes / classifier for boilings of medicinal herbs"
+          },
+          {
+            "pinyin": "hé",
+            "definition": "(literary) harmonious (variant of 和[he2])"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "李",
+        "readings": [
+          {
+            "pinyin": "ǐ",
+            "definition": "surname Li"
+          },
+          {
+            "pinyin": "lǐ",
+            "definition": "plum"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "友",
+        "readings": [
+          {
+            "pinyin": "yǒu",
+            "definition": "friend"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "去",
+        "readings": [
+          {
+            "pinyin": "qù",
+            "definition": "to go / to go to (a place) / (of a time etc) last / just passed / to send / to remove / to get rid of / to reduce / to be apart from in space or time / to die (euphemism) / to play (a part) / (when used either before or after a verb) to go in order to do sth / (after a verb of motion indicates movement away from the speaker) / (used after certain verbs to indicate detachment or separation)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "高",
+        "readings": [
+          {
+            "pinyin": "āo",
+            "definition": "surname Gao"
+          },
+          {
+            "pinyin": "gāo",
+            "definition": "high / tall / above average / loud / your (honorific)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "文",
+        "readings": [
+          {
+            "pinyin": "én",
+            "definition": "surname Wen"
+          },
+          {
+            "pinyin": "wén",
+            "definition": "language / culture / writing / formal / literary / gentle / (old) classifier for coins / Kangxi radical 67"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "中",
+        "readings": [
+          {
+            "pinyin": "hōng",
+            "definition": "(bound form) China; Chinese / surname Zhong"
+          },
+          {
+            "pinyin": "zhōng",
+            "definition": "within; among; in / middle; center / while (doing sth); during / (dialect) OK; all right"
+          },
+          {
+            "pinyin": "zhòng",
+            "definition": "to hit (a target) / to be struck by (a bullet, illness etc) / to win (a prize or lottery)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "家",
+        "readings": [
+          {
+            "pinyin": "jiā",
+            "definition": "used in 傢伙|家伙[jia1huo5] and 傢俱|家俱[jia1ju4]"
+          },
+          {
+            "pinyin": "jiā",
+            "definition": "home / family / (polite) my (sister, uncle etc) / classifier for families or businesses / refers to the philosophical schools of pre-Han China / noun suffix for a specialist in some activity, such as a musician or revolutionary, corresponding to English -ist, -er, -ary or -ian / CL:個|个[ge4]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "玩",
+        "readings": [
+          {
+            "pinyin": "wán",
+            "definition": "to play / to have fun / to trifle with / toy / sth used for amusement / curio or antique (Taiwan pr. [wan4]) / to keep sth for entertainment"
+          },
+          {
+            "pinyin": "wán",
+            "definition": "variant of 玩[wan2] / Taiwan pr. [wan4]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "儿",
+        "readings": [
+          {
+            "pinyin": "rén",
+            "definition": "variant of 人[ren2] / \"person\" radical in Chinese characters (Kangxi radical 10), occurring in 兒, 兀, 兄 etc"
+          },
+          {
+            "pinyin": "ér",
+            "definition": "child / son"
+          },
+          {
+            "pinyin": "r",
+            "definition": "non-syllabic diminutive suffix / retroflex final"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "在",
+        "readings": [
+          {
+            "pinyin": "zài",
+            "definition": "to exist; to be alive / (of sb or sth) to be (located) at / (used before a verb to indicate an action in progress)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "他",
+        "readings": [
+          {
+            "pinyin": "tā",
+            "definition": "(third-person singular) (since the early 20th century, usu. male) he; him; his / (bound form) other; another; some other (as in 他日[ta1ri4] and 他人[ta1ren2])"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "们",
+        "readings": [
+          {
+            "pinyin": "men",
+            "definition": "plural marker for pronouns, and nouns referring to individuals"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "认",
+        "readings": [
+          {
+            "pinyin": "rèn",
+            "definition": "to recognize / to know / to admit"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "识",
+        "readings": [
+          {
+            "pinyin": "shí",
+            "definition": "to know / knowledge / Taiwan pr. [shi4]"
+          },
+          {
+            "pinyin": "zhì",
+            "definition": "to record / to write a footnote"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "了",
+        "readings": [
+          {
+            "pinyin": "le",
+            "definition": "(completed action marker) / (modal particle indicating change of state, situation now) / (modal particle intensifying preceding clause)"
+          },
+          {
+            "pinyin": "liǎo",
+            "definition": "to finish / (used with 得[de2] or 不[bu4] after a verb to express (im)possibility, as in 忘不了[wang4bu5liao3] \"cannot forget\") / (literary) (usually followed by a negative such as 無|无[wu2] or 不[bu4]) completely (not); entirely (not); (not) in the least / to understand clearly (variant of 瞭|了[liao3])"
+          },
+          {
+            "pinyin": "liǎo",
+            "definition": "(of eyes) bright / clear-sighted / to understand clearly"
+          },
+          {
+            "pinyin": "liào",
+            "definition": "unofficial variant of 瞭[liao4]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "的",
+        "readings": [
+          {
+            "pinyin": "de",
+            "definition": "of; ~'s (possessive particle) / (used after an attribute when it modifies a noun) / (used at the end of a declarative sentence for emphasis) / (used after a noun, verb or adjective to form a nominal expression, as in 皮革的[pi2ge2 de5] \"one made of leather\" or 跑堂兒的|跑堂儿的[pao3tang2r5de5] \"a waiter (literally, one who runs back and forth in a restaurant)\" or 新的[xin1 de5] \"new one\") / also pr. [di4] or [di5] in poetry and songs"
+          },
+          {
+            "pinyin": "dī",
+            "definition": "a taxi; a cab (abbr. for 的士[di1shi4])"
+          },
+          {
+            "pinyin": "dí",
+            "definition": "really and truly"
+          },
+          {
+            "pinyin": "dì",
+            "definition": "(bound form) bull's-eye; target"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "姐",
+        "readings": [
+          {
+            "pinyin": "jiě",
+            "definition": "older sister"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "她",
+        "readings": [
+          {
+            "pinyin": "tā",
+            "definition": "she"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "叫",
+        "readings": [
+          {
+            "pinyin": "jiào",
+            "definition": "to shout / to call / to order / to ask / to be called / by (indicates agent in the passive mood)"
+          },
+          {
+            "pinyin": "jiào",
+            "definition": "variant of 叫[jiao4]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "小",
+        "readings": [
+          {
+            "pinyin": "xiǎo",
+            "definition": "small / tiny / few / young"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "音",
+        "readings": [
+          {
+            "pinyin": "yīn",
+            "definition": "sound / noise / note (of musical scale) / tone / news / syllable / reading (phonetic value of a character)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "学",
+        "readings": [
+          {
+            "pinyin": "xué",
+            "definition": "to learn / to study / to imitate / science / -ology"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "校",
+        "readings": [
+          {
+            "pinyin": "jiào",
+            "definition": "to check; to collate; to proofread"
+          },
+          {
+            "pinyin": "xiào",
+            "definition": "(bound form) school; college / (bound form) (military) field officer"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "图",
+        "readings": [
+          {
+            "pinyin": "tú",
+            "definition": "diagram / picture / drawing / chart / map / CL:張|张[zhang1] / to plan / to scheme / to attempt / to pursue / to seek"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "书",
+        "readings": [
+          {
+            "pinyin": "hū",
+            "definition": "abbr. for 書經|书经[Shu1 jing1]"
+          },
+          {
+            "pinyin": "shū",
+            "definition": "book / letter / document / CL:本[ben3],冊|册[ce4],部[bu4] / to write"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "馆",
+        "readings": [
+          {
+            "pinyin": "guǎn",
+            "definition": "variant of 館|馆[guan3]"
+          },
+          {
+            "pinyin": "guǎn",
+            "definition": "building / shop / term for certain service establishments / embassy or consulate / schoolroom (old) / CL:家[jia1]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "工",
+        "readings": [
+          {
+            "pinyin": "gōng",
+            "definition": "work / worker / skill / profession / trade / craft / labor"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "作",
+        "readings": [
+          {
+            "pinyin": "zuō",
+            "definition": "(bound form) worker / (bound form) workshop / (slang) troublesome; high-maintenance (person)"
+          },
+          {
+            "pinyin": "zuò",
+            "definition": "to do; to engage in / to write; to compose / to pretend; to feign / to regard as; to consider to be / to be; to act the part of / to feel (itchy, nauseous etc) / writings; works"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "请",
+        "readings": [
+          {
+            "pinyin": "qǐng",
+            "definition": "to ask / to invite / please (do sth) / to treat (to a meal etc) / to request"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "喝",
+        "readings": [
+          {
+            "pinyin": "hē",
+            "definition": "to drink / variant of 嗬[he1]"
+          },
+          {
+            "pinyin": "hè",
+            "definition": "to shout"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "茶",
+        "readings": [
+          {
+            "pinyin": "chá",
+            "definition": "tea / tea plant / CL:杯[bei1],壺|壶[hu2]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "两",
+        "readings": [
+          {
+            "pinyin": "liǎng",
+            "definition": "two / both / some / a few / tael, unit of weight equal to 50 grams (modern) or 1⁄16 of a catty 斤[jin1] (old)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "杯",
+        "readings": [
+          {
+            "pinyin": "bēi",
+            "definition": "cup / trophy cup / classifier for certain containers of liquids: glass, cup"
+          },
+          {
+            "pinyin": "bēi",
+            "definition": "variant of 杯[bei1]"
+          },
+          {
+            "pinyin": "bēi",
+            "definition": "variant of 杯[bei1] / trophy cup / classifier for certain containers of liquids: glass, cup"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "不",
+        "readings": [
+          {
+            "pinyin": "bù",
+            "definition": "no; not so / (bound form) not; un-"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "只",
+        "readings": [
+          {
+            "pinyin": "zhī",
+            "definition": "variant of 隻|只[zhi1]"
+          },
+          {
+            "pinyin": "zhǐ",
+            "definition": "only; merely; just"
+          },
+          {
+            "pinyin": "zhǐ",
+            "definition": "variant of 只[zhi3]"
+          },
+          {
+            "pinyin": "zhī",
+            "definition": "grain that has begun to ripen"
+          },
+          {
+            "pinyin": "zhǐ",
+            "definition": "variant of 只[zhi3]"
+          },
+          {
+            "pinyin": "zhī",
+            "definition": "classifier for birds and certain animals, one of a pair, some utensils, vessels etc"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "一",
+        "readings": [
+          {
+            "pinyin": "yī",
+            "definition": "one / single / a (article) / as soon as / entire; whole; all; throughout / \"one\" radical in Chinese characters (Kangxi radical 1) / also pr. [yao1] for greater clarity when spelling out numbers digit by digit"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "水",
+        "readings": [
+          {
+            "pinyin": "huǐ",
+            "definition": "surname Shui"
+          },
+          {
+            "pinyin": "shuǐ",
+            "definition": "water / (after a name) ... River / to swim (used mostly in 會水|会水[hui4shui3] and 水性[shui3xing4]) / (coll.) lacking in substance; shoddy / (bound form) additional cost; extra income / classifier for washings of a garment"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "起",
+        "readings": [
+          {
+            "pinyin": "qǐ",
+            "definition": "to rise / to raise / to get up / to set out / to start / to appear / to launch / to initiate (action) / to draft / to establish / to get (from a depot or counter) / verb suffix, to start / starting from (a time, place, price etc) / classifier for occurrences or unpredictable events: case, instance / classifier for groups: batch, group"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "聊",
+        "readings": [
+          {
+            "pinyin": "liáo",
+            "definition": "(coll.) to chat / (literary) temporarily; for a while / (literary) somewhat; slightly / (literary) to depend upon"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "看",
+        "readings": [
+          {
+            "pinyin": "kān",
+            "definition": "to look after / to take care of / to watch / to guard"
+          },
+          {
+            "pinyin": "kàn",
+            "definition": "to see; to look at / to read / to watch / to visit; to call on / to consider; to regard as / to look after / to treat (a patient or illness) / to depend on / to feel (that) / (after a verb) to give it a try / to watch out for"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "电",
+        "readings": [
+          {
+            "pinyin": "diàn",
+            "definition": "lightning / electricity / electric (bound form) / to get (or give) an electric shock / phone call or telegram etc / to send via telephone or telegram etc"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "视",
+        "readings": [
+          {
+            "pinyin": "shì",
+            "definition": "variant of 視|视[shi4] / variant of 示[shi4]"
+          },
+          {
+            "pinyin": "shì",
+            "definition": "old variant of 視|视[shi4]"
+          },
+          {
+            "pinyin": "shì",
+            "definition": "(literary, or bound form) to look at"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "十",
+        "readings": [
+          {
+            "pinyin": "shí",
+            "definition": "ten / 10"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "二",
+        "readings": [
+          {
+            "pinyin": "èr",
+            "definition": "two / 2 / (Beijing dialect) stupid"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "点",
+        "readings": [
+          {
+            "pinyin": "diǎn",
+            "definition": "to touch briefly; to tap / to mark with a dot; to check off (on a list) / to order (food etc); to select / to mention; to bring up (a topic or person) / to hint at; to imply / to administer (eye medicine etc) in drops / to light (a fire, a lamp etc); to ignite / to nod (one's head) in agreement; to beckon by moving (one's hand) up and down / point; dot; spot; speck / dot stroke in Chinese characters / (math.) decimal point / point in time or space / (after a number) o'clock / a small amount; a bit; (after a verb or adjective) a bit more / classifier for small amounts"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "才",
+        "readings": [
+          {
+            "pinyin": "cái",
+            "definition": "ability; talent / sb of a certain type / a capable individual / then and only then / just now / (before an expression of quantity) only"
+          },
+          {
+            "pinyin": "cái",
+            "definition": "(variant of 才[cai2]) just now / (variant of 才[cai2]) (before an expression of quantity) only"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "回",
+        "readings": [
+          {
+            "pinyin": "huí",
+            "definition": "to circle / to go back / to turn around / to answer / to return / to revolve / Hui ethnic group (Chinese Muslims) / time / classifier for acts of a play / section or chapter (of a classic book)"
+          },
+          {
+            "pinyin": "huí",
+            "definition": "to curve / to return / to revolve"
+          },
+          {
+            "pinyin": "huí",
+            "definition": "variant of 迴|回[hui2]"
           }
         ],
         "mode": "hanzi"
@@ -5009,6 +9158,1006 @@ export const decks: Decks = {
       }
     ]
   },
+  "dialogue9": {
+    "name": "Dialogue 9",
+    "folder": "Class",
+    "desc": "Dialogue 9",
+    "cards": [
+      {
+        "term": "谁呀？",
+        "pinyin": "shuí ya ？",
+        "toneless": "shui ya ？",
+        "definition": "Who is it?,",
+        "mode": "sentence"
+      },
+      {
+        "term": "是我，王朋，还有李友。",
+        "pinyin": "shì wǒ, wáng péng, háiyǒu lǐ yǒu 。",
+        "toneless": "shi wo, wang peng, haiyou li you 。",
+        "definition": "It's me, Wang Peng and Li You.\",",
+        "mode": "sentence"
+      },
+      {
+        "term": "请进，请进，快进来！",
+        "pinyin": "qǐng jìn, qǐng jìn, kuàijìnlái ！",
+        "toneless": "qing jin, qing jin, kuaijinlai ！",
+        "definition": "Please enter, please enter, please come enter quickly!\",",
+        "mode": "sentence"
+      },
+      {
+        "term": "来，我介绍一下，这是我姐姐，高小音。",
+        "pinyin": "lái, wǒ jièshào yíxià, zhè shì wǒ jiějie, gāo xiǎo yīn 。",
+        "toneless": "lai, wo jieshao yixia, zhe shi wo jiejie, gao xiao yin 。",
+        "definition": "Come, let me introduce you (a bit), this is my older sister, Gao Xiaoyin\",",
+        "mode": "sentence"
+      },
+      {
+        "term": "小音，你好。认识你很高兴。",
+        "pinyin": "xiǎo yīn, nǐhǎo. rènshi nǐ hěn gāoxìng 。",
+        "toneless": "xiao yin, nihao. renshi ni hen gaoxing 。",
+        "definition": "Xiaoyin, hello. I am happy to meet you.\",",
+        "mode": "sentence"
+      },
+      {
+        "term": "认识你们我也很高兴。",
+        "pinyin": "rènshi nǐmen wǒ yě hěn gāoxìng 。",
+        "toneless": "renshi nimen wo ye hen gaoxing 。",
+        "definition": "I'm also happy to meet you all.,",
+        "mode": "sentence"
+      },
+      {
+        "term": "你们家很大，也很漂亮。",
+        "pinyin": "nǐmen jiā hěndà, yě hěnpiàoliang 。",
+        "toneless": "nimen jia henda, ye henpiaoliang 。",
+        "definition": "Your house is very big and also very beautiful.,",
+        "mode": "sentence"
+      },
+      {
+        "term": "是吗？请坐，请坐。",
+        "pinyin": "shì ma ？ qǐng zuò, qǐng zuò 。",
+        "toneless": "shi ma ？ qing zuo, qing zuo 。",
+        "definition": "Really? Please sit, please sit.\",",
+        "mode": "sentence"
+      },
+      {
+        "term": "小音，你在哪儿工作？",
+        "pinyin": "xiǎo yīn, nǐ zài nǎér gōngzuò ？",
+        "toneless": "xiao yin, ni zai naer gongzuo ？",
+        "definition": "Xiaoyin, where do you work?\",",
+        "mode": "sentence"
+      },
+      {
+        "term": "我在学校工作。你们想喝点儿什么？",
+        "pinyin": "wǒ zài xuéxiào gōngzuò. nǐmen xiǎng hē diǎnér shénme ？",
+        "toneless": "wo zai xuexiao gongzuo. nimen xiang he dianer shenme ？",
+        "definition": "I work at the school. What do you all want to drink?,",
+        "mode": "sentence"
+      },
+      {
+        "term": "喝茶还是喝咖啡？",
+        "pinyin": "hēchá háishì hēkāfēi ？",
+        "toneless": "hecha haishi hekafei ？",
+        "definition": "Do you want to drink tea or coffee?,",
+        "mode": "sentence"
+      },
+      {
+        "term": "我喝茶吧。",
+        "pinyin": "wǒ hēchá ba 。",
+        "toneless": "wo hecha ba 。",
+        "definition": "I'll drink tea then.,",
+        "mode": "sentence"
+      },
+      {
+        "term": "我要一瓶可乐，可以吗？",
+        "pinyin": "wǒ yào yìpíng kělè, kěyǐ ma ？",
+        "toneless": "wo yao yiping kele, keyi ma ？",
+        "definition": "I want a bottle of cola, can I?\",",
+        "mode": "sentence"
+      },
+      {
+        "term": "对不起，我们家没有可乐。",
+        "pinyin": "duìbùqǐ, wǒmen jiā méiyǒu kělè 。",
+        "toneless": "duibuqi, women jia meiyou kele 。",
+        "definition": "Sorry, out house doesn't have cola.\",",
+        "mode": "sentence"
+      },
+      {
+        "term": "那给我一杯水吧.",
+        "pinyin": "nà gěi wǒ yìbēi shuǐba .",
+        "toneless": "na gei wo yibei shuiba .",
+        "definition": "Then give me one cup of water.,",
+        "mode": "sentence"
+      },
+      {
+        "term": "谁",
+        "readings": [
+          {
+            "pinyin": "shéi",
+            "definition": "who / also pr. [shui2]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "呀",
+        "readings": [
+          {
+            "pinyin": "yā",
+            "definition": "ah (used to express surprise) / (onom.) creaking"
+          },
+          {
+            "pinyin": "ya",
+            "definition": "(particle equivalent to 啊 after a vowel, expressing surprise or doubt)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "是",
+        "readings": [
+          {
+            "pinyin": "shì",
+            "definition": "to be (followed by substantives only) / correct; right; true / (respectful acknowledgement of a command) very well / (adverb for emphatic assertion)"
+          },
+          {
+            "pinyin": "shì",
+            "definition": "variant of 是[shi4]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "我",
+        "readings": [
+          {
+            "pinyin": "wǒ",
+            "definition": "I; me; my"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "王",
+        "readings": [
+          {
+            "pinyin": "áng",
+            "definition": "surname Wang"
+          },
+          {
+            "pinyin": "wáng",
+            "definition": "king or monarch / best or strongest of its type / grand / great"
+          },
+          {
+            "pinyin": "wàng",
+            "definition": "(literary) (of a monarch) to reign over (a kingdom)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "朋",
+        "readings": [
+          {
+            "pinyin": "péng",
+            "definition": "friend"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "还",
+        "readings": [
+          {
+            "pinyin": "uán",
+            "definition": "surname Huan"
+          },
+          {
+            "pinyin": "hái",
+            "definition": "still / still in progress / still more / yet / even more / in addition / fairly / passably (good) / as early as / even / also / else"
+          },
+          {
+            "pinyin": "huán",
+            "definition": "to pay back / to return"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "有",
+        "readings": [
+          {
+            "pinyin": "yǒu",
+            "definition": "to have; there is / (bound form) having; with; -ful; -ed; -al (as in 有意[you3yi4] intentional)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "李",
+        "readings": [
+          {
+            "pinyin": "ǐ",
+            "definition": "surname Li"
+          },
+          {
+            "pinyin": "lǐ",
+            "definition": "plum"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "友",
+        "readings": [
+          {
+            "pinyin": "yǒu",
+            "definition": "friend"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "请",
+        "readings": [
+          {
+            "pinyin": "qǐng",
+            "definition": "to ask / to invite / please (do sth) / to treat (to a meal etc) / to request"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "进",
+        "readings": [
+          {
+            "pinyin": "jìn",
+            "definition": "to go forward / to advance / to go in / to enter / to put in / to submit / to take in / to admit / (math.) base of a number system / classifier for sections in a building or residential compound"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "快",
+        "readings": [
+          {
+            "pinyin": "kuài",
+            "definition": "rapid / quick / speed / rate / soon / almost / to make haste / clever / sharp (of knives or wits) / forthright / plainspoken / gratified / pleased / pleasant"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "来",
+        "readings": [
+          {
+            "pinyin": "lái",
+            "definition": "to come / (used as a substitute for a more specific verb) / hither (directional complement for motion toward the speaker, as in 回來|回来[hui2lai5]) / ever since (as in 自古以來|自古以来[zi4gu3 yi3lai2]) / for the past (amount of time) / (prefix) the coming ...; the next ... (as in 來世|来世[lai2shi4]) / (between two verbs) in order to / (after a round number) approximately / (used after 得[de2] to indicate possibility, as in 談得來|谈得来[tan2de5lai2], or after 不[bu4] to indicate impossibility, as in 吃不來|吃不来[chi1bu5lai2])"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "介",
+        "readings": [
+          {
+            "pinyin": "jiè",
+            "definition": "to introduce / to lie between / between / shell / armor"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "绍",
+        "readings": [
+          {
+            "pinyin": "hào",
+            "definition": "surname Shao"
+          },
+          {
+            "pinyin": "shào",
+            "definition": "to continue / to carry on"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "一",
+        "readings": [
+          {
+            "pinyin": "yī",
+            "definition": "one / single / a (article) / as soon as / entire; whole; all; throughout / \"one\" radical in Chinese characters (Kangxi radical 1) / also pr. [yao1] for greater clarity when spelling out numbers digit by digit"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "下",
+        "readings": [
+          {
+            "pinyin": "xià",
+            "definition": "down / downwards / below / lower / later / next (week etc) / second (of two parts) / to decline / to go down / to arrive at (a decision, conclusion etc) / measure word to show the frequency of an action"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "这",
+        "readings": [
+          {
+            "pinyin": "zhè",
+            "definition": "(pronoun) this; these / (bound form) this; the (followed by a noun) / (bound form) this; these (followed by a classifier) (in this sense, commonly pr. [zhei4], esp. in Beijing)"
+          },
+          {
+            "pinyin": "zhèi",
+            "definition": "(coll.) this"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "姐",
+        "readings": [
+          {
+            "pinyin": "jiě",
+            "definition": "older sister"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "高",
+        "readings": [
+          {
+            "pinyin": "āo",
+            "definition": "surname Gao"
+          },
+          {
+            "pinyin": "gāo",
+            "definition": "high / tall / above average / loud / your (honorific)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "小",
+        "readings": [
+          {
+            "pinyin": "xiǎo",
+            "definition": "small / tiny / few / young"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "音",
+        "readings": [
+          {
+            "pinyin": "yīn",
+            "definition": "sound / noise / note (of musical scale) / tone / news / syllable / reading (phonetic value of a character)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "你",
+        "readings": [
+          {
+            "pinyin": "nǐ",
+            "definition": "you (informal, as opposed to courteous 您[nin2])"
+          },
+          {
+            "pinyin": "nǐ",
+            "definition": "you (Note: In Taiwan, 妳 is used to address females, but in mainland China, it is not commonly used. Instead, 你 is used to address both males and females.)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "好",
+        "readings": [
+          {
+            "pinyin": "hǎo",
+            "definition": "good / appropriate; proper / all right! / (before a verb) easy to / (before a verb) good to / (before an adjective for exclamatory effect) so / (verb complement indicating completion) / (of two people) close; on intimate terms / (after a personal pronoun) hello"
+          },
+          {
+            "pinyin": "hào",
+            "definition": "to be fond of; to have a tendency to; to be prone to"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "认",
+        "readings": [
+          {
+            "pinyin": "rèn",
+            "definition": "to recognize / to know / to admit"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "识",
+        "readings": [
+          {
+            "pinyin": "shí",
+            "definition": "to know / knowledge / Taiwan pr. [shi4]"
+          },
+          {
+            "pinyin": "zhì",
+            "definition": "to record / to write a footnote"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "很",
+        "readings": [
+          {
+            "pinyin": "hěn",
+            "definition": "very; quite / (also, often used before an adjective without intensifying its meaning, i.e. as a meaningless syntactic element)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "兴",
+        "readings": [
+          {
+            "pinyin": "īng",
+            "definition": "surname Xing"
+          },
+          {
+            "pinyin": "xīng",
+            "definition": "to rise / to flourish / to become popular / to start / to encourage / to get up / (often used in the negative) to permit or allow (dialect) / maybe (dialect)"
+          },
+          {
+            "pinyin": "xìng",
+            "definition": "feeling or desire to do sth / interest in sth / excitement"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "们",
+        "readings": [
+          {
+            "pinyin": "men",
+            "definition": "plural marker for pronouns, and nouns referring to individuals"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "也",
+        "readings": [
+          {
+            "pinyin": "ě",
+            "definition": "surname Ye"
+          },
+          {
+            "pinyin": "yě",
+            "definition": "also; too; as well; (not ...) either / (used after a verbal or nominal expression X to indicate that X is an extreme or unexpected case) even (X) / (literary) particle having functions similar to 啊[a5]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "家",
+        "readings": [
+          {
+            "pinyin": "jiā",
+            "definition": "used in 傢伙|家伙[jia1huo5] and 傢俱|家俱[jia1ju4]"
+          },
+          {
+            "pinyin": "jiā",
+            "definition": "home / family / (polite) my (sister, uncle etc) / classifier for families or businesses / refers to the philosophical schools of pre-Han China / noun suffix for a specialist in some activity, such as a musician or revolutionary, corresponding to English -ist, -er, -ary or -ian / CL:個|个[ge4]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "大",
+        "readings": [
+          {
+            "pinyin": "dà",
+            "definition": "big; large; great / older (than another person) / eldest (as in 大姐[da4jie3]) / greatly; freely; fully / (dialect) father / (dialect) uncle (father's brother)"
+          },
+          {
+            "pinyin": "dài",
+            "definition": "see 大夫[dai4 fu5]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "漂",
+        "readings": [
+          {
+            "pinyin": "piāo",
+            "definition": "to float / to drift"
+          },
+          {
+            "pinyin": "piǎo",
+            "definition": "to bleach"
+          },
+          {
+            "pinyin": "piào",
+            "definition": "used in 漂亮[piao4liang5]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "亮",
+        "readings": [
+          {
+            "pinyin": "liàng",
+            "definition": "bright; light / to shine; to flash / loud and clear / to show (one's passport etc); to make public (one's views etc)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "吗",
+        "readings": [
+          {
+            "pinyin": "má",
+            "definition": "(coll.) what?"
+          },
+          {
+            "pinyin": "mǎ",
+            "definition": "used in 嗎啡|吗啡[ma3fei1]"
+          },
+          {
+            "pinyin": "ma",
+            "definition": "(question particle for \"yes-no\" questions)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "坐",
+        "readings": [
+          {
+            "pinyin": "uò",
+            "definition": "surname Zuo"
+          },
+          {
+            "pinyin": "zuò",
+            "definition": "to sit / to take a seat / to take (a bus, airplane etc) / to bear fruit / variant of 座[zuo4]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "在",
+        "readings": [
+          {
+            "pinyin": "zài",
+            "definition": "to exist; to be alive / (of sb or sth) to be (located) at / (used before a verb to indicate an action in progress)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "哪",
+        "readings": [
+          {
+            "pinyin": "nǎ",
+            "definition": "how / which"
+          },
+          {
+            "pinyin": "na",
+            "definition": "(emphatic sentence-final particle, used instead of 啊[a5] after a word ending in \"n\")"
+          },
+          {
+            "pinyin": "né",
+            "definition": "used in 哪吒[Ne2 zha1] / Taiwan pr. [nuo2]"
+          },
+          {
+            "pinyin": "něi",
+            "definition": "which? (interrogative, followed by classifier or numeral-classifier)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "儿",
+        "readings": [
+          {
+            "pinyin": "rén",
+            "definition": "variant of 人[ren2] / \"person\" radical in Chinese characters (Kangxi radical 10), occurring in 兒, 兀, 兄 etc"
+          },
+          {
+            "pinyin": "ér",
+            "definition": "child / son"
+          },
+          {
+            "pinyin": "r",
+            "definition": "non-syllabic diminutive suffix / retroflex final"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "工",
+        "readings": [
+          {
+            "pinyin": "gōng",
+            "definition": "work / worker / skill / profession / trade / craft / labor"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "作",
+        "readings": [
+          {
+            "pinyin": "zuō",
+            "definition": "(bound form) worker / (bound form) workshop / (slang) troublesome; high-maintenance (person)"
+          },
+          {
+            "pinyin": "zuò",
+            "definition": "to do; to engage in / to write; to compose / to pretend; to feign / to regard as; to consider to be / to be; to act the part of / to feel (itchy, nauseous etc) / writings; works"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "学",
+        "readings": [
+          {
+            "pinyin": "xué",
+            "definition": "to learn / to study / to imitate / science / -ology"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "校",
+        "readings": [
+          {
+            "pinyin": "jiào",
+            "definition": "to check; to collate; to proofread"
+          },
+          {
+            "pinyin": "xiào",
+            "definition": "(bound form) school; college / (bound form) (military) field officer"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "想",
+        "readings": [
+          {
+            "pinyin": "xiǎng",
+            "definition": "to think (about) / to think of; to devise / to think (that); to believe (that) / to desire; to want (to) / to miss (feel wistful about the absence of)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "喝",
+        "readings": [
+          {
+            "pinyin": "hē",
+            "definition": "to drink / variant of 嗬[he1]"
+          },
+          {
+            "pinyin": "hè",
+            "definition": "to shout"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "点",
+        "readings": [
+          {
+            "pinyin": "diǎn",
+            "definition": "to touch briefly; to tap / to mark with a dot; to check off (on a list) / to order (food etc); to select / to mention; to bring up (a topic or person) / to hint at; to imply / to administer (eye medicine etc) in drops / to light (a fire, a lamp etc); to ignite / to nod (one's head) in agreement; to beckon by moving (one's hand) up and down / point; dot; spot; speck / dot stroke in Chinese characters / (math.) decimal point / point in time or space / (after a number) o'clock / a small amount; a bit; (after a verb or adjective) a bit more / classifier for small amounts"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "什",
+        "readings": [
+          {
+            "pinyin": "shén",
+            "definition": "what"
+          },
+          {
+            "pinyin": "shí",
+            "definition": "ten (used in fractions, writing checks etc) / assorted / miscellaneous"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "么",
+        "readings": [
+          {
+            "pinyin": "má",
+            "definition": "exclamatory final particle"
+          },
+          {
+            "pinyin": "ma",
+            "definition": "interrogative final particle"
+          },
+          {
+            "pinyin": "me",
+            "definition": "suffix, used to form interrogative 什麼|什么[shen2 me5], what?, indefinite 這麼|这么[zhe4 me5] thus, etc"
+          },
+          {
+            "pinyin": "me",
+            "definition": "variant of 麼|么[me5]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "茶",
+        "readings": [
+          {
+            "pinyin": "chá",
+            "definition": "tea / tea plant / CL:杯[bei1],壺|壶[hu2]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "咖",
+        "readings": [
+          {
+            "pinyin": "gā",
+            "definition": "used in 咖喱[ga1li2]"
+          },
+          {
+            "pinyin": "kā",
+            "definition": "coffee / class / grade"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "啡",
+        "readings": [
+          {
+            "pinyin": "fēi",
+            "definition": "(used in loanwords for its phonetic value)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "吧",
+        "readings": [
+          {
+            "pinyin": "bā",
+            "definition": "bar (loanword) (serving drinks, or providing Internet access etc) / to puff (on a pipe etc) / (onom.) bang / abbr. for 貼吧|贴吧[tie1 ba1]"
+          },
+          {
+            "pinyin": "ba",
+            "definition": "(modal particle indicating suggestion or surmise) / ...right? / ...OK? / ...I presume."
+          },
+          {
+            "pinyin": "biā",
+            "definition": "(onom.) smack!"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "要",
+        "readings": [
+          {
+            "pinyin": "yāo",
+            "definition": "(bound form) to demand; to coerce"
+          },
+          {
+            "pinyin": "yào",
+            "definition": "to want; to need; to ask for / will; shall; about to / need to; should / if (same as 要是[yao4 shi5]) / (bound form) important"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "瓶",
+        "readings": [
+          {
+            "pinyin": "píng",
+            "definition": "bottle / vase / pitcher / CL:個|个[ge4] / classifier for wine and liquids"
+          },
+          {
+            "pinyin": "píng",
+            "definition": "variant of 瓶[ping2]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "可",
+        "readings": [
+          {
+            "pinyin": "kě",
+            "definition": "(prefix) can; may; able to; -able / to approve; to permit / to suit / (particle used for emphasis) certainly; very / but; however"
+          },
+          {
+            "pinyin": "kè",
+            "definition": "used in 可汗[ke4 han2]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "乐",
+        "readings": [
+          {
+            "pinyin": "è",
+            "definition": "surname Le"
+          },
+          {
+            "pinyin": "uè",
+            "definition": "surname Yue"
+          },
+          {
+            "pinyin": "lào",
+            "definition": "used in place names"
+          },
+          {
+            "pinyin": "lè",
+            "definition": "happy / cheerful / to laugh"
+          },
+          {
+            "pinyin": "yuè",
+            "definition": "music"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "以",
+        "readings": [
+          {
+            "pinyin": "yǐ",
+            "definition": "old variant of 以[yi3]"
+          },
+          {
+            "pinyin": "yǐ",
+            "definition": "old variant of 以[yi3]"
+          },
+          {
+            "pinyin": "ǐ",
+            "definition": "abbr. for Israel 以色列[Yi3 se4 lie4]"
+          },
+          {
+            "pinyin": "yǐ",
+            "definition": "to use / by means of / according to / in order to / because of / at (a certain date or place)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "对",
+        "readings": [
+          {
+            "pinyin": "duì",
+            "definition": "right; correct / towards; at; for / concerning; regarding / to treat (sb a certain way) / to face / (bound form) opposite; facing; matching / to match together; to adjust / to fit; to suit / to answer; to reply / to add; to pour in (a fluid) / to check; to compare / classifier: couple; pair"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "不",
+        "readings": [
+          {
+            "pinyin": "bù",
+            "definition": "no; not so / (bound form) not; un-"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "起",
+        "readings": [
+          {
+            "pinyin": "qǐ",
+            "definition": "to rise / to raise / to get up / to set out / to start / to appear / to launch / to initiate (action) / to draft / to establish / to get (from a depot or counter) / verb suffix, to start / starting from (a time, place, price etc) / classifier for occurrences or unpredictable events: case, instance / classifier for groups: batch, group"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "没",
+        "readings": [
+          {
+            "pinyin": "méi",
+            "definition": "(negative prefix for verbs) have not; not"
+          },
+          {
+            "pinyin": "mò",
+            "definition": "drowned / to end / to die / to inundate"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "那",
+        "readings": [
+          {
+            "pinyin": "ā",
+            "definition": "surname Na"
+          },
+          {
+            "pinyin": "uó",
+            "definition": "surname Nuo"
+          },
+          {
+            "pinyin": "nǎ",
+            "definition": "variant of 哪[na3]"
+          },
+          {
+            "pinyin": "nà",
+            "definition": "(specifier) that; the; those (colloquial pr. [nei4]) / (pronoun) that (referring to persons, things or situations) / then (in that case)"
+          },
+          {
+            "pinyin": "nuó",
+            "definition": "(archaic) many / beautiful / how / old variant of 挪[nuo2]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "给",
+        "readings": [
+          {
+            "pinyin": "gěi",
+            "definition": "to / for / for the benefit of / to give / to allow / to do sth (for sb) / (grammatical equivalent of 被) / (grammatical equivalent of 把) / (sentence intensifier)"
+          },
+          {
+            "pinyin": "jǐ",
+            "definition": "to supply / to provide"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "杯",
+        "readings": [
+          {
+            "pinyin": "bēi",
+            "definition": "cup / trophy cup / classifier for certain containers of liquids: glass, cup"
+          },
+          {
+            "pinyin": "bēi",
+            "definition": "variant of 杯[bei1]"
+          },
+          {
+            "pinyin": "bēi",
+            "definition": "variant of 杯[bei1] / trophy cup / classifier for certain containers of liquids: glass, cup"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "水",
+        "readings": [
+          {
+            "pinyin": "huǐ",
+            "definition": "surname Shui"
+          },
+          {
+            "pinyin": "shuǐ",
+            "definition": "water / (after a name) ... River / to swim (used mostly in 會水|会水[hui4shui3] and 水性[shui3xing4]) / (coll.) lacking in substance; shoddy / (bound form) additional cost; extra income / classifier for washings of a garment"
+          }
+        ],
+        "mode": "hanzi"
+      }
+    ]
+  },
   "vocab1": {
     "name": "Vocab 1",
     "folder": "Class",
@@ -5387,6 +10536,261 @@ export const decks: Decks = {
           {
             "pinyin": "péng",
             "definition": "friend"
+          }
+        ],
+        "mode": "hanzi"
+      }
+    ]
+  },
+  "vocab10": {
+    "name": "Vocab 10",
+    "folder": "Class",
+    "desc": "Vocab 10",
+    "cards": [
+      {
+        "term": "玩儿",
+        "pinyin": "wánér",
+        "toneless": "waner",
+        "definition": "to play (to have fun)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "了",
+        "pinyin": "liǎo",
+        "toneless": "liao",
+        "definition": "completed action particle",
+        "mode": "pinyin"
+      },
+      {
+        "term": "图书馆",
+        "pinyin": "túshūguǎn",
+        "toneless": "tushuguan",
+        "definition": "library",
+        "mode": "pinyin"
+      },
+      {
+        "term": "一起",
+        "pinyin": "yìqǐ",
+        "toneless": "yiqi",
+        "definition": "together",
+        "mode": "pinyin"
+      },
+      {
+        "term": "聊天儿",
+        "pinyin": "liáotiānér",
+        "toneless": "liaotianer",
+        "definition": "to chat",
+        "mode": "pinyin"
+      },
+      {
+        "term": "聊",
+        "pinyin": "liáo",
+        "toneless": "liao",
+        "definition": "to chat",
+        "mode": "pinyin"
+      },
+      {
+        "term": "天",
+        "pinyin": "tiān",
+        "toneless": "tian",
+        "definition": "sky",
+        "mode": "pinyin"
+      },
+      {
+        "term": "才",
+        "pinyin": "cái",
+        "toneless": "cai",
+        "definition": "not until (only then)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "回家",
+        "pinyin": "huíjiā",
+        "toneless": "huijia",
+        "definition": "to go home",
+        "mode": "pinyin"
+      },
+      {
+        "term": "回",
+        "pinyin": "huí",
+        "toneless": "hui",
+        "definition": "to return",
+        "mode": "pinyin"
+      },
+      {
+        "term": "玩",
+        "readings": [
+          {
+            "pinyin": "wán",
+            "definition": "to play / to have fun / to trifle with / toy / sth used for amusement / curio or antique (Taiwan pr. [wan4]) / to keep sth for entertainment"
+          },
+          {
+            "pinyin": "wán",
+            "definition": "variant of 玩[wan2] / Taiwan pr. [wan4]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "儿",
+        "readings": [
+          {
+            "pinyin": "rén",
+            "definition": "variant of 人[ren2] / \"person\" radical in Chinese characters (Kangxi radical 10), occurring in 兒, 兀, 兄 etc"
+          },
+          {
+            "pinyin": "ér",
+            "definition": "child / son"
+          },
+          {
+            "pinyin": "r",
+            "definition": "non-syllabic diminutive suffix / retroflex final"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "了",
+        "readings": [
+          {
+            "pinyin": "le",
+            "definition": "(completed action marker) / (modal particle indicating change of state, situation now) / (modal particle intensifying preceding clause)"
+          },
+          {
+            "pinyin": "liǎo",
+            "definition": "to finish / (used with 得[de2] or 不[bu4] after a verb to express (im)possibility, as in 忘不了[wang4bu5liao3] \"cannot forget\") / (literary) (usually followed by a negative such as 無|无[wu2] or 不[bu4]) completely (not); entirely (not); (not) in the least / to understand clearly (variant of 瞭|了[liao3])"
+          },
+          {
+            "pinyin": "liǎo",
+            "definition": "(of eyes) bright / clear-sighted / to understand clearly"
+          },
+          {
+            "pinyin": "liào",
+            "definition": "unofficial variant of 瞭[liao4]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "图",
+        "readings": [
+          {
+            "pinyin": "tú",
+            "definition": "diagram / picture / drawing / chart / map / CL:張|张[zhang1] / to plan / to scheme / to attempt / to pursue / to seek"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "书",
+        "readings": [
+          {
+            "pinyin": "hū",
+            "definition": "abbr. for 書經|书经[Shu1 jing1]"
+          },
+          {
+            "pinyin": "shū",
+            "definition": "book / letter / document / CL:本[ben3],冊|册[ce4],部[bu4] / to write"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "馆",
+        "readings": [
+          {
+            "pinyin": "guǎn",
+            "definition": "variant of 館|馆[guan3]"
+          },
+          {
+            "pinyin": "guǎn",
+            "definition": "building / shop / term for certain service establishments / embassy or consulate / schoolroom (old) / CL:家[jia1]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "一",
+        "readings": [
+          {
+            "pinyin": "yī",
+            "definition": "one / single / a (article) / as soon as / entire; whole; all; throughout / \"one\" radical in Chinese characters (Kangxi radical 1) / also pr. [yao1] for greater clarity when spelling out numbers digit by digit"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "起",
+        "readings": [
+          {
+            "pinyin": "qǐ",
+            "definition": "to rise / to raise / to get up / to set out / to start / to appear / to launch / to initiate (action) / to draft / to establish / to get (from a depot or counter) / verb suffix, to start / starting from (a time, place, price etc) / classifier for occurrences or unpredictable events: case, instance / classifier for groups: batch, group"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "聊",
+        "readings": [
+          {
+            "pinyin": "liáo",
+            "definition": "(coll.) to chat / (literary) temporarily; for a while / (literary) somewhat; slightly / (literary) to depend upon"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "天",
+        "readings": [
+          {
+            "pinyin": "tiān",
+            "definition": "day / sky / heaven"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "才",
+        "readings": [
+          {
+            "pinyin": "cái",
+            "definition": "ability; talent / sb of a certain type / a capable individual / then and only then / just now / (before an expression of quantity) only"
+          },
+          {
+            "pinyin": "cái",
+            "definition": "(variant of 才[cai2]) just now / (variant of 才[cai2]) (before an expression of quantity) only"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "回",
+        "readings": [
+          {
+            "pinyin": "huí",
+            "definition": "to circle / to go back / to turn around / to answer / to return / to revolve / Hui ethnic group (Chinese Muslims) / time / classifier for acts of a play / section or chapter (of a classic book)"
+          },
+          {
+            "pinyin": "huí",
+            "definition": "to curve / to return / to revolve"
+          },
+          {
+            "pinyin": "huí",
+            "definition": "variant of 迴|回[hui2]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "家",
+        "readings": [
+          {
+            "pinyin": "jiā",
+            "definition": "used in 傢伙|家伙[jia1huo5] and 傢俱|家俱[jia1ju4]"
+          },
+          {
+            "pinyin": "jiā",
+            "definition": "home / family / (polite) my (sister, uncle etc) / classifier for families or businesses / refers to the philosophical schools of pre-Han China / noun suffix for a specialist in some activity, such as a musician or revolutionary, corresponding to English -ist, -er, -ary or -ian / CL:個|个[ge4]"
           }
         ],
         "mode": "hanzi"
@@ -8793,6 +14197,673 @@ export const decks: Decks = {
           {
             "pinyin": "rén",
             "definition": "person; people / CL:個|个[ge4],位[wei4]"
+          }
+        ],
+        "mode": "hanzi"
+      }
+    ]
+  },
+  "vocab9": {
+    "name": "Vocab 9",
+    "folder": "Class",
+    "desc": "Vocab 9",
+    "cards": [
+      {
+        "term": "呀",
+        "pinyin": "ya",
+        "toneless": "ya",
+        "definition": "interjectory particle (softens a question, casual, lively, surprised)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "进",
+        "pinyin": "jìn",
+        "toneless": "jin",
+        "definition": "to enter",
+        "mode": "pinyin"
+      },
+      {
+        "term": "快",
+        "pinyin": "kuài",
+        "toneless": "kuai",
+        "definition": "fast (quickly)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "进来",
+        "pinyin": "jìnlái",
+        "toneless": "jinlai",
+        "definition": "to come in",
+        "mode": "pinyin"
+      },
+      {
+        "term": "来",
+        "pinyin": "lái",
+        "toneless": "lai",
+        "definition": "to come",
+        "mode": "pinyin"
+      },
+      {
+        "term": "介绍",
+        "pinyin": "jièshào",
+        "toneless": "jieshao",
+        "definition": "to introduce",
+        "mode": "pinyin"
+      },
+      {
+        "term": "一下",
+        "pinyin": "yíxià",
+        "toneless": "yixia",
+        "definition": "once (a bit)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "高兴",
+        "pinyin": "gāoxìng",
+        "toneless": "gaoxing",
+        "definition": "happy",
+        "mode": "pinyin"
+      },
+      {
+        "term": "漂亮",
+        "pinyin": "piàoliang",
+        "toneless": "piaoliang",
+        "definition": "pretty (beautiful)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "坐",
+        "pinyin": "zuò",
+        "toneless": "zuo",
+        "definition": "to sit",
+        "mode": "pinyin"
+      },
+      {
+        "term": "在",
+        "pinyin": "zài",
+        "toneless": "zai",
+        "definition": "at (in, on)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "哪儿",
+        "pinyin": "nǎér",
+        "toneless": "naer",
+        "definition": "where",
+        "mode": "pinyin"
+      },
+      {
+        "term": "学校",
+        "pinyin": "xuéxiào",
+        "toneless": "xuexiao",
+        "definition": "school",
+        "mode": "pinyin"
+      },
+      {
+        "term": "喝",
+        "pinyin": "hē",
+        "toneless": "he",
+        "definition": "to drink",
+        "mode": "pinyin"
+      },
+      {
+        "term": "点儿",
+        "pinyin": "diǎnér",
+        "toneless": "dianer",
+        "definition": "a little",
+        "mode": "pinyin"
+      },
+      {
+        "term": "茶",
+        "pinyin": "chá",
+        "toneless": "cha",
+        "definition": "tea",
+        "mode": "pinyin"
+      },
+      {
+        "term": "咖啡",
+        "pinyin": "kāfēi",
+        "toneless": "kafei",
+        "definition": "coffee",
+        "mode": "pinyin"
+      },
+      {
+        "term": "吧",
+        "pinyin": "ba",
+        "toneless": "ba",
+        "definition": "sentence final particle (soften tone, ask for confirmation)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "要",
+        "pinyin": "yào",
+        "toneless": "yao",
+        "definition": "to want",
+        "mode": "pinyin"
+      },
+      {
+        "term": "瓶",
+        "pinyin": "píng",
+        "toneless": "ping",
+        "definition": "measure word (bottles)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "可乐",
+        "pinyin": "kělè",
+        "toneless": "kele",
+        "definition": "cola",
+        "mode": "pinyin"
+      },
+      {
+        "term": "可以",
+        "pinyin": "kěyǐ",
+        "toneless": "keyi",
+        "definition": "can (may)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "对不起",
+        "pinyin": "duìbùqǐ",
+        "toneless": "duibuqi",
+        "definition": "sorry",
+        "mode": "pinyin"
+      },
+      {
+        "term": "给",
+        "pinyin": "gěi",
+        "toneless": "gei",
+        "definition": "to give",
+        "mode": "pinyin"
+      },
+      {
+        "term": "杯",
+        "pinyin": "bēi",
+        "toneless": "bei",
+        "definition": "measure word  (cup, glass)",
+        "mode": "pinyin"
+      },
+      {
+        "term": "水",
+        "pinyin": "shuǐ",
+        "toneless": "shui",
+        "definition": "water",
+        "mode": "pinyin"
+      },
+      {
+        "term": "呀",
+        "readings": [
+          {
+            "pinyin": "yā",
+            "definition": "ah (used to express surprise) / (onom.) creaking"
+          },
+          {
+            "pinyin": "ya",
+            "definition": "(particle equivalent to 啊 after a vowel, expressing surprise or doubt)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "进",
+        "readings": [
+          {
+            "pinyin": "jìn",
+            "definition": "to go forward / to advance / to go in / to enter / to put in / to submit / to take in / to admit / (math.) base of a number system / classifier for sections in a building or residential compound"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "快",
+        "readings": [
+          {
+            "pinyin": "kuài",
+            "definition": "rapid / quick / speed / rate / soon / almost / to make haste / clever / sharp (of knives or wits) / forthright / plainspoken / gratified / pleased / pleasant"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "来",
+        "readings": [
+          {
+            "pinyin": "lái",
+            "definition": "to come / (used as a substitute for a more specific verb) / hither (directional complement for motion toward the speaker, as in 回來|回来[hui2lai5]) / ever since (as in 自古以來|自古以来[zi4gu3 yi3lai2]) / for the past (amount of time) / (prefix) the coming ...; the next ... (as in 來世|来世[lai2shi4]) / (between two verbs) in order to / (after a round number) approximately / (used after 得[de2] to indicate possibility, as in 談得來|谈得来[tan2de5lai2], or after 不[bu4] to indicate impossibility, as in 吃不來|吃不来[chi1bu5lai2])"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "介",
+        "readings": [
+          {
+            "pinyin": "jiè",
+            "definition": "to introduce / to lie between / between / shell / armor"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "绍",
+        "readings": [
+          {
+            "pinyin": "hào",
+            "definition": "surname Shao"
+          },
+          {
+            "pinyin": "shào",
+            "definition": "to continue / to carry on"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "一",
+        "readings": [
+          {
+            "pinyin": "yī",
+            "definition": "one / single / a (article) / as soon as / entire; whole; all; throughout / \"one\" radical in Chinese characters (Kangxi radical 1) / also pr. [yao1] for greater clarity when spelling out numbers digit by digit"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "下",
+        "readings": [
+          {
+            "pinyin": "xià",
+            "definition": "down / downwards / below / lower / later / next (week etc) / second (of two parts) / to decline / to go down / to arrive at (a decision, conclusion etc) / measure word to show the frequency of an action"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "高",
+        "readings": [
+          {
+            "pinyin": "āo",
+            "definition": "surname Gao"
+          },
+          {
+            "pinyin": "gāo",
+            "definition": "high / tall / above average / loud / your (honorific)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "兴",
+        "readings": [
+          {
+            "pinyin": "īng",
+            "definition": "surname Xing"
+          },
+          {
+            "pinyin": "xīng",
+            "definition": "to rise / to flourish / to become popular / to start / to encourage / to get up / (often used in the negative) to permit or allow (dialect) / maybe (dialect)"
+          },
+          {
+            "pinyin": "xìng",
+            "definition": "feeling or desire to do sth / interest in sth / excitement"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "漂",
+        "readings": [
+          {
+            "pinyin": "piāo",
+            "definition": "to float / to drift"
+          },
+          {
+            "pinyin": "piǎo",
+            "definition": "to bleach"
+          },
+          {
+            "pinyin": "piào",
+            "definition": "used in 漂亮[piao4liang5]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "亮",
+        "readings": [
+          {
+            "pinyin": "liàng",
+            "definition": "bright; light / to shine; to flash / loud and clear / to show (one's passport etc); to make public (one's views etc)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "坐",
+        "readings": [
+          {
+            "pinyin": "uò",
+            "definition": "surname Zuo"
+          },
+          {
+            "pinyin": "zuò",
+            "definition": "to sit / to take a seat / to take (a bus, airplane etc) / to bear fruit / variant of 座[zuo4]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "在",
+        "readings": [
+          {
+            "pinyin": "zài",
+            "definition": "to exist; to be alive / (of sb or sth) to be (located) at / (used before a verb to indicate an action in progress)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "哪",
+        "readings": [
+          {
+            "pinyin": "nǎ",
+            "definition": "how / which"
+          },
+          {
+            "pinyin": "na",
+            "definition": "(emphatic sentence-final particle, used instead of 啊[a5] after a word ending in \"n\")"
+          },
+          {
+            "pinyin": "né",
+            "definition": "used in 哪吒[Ne2 zha1] / Taiwan pr. [nuo2]"
+          },
+          {
+            "pinyin": "něi",
+            "definition": "which? (interrogative, followed by classifier or numeral-classifier)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "儿",
+        "readings": [
+          {
+            "pinyin": "rén",
+            "definition": "variant of 人[ren2] / \"person\" radical in Chinese characters (Kangxi radical 10), occurring in 兒, 兀, 兄 etc"
+          },
+          {
+            "pinyin": "ér",
+            "definition": "child / son"
+          },
+          {
+            "pinyin": "r",
+            "definition": "non-syllabic diminutive suffix / retroflex final"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "学",
+        "readings": [
+          {
+            "pinyin": "xué",
+            "definition": "to learn / to study / to imitate / science / -ology"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "校",
+        "readings": [
+          {
+            "pinyin": "jiào",
+            "definition": "to check; to collate; to proofread"
+          },
+          {
+            "pinyin": "xiào",
+            "definition": "(bound form) school; college / (bound form) (military) field officer"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "喝",
+        "readings": [
+          {
+            "pinyin": "hē",
+            "definition": "to drink / variant of 嗬[he1]"
+          },
+          {
+            "pinyin": "hè",
+            "definition": "to shout"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "点",
+        "readings": [
+          {
+            "pinyin": "diǎn",
+            "definition": "to touch briefly; to tap / to mark with a dot; to check off (on a list) / to order (food etc); to select / to mention; to bring up (a topic or person) / to hint at; to imply / to administer (eye medicine etc) in drops / to light (a fire, a lamp etc); to ignite / to nod (one's head) in agreement; to beckon by moving (one's hand) up and down / point; dot; spot; speck / dot stroke in Chinese characters / (math.) decimal point / point in time or space / (after a number) o'clock / a small amount; a bit; (after a verb or adjective) a bit more / classifier for small amounts"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "茶",
+        "readings": [
+          {
+            "pinyin": "chá",
+            "definition": "tea / tea plant / CL:杯[bei1],壺|壶[hu2]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "咖",
+        "readings": [
+          {
+            "pinyin": "gā",
+            "definition": "used in 咖喱[ga1li2]"
+          },
+          {
+            "pinyin": "kā",
+            "definition": "coffee / class / grade"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "啡",
+        "readings": [
+          {
+            "pinyin": "fēi",
+            "definition": "(used in loanwords for its phonetic value)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "吧",
+        "readings": [
+          {
+            "pinyin": "bā",
+            "definition": "bar (loanword) (serving drinks, or providing Internet access etc) / to puff (on a pipe etc) / (onom.) bang / abbr. for 貼吧|贴吧[tie1 ba1]"
+          },
+          {
+            "pinyin": "ba",
+            "definition": "(modal particle indicating suggestion or surmise) / ...right? / ...OK? / ...I presume."
+          },
+          {
+            "pinyin": "biā",
+            "definition": "(onom.) smack!"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "要",
+        "readings": [
+          {
+            "pinyin": "yāo",
+            "definition": "(bound form) to demand; to coerce"
+          },
+          {
+            "pinyin": "yào",
+            "definition": "to want; to need; to ask for / will; shall; about to / need to; should / if (same as 要是[yao4 shi5]) / (bound form) important"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "瓶",
+        "readings": [
+          {
+            "pinyin": "píng",
+            "definition": "bottle / vase / pitcher / CL:個|个[ge4] / classifier for wine and liquids"
+          },
+          {
+            "pinyin": "píng",
+            "definition": "variant of 瓶[ping2]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "可",
+        "readings": [
+          {
+            "pinyin": "kě",
+            "definition": "(prefix) can; may; able to; -able / to approve; to permit / to suit / (particle used for emphasis) certainly; very / but; however"
+          },
+          {
+            "pinyin": "kè",
+            "definition": "used in 可汗[ke4 han2]"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "乐",
+        "readings": [
+          {
+            "pinyin": "è",
+            "definition": "surname Le"
+          },
+          {
+            "pinyin": "uè",
+            "definition": "surname Yue"
+          },
+          {
+            "pinyin": "lào",
+            "definition": "used in place names"
+          },
+          {
+            "pinyin": "lè",
+            "definition": "happy / cheerful / to laugh"
+          },
+          {
+            "pinyin": "yuè",
+            "definition": "music"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "以",
+        "readings": [
+          {
+            "pinyin": "yǐ",
+            "definition": "old variant of 以[yi3]"
+          },
+          {
+            "pinyin": "yǐ",
+            "definition": "old variant of 以[yi3]"
+          },
+          {
+            "pinyin": "ǐ",
+            "definition": "abbr. for Israel 以色列[Yi3 se4 lie4]"
+          },
+          {
+            "pinyin": "yǐ",
+            "definition": "to use / by means of / according to / in order to / because of / at (a certain date or place)"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "对",
+        "readings": [
+          {
+            "pinyin": "duì",
+            "definition": "right; correct / towards; at; for / concerning; regarding / to treat (sb a certain way) / to face / (bound form) opposite; facing; matching / to match together; to adjust / to fit; to suit / to answer; to reply / to add; to pour in (a fluid) / to check; to compare / classifier: couple; pair"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "不",
+        "readings": [
+          {
+            "pinyin": "bù",
+            "definition": "no; not so / (bound form) not; un-"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "起",
+        "readings": [
+          {
+            "pinyin": "qǐ",
+            "definition": "to rise / to raise / to get up / to set out / to start / to appear / to launch / to initiate (action) / to draft / to establish / to get (from a depot or counter) / verb suffix, to start / starting from (a time, place, price etc) / classifier for occurrences or unpredictable events: case, instance / classifier for groups: batch, group"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "给",
+        "readings": [
+          {
+            "pinyin": "gěi",
+            "definition": "to / for / for the benefit of / to give / to allow / to do sth (for sb) / (grammatical equivalent of 被) / (grammatical equivalent of 把) / (sentence intensifier)"
+          },
+          {
+            "pinyin": "jǐ",
+            "definition": "to supply / to provide"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "杯",
+        "readings": [
+          {
+            "pinyin": "bēi",
+            "definition": "cup / trophy cup / classifier for certain containers of liquids: glass, cup"
+          },
+          {
+            "pinyin": "bēi",
+            "definition": "variant of 杯[bei1]"
+          },
+          {
+            "pinyin": "bēi",
+            "definition": "variant of 杯[bei1] / trophy cup / classifier for certain containers of liquids: glass, cup"
+          }
+        ],
+        "mode": "hanzi"
+      },
+      {
+        "term": "水",
+        "readings": [
+          {
+            "pinyin": "huǐ",
+            "definition": "surname Shui"
+          },
+          {
+            "pinyin": "shuǐ",
+            "definition": "water / (after a name) ... River / to swim (used mostly in 會水|会水[hui4shui3] and 水性[shui3xing4]) / (coll.) lacking in substance; shoddy / (bound form) additional cost; extra income / classifier for washings of a garment"
           }
         ],
         "mode": "hanzi"

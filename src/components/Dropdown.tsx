@@ -6,6 +6,7 @@ import {
   type ReactNode,
 } from "react";
 import type { CheckboxInputProps } from "./CheckboxInput";
+import Scrollable from "./Scrollable";
 
 type Props = {
   children: ReactNode[];
@@ -92,7 +93,10 @@ export default function Dropdown({
             onClick={handleOpenClick}
           />
         </div> */}
-        <div className="flex flex-col gap-2">
+        <Scrollable
+          scrollAccent="scrollbar-thumb-blue-500"
+          className="max-h-[400px]"
+        >
           {children &&
             children.map((child: ReactNode, i: number) => {
               if (isValidElement<CheckboxInputProps>(child)) {
@@ -102,7 +106,7 @@ export default function Dropdown({
                 });
               }
             })}
-        </div>
+        </Scrollable>
         <div className="w-full flex  mt-6 gap-1">
           <button className="py-2 text-sm flex-1 text-white bg-gradient-to-l from-blue-500 to-blue-400 rounded-md cursor-pointer">
             {label}

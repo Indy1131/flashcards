@@ -3,9 +3,14 @@ import { useEffect, useRef, useState } from "react";
 type Props = {
   scrollAccent: string;
   children: React.ReactNode;
+  className?: string;
 };
 
-export default function Scrollable({ children, scrollAccent }: Props) {
+export default function Scrollable({
+  children,
+  scrollAccent,
+  className,
+}: Props) {
   const [hasScrollbar, setHasScrollbar] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -28,7 +33,7 @@ export default function Scrollable({ children, scrollAccent }: Props) {
 
   return (
     <div
-      className={`relative max-h-[200px] ${
+      className={`relative ${className} ${
         hasScrollbar && "pr-4"
       } w-full flex flex-col gap-3 overflow-y-scroll scrollbar ${scrollAccent} always-scrollbar`}
       ref={containerRef}
