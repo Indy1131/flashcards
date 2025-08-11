@@ -1,34 +1,59 @@
 import { decks } from "./generatedDecks";
 
-export type PreCardData = {
-  mode: "pinyin" | "hanzi" | "sentence";
-  term: string;
-  pinyin?: string;
-  toneless?: string;
-  definition?: string;
-  readings?: { pinyin: string; definition: string }[];
+export type DeckWindow = {
+  type: "deck";
+  deck: string;
 };
 
-export type CardData = {
-  mode: "pinyin" | "hanzi" | "sentence";
-  term: string;
-  pinyin?: string;
-  toneless?: string;
-  definition?: string;
-  readings?: { pinyin: string; definition: string }[];
-  formData:
-    | {
-        pinyin: string;
-        definition: string;
-      }
-    | {
-        hanzi: string;
-      };
-  completed: boolean;
-  status: string;
-  order: number;
-  number?: number;
+export type WindowTypes = DeckWindow | null;
+
+type PrePinyin = {
+  mode: "pinyin";
+  pinyin: string;
+  definition: string;
+  toneless: string;
 };
+
+type PreHanzi = {
+  mode: "hanzi";
+  readings: { pinyin: string; definition: string }[];
+};
+
+type PreSentence = {
+  mode: "sentence";
+  pinyin: string;
+  definition: string;
+  toneless: string;
+};
+
+type PreCard = {
+  term: string;
+};
+
+export type PreCardData = (PrePinyin | PreHanzi | PreSentence) & PreCard;
+
+type PinyinFormData = {
+  pinyin: string;
+  definition: string;
+};
+
+type HanziFormData = {
+  hanzi: string;
+};
+
+type SentenceFormData = PinyinFormData;
+
+export type CardData = PreCard &
+  (
+    | (PrePinyin & { formData: PinyinFormData })
+    | (PreHanzi & { formData: HanziFormData })
+    | (PreSentence & { formData: SentenceFormData })
+  ) & {
+    completed: boolean;
+    status: string;
+    order: number;
+    number?: number;
+  };
 
 export type Deck = {
   name: string;
@@ -44,7 +69,9 @@ export function prepData(arr: PreCardData[]) {
     return {
       ...item,
       formData:
-        item.mode == "pinyin" ? { pinyin: "", definition: "" } : { hanzi: "" },
+        item.mode == "pinyin" || item.mode == "sentence"
+          ? { pinyin: "", definition: "" }
+          : { hanzi: "" },
       completed: false,
       status: "default",
       order: i + 1,
@@ -64,12 +91,21 @@ export function copyDeck(deck: string[]) {
   );
 }
 
+export function seeDeck(deck: string) {
+  return decks[deck];
+}
+
 export function applyDeckModes(deck: CardData[], modes: Set<string>) {
   return deck.filter((card) => modes.has(card.mode));
 }
 
 export function resetCard(card: CardData) {
-  card.formData = { pinyin: "", definition: "" };
+  if (card.mode == "hanzi") {
+    card.formData = { hanzi: "" };
+  } else {
+    card.formData = { pinyin: "", definition: "" };
+  }
+
   card.completed = false;
   card.status = "default";
 

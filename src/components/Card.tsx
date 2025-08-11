@@ -1,7 +1,8 @@
-import { Fragment, useRef } from "react";
+import { Fragment } from "react";
 import type { CardData } from "../decks/utilities";
 import { useDeck } from "../contexts/useDeck";
 import Scrollable from "./Scrollable";
+import Flashlight from "./Flashlight";
 
 type Props = {
   data: CardData;
@@ -17,8 +18,6 @@ export default function Card({
   transition,
 }: Props) {
   const { setCardStatus, setCardFormData } = useDeck();
-
-  const lightRef = useRef<HTMLDivElement>(null);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setCardFormData(
@@ -69,24 +68,6 @@ export default function Card({
     setCardStatus(number, "guess");
   }
 
-  function handleMouseMove(e: React.MouseEvent) {
-    const rect = lightRef.current?.getBoundingClientRect();
-    if (!rect) return;
-
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    lightRef.current?.style.setProperty(
-      "background-image",
-      `radial-gradient(circle at ${x}px ${y}px, white 0%, transparent 90%)`
-    );
-    lightRef.current?.style.setProperty("opacity", "1");
-  }
-
-  function handleMouseLeave() {
-    lightRef.current?.style.setProperty("opacity", "0");
-  }
-
   const accent =
     data.status == "correct"
       ? "text-green-500"
@@ -110,24 +91,16 @@ export default function Card({
       className={`${transition == "forward" && "shuffle"} ${
         transition == "back" && "shuffle-back"
       } absolute flex-none flex flex-col bottom-0 max-h-[600px] justify-center items-center w-full h-full select-none rounded-xl perspective-[1000px] z-1`}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      onMouseEnter={handleMouseMove}
     >
-      <div
-        className={`card bg-blue-100 w-full h-full border-1 border-blue-400 rounded-xl ${
+      <Flashlight
+        className={`card w-full h-full border-1 bg-blue-100 border-blue-400 rounded-xl ${
           data.completed && "flipped"
         }`}
+        lightClassName={"rounded-xl " + (data.completed ? "flipped" : "")}
         style={{
           boxShadow: "0px 10px 10px 1px #3B82F6",
         }}
       >
-        <div
-          className={`absolute w-full h-full transition-opacity rounded-xl ${
-            data.completed && "flipped"
-          }`}
-          ref={lightRef}
-        />
         <div className="card-front">
           <form
             className="absolute bottom-5 w-full px-5 flex flex-col gap-3"
@@ -236,9 +209,9 @@ export default function Card({
             )}
           </div>
         </div>
-      </div>
+      </Flashlight>
 
-      <div className="absolute h-[250px] bottom-[230px] w-full px-6">
+      <div className="absolute h-[250px] bottom-[230px] w-full px-6 pointer-events-none">
         <Scrollable
           scrollAccent={scrollAccent}
           className={`h-full w-full font-medium text-6xl ${accent} z-4 transition-colors duration-500 items-center`}
@@ -248,7 +221,7 @@ export default function Card({
       </div>
 
       <h1
-        className={`absolute top-3 right-4 font-medium ${accent} transition-colors duration-500`}
+        className={`pointer-events-none absolute top-3 right-4 font-medium ${accent} transition-colors duration-500`}
       >
         {number + 1}
       </h1>

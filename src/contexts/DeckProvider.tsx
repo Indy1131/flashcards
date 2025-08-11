@@ -1,5 +1,6 @@
-import { type ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import { DeckContext } from "./DeckContext";
+import type { WindowTypes } from "../decks/utilities";
 
 type DeckProviderProps = {
   children: ReactNode;
@@ -30,6 +31,18 @@ export function DeckProvider({
   flipDeck,
   filterDeckModes,
 }: DeckProviderProps) {
+  const [windowHidden, setWindowHidden] = useState(true);
+  const [windowData, setWindowData] = useState<WindowTypes>(null);
+
+  function hideWindow() {
+    setWindowHidden(true);
+  }
+
+  function showWindow(data: WindowTypes) {
+    setWindowHidden(false);
+    setWindowData(data);
+  }
+
   return (
     <DeckContext.Provider
       value={{
@@ -42,6 +55,10 @@ export function DeckProvider({
         filterDeck,
         flipDeck,
         filterDeckModes,
+        windowHidden,
+        hideWindow,
+        showWindow,
+        windowData,
       }}
     >
       {children}

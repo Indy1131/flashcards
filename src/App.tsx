@@ -9,6 +9,7 @@ import {
 } from "./decks/utilities";
 import { decks } from "./decks/generatedDecks";
 import { DeckProvider } from "./contexts/DeckProvider";
+import Window from "./components/Window";
 
 const DEFAULT_MODES = new Set(["pinyin", "sentence"]);
 
@@ -155,6 +156,7 @@ function App() {
       filterDeckModes={filterDeckModes}
     >
       <div className="h-screen bg-gradient-to-t from-blue-500 to-white overflow-hidden">
+        <Window />
         <Deck data={deck} />
       </div>
     </DeckProvider>

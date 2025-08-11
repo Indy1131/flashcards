@@ -6,6 +6,7 @@ import Chip from "./Chip";
 import { useDeck } from "../contexts/useDeck";
 import Dropdown from "./Dropdown";
 import CheckboxInput from "./CheckboxInput";
+import Eye from "./Eye";
 
 type Props = {
   data: CardData[];
@@ -217,29 +218,28 @@ export default function Deck({ data }: Props) {
           <CheckboxInput name="Sentences" value="sentence" checked />
           <CheckboxInput name="Hanzi" value="hanzi" />
         </Dropdown>
-        <div className="ml-auto">
-          <Dropdown
-            name="deck"
-            label="Load Deck"
-            open={dropdown == "deck"}
-            src="/deck.svg"
-            setOpen={setOpen}
-            handleFilterClick={handleSwitchClick}
-            right
-          >
-            {/* <CheckboxInput name="Hello, World" value="defaultDeck" checked /> */}
-            {...Object.keys(decks).map((name, i) => {
-              return (
-                <CheckboxInput
-                  key={name}
-                  name={decks[name].name}
-                  value={name}
-                  checked={i == 0}
-                />
-              );
-            })}
-          </Dropdown>
-        </div>
+        <Eye />
+        <Dropdown
+          name="deck"
+          label="Load Deck"
+          open={dropdown == "deck"}
+          src="/deck.svg"
+          setOpen={setOpen}
+          handleFilterClick={handleSwitchClick}
+          right
+        >
+          {/* <CheckboxInput name="Hello, World" value="defaultDeck" checked /> */}
+          {...Object.keys(decks).map((name, i) => {
+            return (
+              <CheckboxInput
+                key={name}
+                name={decks[name].name}
+                value={name}
+                checked={i == 0}
+              />
+            );
+          })}
+        </Dropdown>
         <button
           className=" cursor-pointer rounded-md"
           onClick={handleResetClick}

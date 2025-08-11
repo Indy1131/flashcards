@@ -1,4 +1,5 @@
 import { createContext } from "react";
+import type { WindowTypes } from "../decks/utilities";
 
 type DeckContextType = {
   resetDeck: (top: number) => boolean;
@@ -14,6 +15,10 @@ type DeckContextType = {
   filterDeck: (options: Set<string>, top: number) => boolean;
   flipDeck: () => void;
   filterDeckModes: (options: Set<string>, top: number) => boolean;
+  windowHidden: boolean;
+  hideWindow: () => void;
+  showWindow: (data: WindowTypes) => void;
+  windowData: WindowTypes;
 };
 
 export const DeckContext = createContext<DeckContextType | null>(null);
