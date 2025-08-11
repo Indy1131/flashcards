@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import type { CardData } from "../decks/utilities";
+import type { CardData, CardModes } from "../decks/utilities";
 import { useDeck } from "../contexts/useDeck";
 import Scrollable from "./Scrollable";
 import Flashlight from "./Flashlight";
@@ -20,11 +20,7 @@ export default function Card({
   const { setCardStatus, setCardFormData } = useDeck();
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-    setCardFormData(
-      number,
-      e.target.name as "pinyin" | "definition" | "hanzi",
-      e.target.value
-    );
+    setCardFormData(number, e.target.name as CardModes, e.target.value);
   }
 
   function handleUnFlip() {
@@ -41,6 +37,10 @@ export default function Card({
     }
     setCompleted(number, true);
 
+    if (data.mode == "sentence") {
+      console.log(data.formData.hanzi, data.term);
+    }
+
     if (data.mode == "pinyin") {
       const extra = data.definition?.indexOf(" (");
       const definition = (
@@ -54,7 +54,10 @@ export default function Card({
       } else {
         setCardStatus(number, "incorrect");
       }
-    } else if (data.formData.hanzi == data.term) {
+    } else if (
+      (data.mode == "hanzi" || data.mode == "sentence") &&
+      data.formData.hanzi == data.term
+    ) {
       setCardStatus(number, "correct");
     } else {
       setCardStatus(number, "incorrect");
@@ -85,6 +88,87 @@ export default function Card({
       : data.status == "guess"
       ? "scrollbar-thumb-amber-500"
       : "scrollbar-thumb-blue-500";
+
+  let back;
+  switch (data.mode) {
+    case "pinyin":
+      back = (
+        <Scrollable scrollAccent={scrollAccent} className="max-h-[200px]">
+          <div
+            className={`w-full rounded-md p-3 border-1 ${accent} transition-colors duration-500 font-medium break-words`}
+          >
+            {data.pinyin}
+          </div>
+          <p
+            className={`text-xs font-medium ${accent} transition-colors duration-500 h-[.5rem] mt-[-.5rem] flex-1`}
+          >
+            {data.formData.pinyin
+              ? "You answered: " + data.formData.pinyin
+              : "No answer"}
+          </p>
+          <div
+            className={`w-full rounded-md p-3 border-1 ${accent} transition-colors duration-500 font-medium`}
+          >
+            {data.definition}
+          </div>
+          <p
+            className={`text-xs font-medium ${accent} transition-colors duration-500 h-[.5rem] mt-[-.5rem] flex-1`}
+          >
+            {data.formData.definition
+              ? "You answered: " + data.formData.definition
+              : "No answer"}
+          </p>
+        </Scrollable>
+      );
+      break;
+    case "hanzi":
+      back = (
+        <Scrollable scrollAccent={scrollAccent} className="max-h-[200px]">
+          {data.readings &&
+            data.readings.map((reading, i) => {
+              return (
+                <Fragment key={i}>
+                  <p
+                    className={`font-medium ${accent} transition-colors duration-500 h-[.5rem] mb-[0.4rem] flex-1`}
+                  >
+                    {reading.pinyin}
+                  </p>
+                  <div
+                    className={`w-full rounded-md p-3 border-1 ${accent} transition-colors duration-500 font-medium flex-1`}
+                  >
+                    {reading.definition}
+                  </div>
+                  {/* <div className="absolute w-full bottom-0 h-[50px] bg-gradient-to-t from-white to-transparent" /> */}
+                </Fragment>
+              );
+            })}
+        </Scrollable>
+      );
+      break;
+    case "sentence":
+      back = (
+        <Scrollable scrollAccent={scrollAccent} className="max-h-[200px]">
+          <div
+            className={`w-full rounded-md p-3 border-1 ${accent} transition-colors duration-500 font-medium break-words`}
+          >
+            {data.pinyin}
+          </div>
+          <p
+            className={`text-xs font-medium ${accent} transition-colors duration-500 h-[.5rem] mt-[-.5rem] flex-1`}
+          >
+            {data.formData.hanzi
+              ? "You answered: " + data.formData.hanzi
+              : "No answer"}
+          </p>
+          <div
+            className={`w-full rounded-md p-3 border-1 ${accent} transition-colors duration-500 font-medium`}
+          >
+            {data.definition}
+          </div>
+        </Scrollable>
+      );
+      break;
+  }
 
   return (
     <div
@@ -158,55 +242,7 @@ export default function Card({
         </div>
         <div className="card-back cursor-pointer" onClick={handleUnFlip}>
           <div className="absolute bottom-5 w-full px-5 flex flex-col gap-3">
-            {data.mode == "pinyin" || data.mode == "sentence" ? (
-              <Scrollable scrollAccent={scrollAccent} className="max-h-[200px]">
-                <div
-                  className={`w-full rounded-md p-3 border-1 ${accent} transition-colors duration-500 font-medium break-words`}
-                >
-                  {data.pinyin}
-                </div>
-                <p
-                  className={`text-xs font-medium ${accent} transition-colors duration-500 h-[.5rem] mt-[-.5rem] flex-1`}
-                >
-                  {data.formData.pinyin
-                    ? "You answered: " + data.formData.pinyin
-                    : "No answer"}
-                </p>
-                <div
-                  className={`w-full rounded-md p-3 border-1 ${accent} transition-colors duration-500 font-medium`}
-                >
-                  {data.definition}
-                </div>
-                <p
-                  className={`text-xs font-medium ${accent} transition-colors duration-500 h-[.5rem] mt-[-.5rem] flex-1`}
-                >
-                  {data.formData.definition
-                    ? "You answered: " + data.formData.definition
-                    : "No answer"}
-                </p>
-              </Scrollable>
-            ) : (
-              <Scrollable scrollAccent={scrollAccent} className="max-h-[200px]">
-                {data.readings &&
-                  data.readings.map((reading, i) => {
-                    return (
-                      <Fragment key={i}>
-                        <p
-                          className={`font-medium ${accent} transition-colors duration-500 h-[.5rem] mb-[0.4rem] flex-1`}
-                        >
-                          {reading.pinyin}
-                        </p>
-                        <div
-                          className={`w-full rounded-md p-3 border-1 ${accent} transition-colors duration-500 font-medium flex-1`}
-                        >
-                          {reading.definition}
-                        </div>
-                        {/* <div className="absolute w-full bottom-0 h-[50px] bg-gradient-to-t from-white to-transparent" /> */}
-                      </Fragment>
-                    );
-                  })}
-              </Scrollable>
-            )}
+            {back}
           </div>
         </div>
       </Flashlight>

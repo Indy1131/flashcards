@@ -7,6 +7,8 @@ export type DeckWindow = {
 
 export type WindowTypes = DeckWindow | null;
 
+export type CardModes = "pinyin" | "hanzi" | "sentence";
+
 type PrePinyin = {
   mode: "pinyin";
   pinyin: string;
@@ -41,7 +43,7 @@ type HanziFormData = {
   hanzi: string;
 };
 
-type SentenceFormData = PinyinFormData;
+type SentenceFormData = HanziFormData;
 
 export type CardData = PreCard &
   (
@@ -69,9 +71,7 @@ export function prepData(arr: PreCardData[]) {
     return {
       ...item,
       formData:
-        item.mode == "pinyin" || item.mode == "sentence"
-          ? { pinyin: "", definition: "" }
-          : { hanzi: "" },
+        item.mode == "pinyin" ? { pinyin: "", definition: "" } : { hanzi: "" },
       completed: false,
       status: "default",
       order: i + 1,
@@ -100,7 +100,7 @@ export function applyDeckModes(deck: CardData[], modes: Set<string>) {
 }
 
 export function resetCard(card: CardData) {
-  if (card.mode == "hanzi") {
+  if (card.mode == "hanzi" || card.mode == "sentence") {
     card.formData = { hanzi: "" };
   } else {
     card.formData = { pinyin: "", definition: "" };

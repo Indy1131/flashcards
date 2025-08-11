@@ -1,6 +1,6 @@
 import { useState, type ReactNode } from "react";
 import { DeckContext } from "./DeckContext";
-import type { WindowTypes } from "../decks/utilities";
+import type { CardModes, WindowTypes } from "../decks/utilities";
 
 type DeckProviderProps = {
   children: ReactNode;
@@ -8,11 +8,7 @@ type DeckProviderProps = {
   shuffleDeck: (top: number) => number;
   setCardCompleted: (number: number, value: boolean) => void;
   setCardStatus: (number: number, value: string) => void;
-  setCardFormData: (
-    number: number,
-    key: "pinyin" | "definition",
-    value: string
-  ) => void;
+  setCardFormData: (number: number, key: CardModes, value: string) => void;
   switchDeck: (newDeck: string[], top: number) => boolean;
   filterDeck: (options: Set<string>, top: number) => boolean;
   flipDeck: () => void;
