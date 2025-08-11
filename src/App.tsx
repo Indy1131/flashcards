@@ -6,6 +6,7 @@ import {
   resetCard,
   shuffle,
   type CardData,
+  type CardFormTypes,
 } from "./decks/utilities";
 import { decks } from "./decks/generatedDecks";
 import { DeckProvider } from "./contexts/DeckProvider";
@@ -14,7 +15,7 @@ import Window from "./components/Window";
 const DEFAULT_MODES = new Set(["pinyin", "sentence"]);
 
 function App() {
-  const initial = ["dialogue1"];
+  const initial = ["numbers"];
   const initialDeck = copyDeck(initial);
 
   const [current, setCurrent] = useState(initial);
@@ -57,11 +58,7 @@ function App() {
     setDeck([...deck]);
   }
 
-  function setCardFormData(
-    number: number,
-    key: "pinyin" | "definition" | "hanzi",
-    value: string
-  ) {
+  function setCardFormData(number: number, key: CardFormTypes, value: string) {
     const formData = deck[number].formData;
 
     if (key === "hanzi" && "hanzi" in formData) {

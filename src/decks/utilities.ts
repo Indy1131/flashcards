@@ -7,7 +7,9 @@ export type DeckWindow = {
 
 export type WindowTypes = DeckWindow | null;
 
-export type CardModes = "pinyin" | "hanzi" | "sentence";
+export type CardModes = "pinyin" | "hanzi" | "definition";
+
+export type CardFormTypes = "pinyin" | "definition" | "hanzi";
 
 type PrePinyin = {
   mode: "pinyin";
@@ -32,7 +34,10 @@ type PreCard = {
   term: string;
 };
 
-export type PreCardData = (PrePinyin | PreHanzi | PreSentence) & PreCard;
+export type PreCardData =
+  | (PrePinyin & PreCard)
+  | (PreHanzi & PreCard)
+  | (PreSentence & PreCard);
 
 type PinyinFormData = {
   pinyin: string;
@@ -45,17 +50,17 @@ type HanziFormData = {
 
 type SentenceFormData = HanziFormData;
 
-export type CardData = PreCard &
-  (
-    | (PrePinyin & { formData: PinyinFormData })
-    | (PreHanzi & { formData: HanziFormData })
-    | (PreSentence & { formData: SentenceFormData })
-  ) & {
-    completed: boolean;
-    status: string;
-    order: number;
-    number?: number;
-  };
+type CommonCardFields = {
+  completed: boolean;
+  status: string;
+  order: number;
+  number?: number;
+};
+
+export type CardData =
+  | (PrePinyin & { formData: PinyinFormData } & PreCard & CommonCardFields)
+  | (PreHanzi & { formData: HanziFormData } & PreCard & CommonCardFields)
+  | (PreSentence & { formData: SentenceFormData } & PreCard & CommonCardFields);
 
 export type Deck = {
   name: string;
@@ -66,19 +71,34 @@ export type Deck = {
 
 export type Decks = Record<string, Deck>;
 
-export function prepData(arr: PreCardData[]) {
-  const newArr = arr.map((item: PreCardData, i: number) => {
-    return {
-      ...item,
-      formData:
-        item.mode == "pinyin" ? { pinyin: "", definition: "" } : { hanzi: "" },
-      completed: false,
-      status: "default",
-      order: i + 1,
-    };
+export function prepData(arr: PreCardData[]): CardData[] {
+  return arr.map((item, i) => {
+    if (item.mode === "pinyin") {
+      return {
+        ...item,
+        formData: { pinyin: "", definition: "" },
+        completed: false,
+        status: "default",
+        order: i + 1,
+      };
+    } else if (item.mode === "hanzi") {
+      return {
+        ...item,
+        formData: { hanzi: "" },
+        completed: false,
+        status: "default",
+        order: i + 1,
+      };
+    } else {
+      return {
+        ...item,
+        formData: { hanzi: "" },
+        completed: false,
+        status: "default",
+        order: i + 1,
+      };
+    }
   });
-
-  return newArr;
 }
 
 export function copyDeck(deck: string[]) {
@@ -91,11 +111,14 @@ export function copyDeck(deck: string[]) {
   );
 }
 
-export function seeDeck(deck: string) {
+export function seeDeck(deck: string): Deck {
   return decks[deck];
 }
 
-export function applyDeckModes(deck: CardData[], modes: Set<string>) {
+export function applyDeckModes(
+  deck: CardData[],
+  modes: Set<string>
+): CardData[] {
   return deck.filter((card) => modes.has(card.mode));
 }
 
