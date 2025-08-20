@@ -174,93 +174,104 @@ export default function Card({
     <div
       className={`${transition == "forward" && "shuffle"} ${
         transition == "back" && "shuffle-back"
-      } absolute flex-none flex flex-col bottom-0 max-h-[600px] justify-center items-center w-full h-full select-none rounded-xl perspective-[1000px] z-1`}
+      } absolute flex-none flex flex-col bottom-0 h-full justify-center items-center w-full select-none rounded-xl perspective-[1000px] z-1`}
     >
-      <Flashlight
-        className={`card w-full h-full border-1 bg-blue-100 border-blue-400 rounded-xl ${
-          data.completed && "flipped"
-        }`}
-        lightClassName={"rounded-xl " + (data.completed ? "flipped" : "")}
-        style={{
-          boxShadow: "0px 10px 10px 1px #3B82F6",
-        }}
-      >
-        <div className="card-front">
-          <form
-            className="absolute bottom-5 w-full px-5 flex flex-col gap-3"
-            onSubmit={handleSubmit}
-          >
-            {data.mode == "pinyin" ? (
-              <>
-                <input
-                  className="w-full rounded-md p-3 border-1 border-blue-400"
-                  placeholder="Pinyin"
-                  autoComplete="off"
-                  lang="zh-CN"
-                  value={data.formData.pinyin}
-                  name="pinyin"
-                  onChange={handleChange}
-                />
-                <input
-                  className="w-full rounded-md p-3 border-1 border-blue-400"
-                  placeholder="Definition"
-                  autoComplete="off"
-                  value={data.formData.definition}
-                  name="definition"
-                  onChange={handleChange}
-                />
-              </>
-            ) : (
-              <>
-                <input
-                  className="w-full rounded-md p-3 border-1 border-blue-400"
-                  placeholder="Hanzi"
-                  autoComplete="off"
-                  lang="zh-CN"
-                  value={data.formData.hanzi}
-                  name="hanzi"
-                  onChange={handleChange}
-                />
-              </>
-            )}
-            <div className="flex gap-2 w-full">
-              <button
-                className="flex-1 bg-gradient-to-l from-blue-500 to-blue-400 text-white py-2 rounded-md cursor-pointer"
-                type="submit"
-              >
-                Check
-              </button>
-              <button
-                className="flex-1 border-2 text-blue-500 py-2 rounded-md cursor-pointer"
-                type="button"
-                onClick={handleGuessClick}
-              >
-                I don't know
-              </button>
-            </div>
-          </form>
-        </div>
-        <div className="card-back cursor-pointer" onClick={handleUnFlip}>
-          <div className="absolute bottom-5 w-full px-5 flex flex-col gap-3">
-            {back}
-          </div>
-        </div>
-      </Flashlight>
-
-      <div className="absolute h-[250px] bottom-[230px] w-full px-6 pointer-events-none">
-        <Scrollable
-          scrollAccent={scrollAccent}
-          className={`h-full w-full font-medium text-6xl ${accent} z-4 transition-colors duration-500 items-center`}
+      <div className="flex-none flex flex-col bottom-0 h-full justify-center max-h-[600px] items-center w-full select-none rounded-xl perspective-[1000px] z-1">
+        <Flashlight
+          className={`card w-full h-full border-1 bg-blue-100 border-blue-400 rounded-xl ${
+            data.completed && "flipped"
+          }`}
+          lightClassName={"rounded-xl " + (data.completed ? "flipped" : "")}
+          style={{
+            boxShadow: "0px 10px 10px 1px #3B82F6",
+          }}
         >
-          {data.term}
-        </Scrollable>
-      </div>
+          <div
+            className={`card-front justify-between flex flex-col p-5 pt-10 gap-5 ${
+              data.completed && "pointer-events-none"
+            }`}
+          >
+            <Scrollable
+              scrollAccent={scrollAccent}
+              className={`absolute w-full h-full font-medium text-6xl ${accent} z-4 transition-colors duration-500 items-center`}
+            >
+              {data.term}
+            </Scrollable>
 
-      <h1
-        className={`pointer-events-none absolute top-3 right-4 font-medium ${accent} transition-colors duration-500`}
-      >
-        {number + 1}
-      </h1>
+            <form
+              className="bottom-5 w-full flex flex-col gap-3"
+              onSubmit={handleSubmit}
+            >
+              {data.mode == "pinyin" ? (
+                <>
+                  <input
+                    className="w-full rounded-md p-3 border-1 border-blue-400"
+                    placeholder="Pinyin"
+                    autoComplete="off"
+                    lang="zh-CN"
+                    value={data.formData.pinyin}
+                    name="pinyin"
+                    onChange={handleChange}
+                  />
+                  <input
+                    className="w-full rounded-md p-3 border-1 border-blue-400"
+                    placeholder="Definition"
+                    autoComplete="off"
+                    value={data.formData.definition}
+                    name="definition"
+                    onChange={handleChange}
+                  />
+                </>
+              ) : (
+                <>
+                  <input
+                    className="w-full rounded-md p-3 border-1 border-blue-400"
+                    placeholder="Hanzi"
+                    autoComplete="off"
+                    lang="zh-CN"
+                    value={data.formData.hanzi}
+                    name="hanzi"
+                    onChange={handleChange}
+                  />
+                </>
+              )}
+              <div className="flex gap-2 w-full">
+                <button
+                  className="flex-1 bg-gradient-to-l from-blue-500 to-blue-400 text-white py-2 rounded-md cursor-pointer"
+                  type="submit"
+                >
+                  Check
+                </button>
+                <button
+                  className="flex-1 border-2 text-blue-500 py-2 rounded-md cursor-pointer"
+                  type="button"
+                  onClick={handleGuessClick}
+                >
+                  I don't know
+                </button>
+              </div>
+            </form>
+          </div>
+          <div
+            className="card-back justify-between flex flex-col p-5 pt-10 gap-5 cursor-pointer"
+            onClick={handleUnFlip}
+          >
+            <Scrollable
+              scrollAccent={scrollAccent}
+              className={`absolute w-full h-full font-medium text-6xl ${accent} z-40 transition-colors duration-500 items-center`}
+            >
+              {data.term}
+            </Scrollable>
+            <div className="bottom-5 w-full flex flex-col gap-3">{back}</div>
+          </div>
+        </Flashlight>
+
+        <h1
+          className={`pointer-events-none absolute top-3 right-4 font-medium ${accent} transition-colors duration-500`}
+        >
+          {number + 1}
+        </h1>
+      </div>
     </div>
   );
 }

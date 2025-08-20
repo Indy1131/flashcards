@@ -15,7 +15,7 @@ import Window from "./components/Window";
 const DEFAULT_MODES = new Set(["pinyin", "sentence"]);
 
 function App() {
-  const initial = ["numbers"];
+  const initial = ["numbers", "vocab10", "Dialogue12", "Dialogue11"];
   const initialDeck = copyDeck(initial);
 
   const [current, setCurrent] = useState(initial);
@@ -154,7 +154,7 @@ function App() {
     >
       <div className="h-screen bg-gradient-to-t from-blue-500 to-white overflow-hidden">
         <Window />
-        <Deck data={deck} />
+        <Deck data={deck} deckNames={current} />
       </div>
     </DeckProvider>
   );

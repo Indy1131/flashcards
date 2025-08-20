@@ -1,7 +1,8 @@
 import { useDeck } from "../contexts/useDeck";
-import { seeDeck } from "../decks/utilities";
+import { seeDecks } from "../decks/utilities";
 import DeckWindow from "./DeckWindow";
 import Flashlight from "./Flashlight";
+import SelectWindow from "./SelectWindow";
 
 export default function Window() {
   const { windowHidden, hideWindow, windowData } = useDeck();
@@ -16,7 +17,18 @@ export default function Window() {
     hideWindow();
   }
 
-  if (windowData == null) return null;
+  let content;
+
+  if (windowData) {
+    switch (windowData.type) {
+      case "deck":
+        content = <DeckWindow decks={seeDecks(windowData.deckNames)} />;
+        break;
+      case "selection":
+        content = <SelectWindow />;
+        break;
+    }
+  }
 
   return (
     <div
@@ -33,7 +45,7 @@ export default function Window() {
         }}
         percent={70}
       >
-        <div className="absolute p-2 w-full h-full text-blue-500 flex flex-col">
+        <div className="absolute px-2 pt-2 w-full h-full text-blue-500 flex flex-col">
           <button className="rounded-md h-[1.5rem]">
             <img
               className="cursor-pointer h-[1.3rem] w-[1.3rem] transition-[height] active:h-[1rem]"
@@ -42,9 +54,7 @@ export default function Window() {
               alt="Logo"
             />
           </button>
-          {windowData.type == "deck" ? (
-            <DeckWindow deck={seeDeck(windowData.deck)} />
-          ) : null}
+          {content}
         </div>
       </Flashlight>
     </div>

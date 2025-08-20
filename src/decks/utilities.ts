@@ -2,10 +2,14 @@ import { decks } from "./generatedDecks";
 
 export type DeckWindow = {
   type: "deck";
-  deck: string;
+  deckNames: string[];
 };
 
-export type WindowTypes = DeckWindow | null;
+export type SelectionWindow = {
+  type: "selection";
+};
+
+export type WindowTypes = DeckWindow | SelectionWindow | null;
 
 export type CardModes = "pinyin" | "hanzi" | "definition";
 
@@ -111,8 +115,8 @@ export function copyDeck(deck: string[]) {
   );
 }
 
-export function seeDeck(deck: string): Deck {
-  return decks[deck];
+export function seeDecks(deckNames: string[]) {
+  return [...deckNames.map((name) => decks[name])];
 }
 
 export function applyDeckModes(

@@ -1,15 +1,14 @@
 import { useDeck } from "../contexts/useDeck";
-import type { Deck } from "../decks/utilities";
 
 type Props = {
-  deck: Deck;
+  deckNames: string[];
 };
 
-export default function Eye({ deck }: Props) {
+export default function Eye({ deckNames }: Props) {
   const { showWindow } = useDeck();
 
   function handleClick() {
-    showWindow({ type: "deck", deck: "dialogue1" });
+    showWindow({ type: "deck", deckNames });
   }
 
   return (

@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import Card from "./Card";
 import { type CardData } from "../decks/utilities";
-import { decks } from "../decks/generatedDecks";
 import Chip from "./Chip";
 import { useDeck } from "../contexts/useDeck";
 import Dropdown from "./Dropdown";
@@ -10,6 +9,7 @@ import Eye from "./Eye";
 
 type Props = {
   data: CardData[];
+  deckNames: string[];
 };
 
 function back(top: number, cards: CardData[]): number {
@@ -20,11 +20,12 @@ function forward(top: number, cards: CardData[]): number {
   return (top + 1) % cards.length;
 }
 
-export default function Deck({ data }: Props) {
+export default function Deck({ data, deckNames }: Props) {
   const [oldCard, setOldCard] = useState<CardData | null>(null);
   const [top, setTop] = useState(0);
   const [transitioning, setTransitioning] = useState<string | null>(null);
   const [dropdown, setDropdown] = useState<string | null>(null);
+  const { showWindow } = useDeck();
 
   const {
     resetDeck,
@@ -32,7 +33,6 @@ export default function Deck({ data }: Props) {
     setCardCompleted,
     filterDeck,
     flipDeck,
-    switchDeck,
     filterDeckModes,
   } = useDeck();
 
@@ -129,8 +129,8 @@ export default function Deck({ data }: Props) {
     flipDeck();
   }
 
-  function handleSwitchClick(newDeck: Set<string>) {
-    if (switchDeck([...newDeck], top)) jumpBackward(0);
+  function handleSelectDeckClick() {
+    showWindow({ type: "selection" });
   }
 
   function setCompleted(number: number, value: boolean) {
@@ -171,7 +171,7 @@ export default function Deck({ data }: Props) {
   }, [handleForwardClick, handleBackClick]);
 
   return (
-    <div className="h-screen flex flex-col items-baseline">
+    <div className="h-screen flex flex-col">
       <div className="flex gap-2 p-1 w-full">
         <button
           className=" cursor-pointer rounded-md"
@@ -218,28 +218,17 @@ export default function Deck({ data }: Props) {
           <CheckboxInput name="Sentences" value="sentence" checked />
           <CheckboxInput name="Hanzi" value="hanzi" />
         </Dropdown>
-        <Eye />
-        <Dropdown
-          name="deck"
-          label="Load Deck"
-          open={dropdown == "deck"}
-          src="/deck.svg"
-          setOpen={setOpen}
-          handleFilterClick={handleSwitchClick}
-          right
+        <Eye deckNames={deckNames} />
+        <button
+          className=" cursor-pointer rounded-md"
+          onClick={handleSelectDeckClick}
         >
-          {/* <CheckboxInput name="Hello, World" value="defaultDeck" checked /> */}
-          {...Object.keys(decks).map((name, i) => {
-            return (
-              <CheckboxInput
-                key={name}
-                name={decks[name].name}
-                value={name}
-                checked={i == 0}
-              />
-            );
-          })}
-        </Dropdown>
+          <img
+            className="h-[1.3rem] w-[1.3rem] transition-[height] active:h-[1rem]"
+            src="/deck.svg"
+            alt="Logo"
+          />
+        </button>
         <button
           className=" cursor-pointer rounded-md"
           onClick={handleResetClick}
@@ -251,8 +240,8 @@ export default function Deck({ data }: Props) {
           />
         </button>
       </div>
-      <div className="w-full flex justify-center flex-1 p-40">
-        <div className="flex w-[500px] relative">
+      <div className="w-full flex justify-center flex-1 p-6">
+        <div className="flex w-[700px] items-center relative">
           {data.length > 0 ? (
             <>
               <Card
@@ -266,7 +255,7 @@ export default function Deck({ data }: Props) {
                 transitioning !== null &&
                 transitioning !== "flipping" && (
                   <Card
-                    key={oldCard.term + "" + oldCard.order + "fake"}
+                    key={oldCard.term + "" + oldCard.order}
                     data={oldCard}
                     number={oldCard.number ? oldCard.number : 0}
                     setCompleted={setCompleted}
