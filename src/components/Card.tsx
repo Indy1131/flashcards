@@ -1,8 +1,9 @@
 import { Fragment } from "react";
+import Scrollable from "./atoms/Scrollable";
+import Flashlight from "./atoms/Flashlight";
+
 import type { CardData, CardModes } from "../decks/utilities";
-import { useDeck } from "../contexts/useDeck";
-import Scrollable from "./Scrollable";
-import Flashlight from "./Flashlight";
+import { useDeck } from "../providers/useDeck";
 
 type Props = {
   data: CardData;

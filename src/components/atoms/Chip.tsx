@@ -1,4 +1,4 @@
-import type { CardData } from "../decks/utilities";
+import type { CardData } from "../../decks/utilities";
 
 type Props = {
   card: CardData;

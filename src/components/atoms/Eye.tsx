@@ -1,4 +1,4 @@
-import { useDeck } from "../contexts/useDeck";
+import { useDeck } from "../../providers/useDeck";
 
 type Props = {
   deckNames: string[];

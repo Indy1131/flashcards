@@ -9,8 +9,8 @@ import {
   type CardFormTypes,
 } from "./decks/utilities";
 import { decks } from "./decks/generatedDecks";
-import { DeckProvider } from "./contexts/DeckProvider";
-import Window from "./components/Window";
+import { DeckProvider } from "./providers/DeckProvider";
+import Window from "./components/atoms/Window";
 
 const DEFAULT_MODES = new Set(["pinyin", "sentence"]);
 

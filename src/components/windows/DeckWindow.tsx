@@ -1,8 +1,8 @@
 import { useState } from "react";
-import type { Deck } from "../decks/utilities";
-import Scrollable from "./Scrollable";
-import CheckboxInput from "./CheckboxInput";
-import Dropdown from "./Dropdown";
+import type { Deck } from "../../decks/utilities";
+import Scrollable from "../atoms/Scrollable";
+import CheckboxInput from "../atoms/CheckboxInput";
+import Dropdown from "../atoms/Dropdown";
 
 type Props = {
   decks: Deck[];

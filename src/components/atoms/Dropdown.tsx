@@ -56,10 +56,6 @@ export default function Dropdown({
     return true;
   }
 
-  //   children.map((child) => {
-  //     console.log(child);
-  //   });
-
   return (
     <div className="rounded-md relative">
       <div
@@ -86,13 +82,6 @@ export default function Dropdown({
         style={{ boxShadow: "0px 3px 10px 1px #3B82F6" }}
         onSubmit={handleSubmit}
       >
-        {/* <div className="flex justify-between w-full mb-3 items-center">
-          <img
-            src="/close.svg"
-            className="h-full w-[1rem] cursor-pointer"
-            onClick={handleOpenClick}
-          />
-        </div> */}
         <Scrollable
           scrollAccent="scrollbar-thumb-blue-500"
           className="max-h-[400px]"

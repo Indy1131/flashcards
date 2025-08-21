@@ -1,11 +1,12 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import Card from "./Card";
+import Chip from "./atoms/Chip";
+import Dropdown from "./atoms/Dropdown";
+import CheckboxInput from "./atoms/CheckboxInput";
+import Eye from "./atoms/Eye";
+
 import { type CardData } from "../decks/utilities";
-import Chip from "./Chip";
-import { useDeck } from "../contexts/useDeck";
-import Dropdown from "./Dropdown";
-import CheckboxInput from "./CheckboxInput";
-import Eye from "./Eye";
+import { useDeck } from "../providers/useDeck";
 
 type Props = {
   data: CardData[];

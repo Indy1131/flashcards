@@ -1,8 +1,8 @@
-import { useDeck } from "../contexts/useDeck";
-import { seeDecks } from "../decks/utilities";
-import DeckWindow from "./DeckWindow";
+import { useDeck } from "../../providers/useDeck";
+import { seeDecks } from "../../decks/utilities";
+import DeckWindow from "../windows/DeckWindow";
 import Flashlight from "./Flashlight";
-import SelectWindow from "./SelectWindow";
+import SelectWindow from "../windows/SelectWindow";
 
 export default function Window() {
   const { windowHidden, hideWindow, windowData } = useDeck();
