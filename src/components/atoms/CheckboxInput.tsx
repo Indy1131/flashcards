@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { icons } from "../icons";
 
 export type CheckboxInputProps = {
   name: string;
@@ -37,7 +38,7 @@ export default function CheckboxInput({
             selected ? "opacity-100" : "opacity-0"
           } h-[20px] w-[20px] flex justify-center items-center transition-all bg-blue-500 text-white`}
         >
-          {selected && <img src="/check.svg" className="select-none" />}
+          {selected && <img src={icons.check} className="select-none" alt="select" />}
         </div>
       </div>
     </div>

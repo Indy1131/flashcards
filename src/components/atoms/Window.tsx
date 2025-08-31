@@ -1,10 +1,15 @@
-import { useDeck } from "../../providers/useDeck";
+import { useDeck } from "../../providers/deck/useDeck";
 import { seeDecks } from "../../decks/utilities";
 import DeckWindow from "../windows/DeckWindow";
 import Flashlight from "./Flashlight";
 import SelectWindow from "../windows/SelectWindow";
+import { icons } from "../icons";
 
-export default function Window() {
+type WindowProps = {
+  changeDecks: (newIds: string[]) => void;
+};
+
+export default function Window({ changeDecks }: WindowProps) {
   const { windowHidden, hideWindow, windowData } = useDeck();
 
   function handlePaddingClick(e: React.MouseEvent<HTMLDivElement>) {
@@ -25,14 +30,14 @@ export default function Window() {
         content = <DeckWindow decks={seeDecks(windowData.deckNames)} />;
         break;
       case "selection":
-        content = <SelectWindow />;
+        content = <SelectWindow changeDecks={changeDecks} />;
         break;
     }
   }
 
   return (
     <div
-      className={`overflow-hidden absolute w-full h-full flex justify-center items-center p-8 pb-10 backdrop-blur-xs z-200 transition-opacity ${
+      className={`top-0 overflow-hidden fixed w-screen h-screen flex justify-center items-center p-8 pb-10 backdrop-blur-xs z-200 transition-opacity ${
         windowHidden ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
       onClick={handlePaddingClick}
@@ -50,7 +55,7 @@ export default function Window() {
             <img
               className="cursor-pointer h-[1.3rem] w-[1.3rem] transition-[height] active:h-[1rem]"
               onClick={handleCloseClick}
-              src="/close.svg"
+              src={icons.close}
               alt="Logo"
             />
           </button>

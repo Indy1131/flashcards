@@ -1,4 +1,5 @@
-import { useDeck } from "../../providers/useDeck";
+import { useDeck } from "../../providers/deck/useDeck";
+import { icons } from "../icons";
 
 type Props = {
   deckNames: string[];
@@ -18,7 +19,7 @@ export default function Eye({ deckNames }: Props) {
     >
       <img
         className="h-[1.3rem] w-[1.3rem] transition-[height] active:h-[1rem]"
-        src="/eye.svg"
+        src={icons.eye}
         alt="Logo"
       />
     </button>

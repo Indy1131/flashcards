@@ -1,16 +1,39 @@
-import { useState } from "react";
-import type { Deck } from "../../decks/utilities";
+import { useEffect, useState } from "react";
+import { DEFAULT_MODES, type Deck } from "../../decks/utilities";
 import Scrollable from "../atoms/Scrollable";
 import CheckboxInput from "../atoms/CheckboxInput";
 import Dropdown from "../atoms/Dropdown";
+import { icons } from "../icons";
+import { Fragment } from "react";
+import { useAuth } from "../../providers/auth/useAuth";
 
 type Props = {
-  decks: Deck[];
+  decks?: Deck[];
+  deckIds?: string[];
 };
 
-export default function DeckWindow({ decks }: Props) {
+export default function DeckWindow({ decks, deckIds }: Props) {
+  const [data, setData] = useState<Deck[] | null>(null);
   const [dropdown, setDropdown] = useState<string | null>(null);
-  const [modes, setModes] = useState(new Set(["pinyin", "sentence"]));
+  const [modes, setModes] = useState(DEFAULT_MODES);
+
+  const { fetchWithAuth } = useAuth();
+
+  useEffect(() => {
+    if (decks) {
+      setData(decks);
+      return;
+    }
+
+    async function getData() {
+      const url = `${import.meta.env.VITE_BASE_URL}/`;
+      const response = await fetchWithAuth(url);
+      const json = response.json();
+      console.log(json);
+    }
+
+    getData();
+  }, [decks, deckIds]);
 
   function setOpen(name: string) {
     if (dropdown == name) {
@@ -24,13 +47,15 @@ export default function DeckWindow({ decks }: Props) {
     setModes(set);
   }
 
+  if (!data) return <h1>Loading</h1>;
+
   return (
     <>
       <Dropdown
         name="filter"
         label="Filter"
         open={dropdown == "filter"}
-        src="/filter.svg"
+        src={icons.filter}
         setOpen={setOpen}
         handleFilterClick={handleFilterClick}
       >
@@ -42,17 +67,17 @@ export default function DeckWindow({ decks }: Props) {
         scrollAccent="scrollbar-thumb-blue-500"
         className="flex-1 text-xl mb-4"
       >
-        {decks.map((deck) => {
+        {data.map((deck) => {
           return (
-            <>
+            <Fragment key={deck.name}>
               <h1 className="text-4xl mt-4 ml-2 font-semibold">{deck.name}</h1>
               <div className="flex gap-4 mb-4 ml-2">
                 <p>{deck.desc}</p>
               </div>
               {deck.cards
-                .filter((card) => modes.has(card.mode))
+                .filter((card) => modes.has(card.type))
                 .map((card, i) => {
-                  switch (card.mode) {
+                  switch (card.type) {
                     case "pinyin":
                       return (
                         <div
@@ -133,7 +158,7 @@ export default function DeckWindow({ decks }: Props) {
                       return <h1>error</h1>;
                   }
                 })}
-            </>
+            </Fragment>
           );
         })}
       </Scrollable>

@@ -2,13 +2,14 @@ import { Fragment } from "react";
 import Scrollable from "./atoms/Scrollable";
 import Flashlight from "./atoms/Flashlight";
 
-import type { CardData, CardModes } from "../decks/utilities";
-import { useDeck } from "../providers/useDeck";
+import type { CardData, CardFormTypes, CardModes } from "../decks/utilities";
 
 type Props = {
   data: CardData;
   number: number;
   setCompleted: (number: number, value: boolean) => void;
+  setCardStatus: (number: number, value: string) => void;
+  setCardFormData: (number: number, key: CardFormTypes, value: string) => void;
   transition?: string | null;
 };
 
@@ -16,10 +17,10 @@ export default function Card({
   data,
   number,
   setCompleted,
+  setCardStatus,
+  setCardFormData,
   transition,
 }: Props) {
-  const { setCardStatus, setCardFormData } = useDeck();
-
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setCardFormData(number, e.target.name as CardModes, e.target.value);
   }
@@ -38,11 +39,7 @@ export default function Card({
     }
     setCompleted(number, true);
 
-    if (data.mode == "sentence") {
-      console.log(data.formData.hanzi, data.term);
-    }
-
-    if (data.mode == "pinyin") {
+    if (data.type == "pinyin") {
       const extra = data.definition?.indexOf(" (");
       const definition = (
         extra == -1 ? data.definition : data.definition.substring(0, extra)
@@ -56,7 +53,7 @@ export default function Card({
         setCardStatus(number, "incorrect");
       }
     } else if (
-      (data.mode == "hanzi" || data.mode == "sentence") &&
+      (data.type == "hanzi" || data.type == "sentence") &&
       data.formData.hanzi == data.term
     ) {
       setCardStatus(number, "correct");
@@ -91,12 +88,12 @@ export default function Card({
       : "scrollbar-thumb-blue-500";
 
   let back;
-  switch (data.mode) {
+  switch (data.type) {
     case "pinyin":
       back = (
         <Scrollable scrollAccent={scrollAccent} className="max-h-[200px]">
           <div
-            className={`w-full rounded-md p-3 border-1 ${accent} transition-colors duration-500 font-medium break-words`}
+            className={`w-full rounded-md p-3 border-1 text-red-500 transition-colors duration-500 font-medium break-words`}
           >
             {data.pinyin}
           </div>
@@ -179,7 +176,7 @@ export default function Card({
     >
       <div className="flex-none flex flex-col bottom-0 h-full justify-center max-h-[600px] items-center w-full select-none rounded-xl perspective-[1000px] z-1">
         <Flashlight
-          className={`card w-full h-full border-1 bg-blue-100 border-blue-400 rounded-xl ${
+          className={`card w-full h-full border-1 bg-blue-100 border-blue-400 rounded-xl pointer-events-auto ${
             data.completed && "flipped"
           }`}
           lightClassName={"rounded-xl " + (data.completed ? "flipped" : "")}
@@ -203,7 +200,7 @@ export default function Card({
               className="bottom-5 w-full flex flex-col gap-3"
               onSubmit={handleSubmit}
             >
-              {data.mode == "pinyin" ? (
+              {data.type == "pinyin" ? (
                 <>
                   <input
                     className="w-full rounded-md p-3 border-1 border-blue-400"

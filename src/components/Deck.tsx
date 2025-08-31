@@ -4,13 +4,26 @@ import Chip from "./atoms/Chip";
 import Dropdown from "./atoms/Dropdown";
 import CheckboxInput from "./atoms/CheckboxInput";
 import Eye from "./atoms/Eye";
+import { icons } from "./icons";
 
-import { type CardData } from "../decks/utilities";
-import { useDeck } from "../providers/useDeck";
+import {
+  applyDeckModes,
+  copyDeck,
+  DEFAULT_MODES,
+  prepData,
+  resetCard,
+  shuffle,
+  unionDecks,
+  type CardData,
+  type CardFormTypes,
+  type Deck,
+} from "../decks/utilities";
+import { useDeck } from "../providers/deck/useDeck";
+import { useAuth } from "../providers/auth/useAuth";
+import Flashlight from "./atoms/Flashlight";
 
-type Props = {
-  data: CardData[];
-  deckNames: string[];
+type DeckProps = {
+  deckIds: string[];
 };
 
 function back(top: number, cards: CardData[]): number {
@@ -21,27 +34,26 @@ function forward(top: number, cards: CardData[]): number {
   return (top + 1) % cards.length;
 }
 
-export default function Deck({ data, deckNames }: Props) {
+export default function Deck({ deckIds }: DeckProps) {
+  const [data, setData] = useState<null | CardData[]>(null);
+  const fullDeck = useRef<CardData[] | null>(null);
+
+  const [modes, setModes] = useState(DEFAULT_MODES);
+
   const [oldCard, setOldCard] = useState<CardData | null>(null);
   const [top, setTop] = useState(0);
+
   const [transitioning, setTransitioning] = useState<string | null>(null);
   const [dropdown, setDropdown] = useState<string | null>(null);
-  const { showWindow } = useDeck();
 
-  const {
-    resetDeck,
-    shuffleDeck,
-    setCardCompleted,
-    filterDeck,
-    flipDeck,
-    filterDeckModes,
-  } = useDeck();
+  const { user, logout, fetchWithAuth } = useAuth();
+  const { showWindow } = useDeck();
 
   const progressRef = useRef<HTMLDivElement>(null);
 
   const jumpForward = useCallback(
     (next: number) => {
-      if (transitioning !== null) return;
+      if (!data || transitioning !== null) return;
       progressRef.current?.children[next + 1].scrollIntoView({
         behavior: "smooth",
         inline: "center",
@@ -59,7 +71,7 @@ export default function Deck({ data, deckNames }: Props) {
 
   const jumpBackward = useCallback(
     (next: number) => {
-      if (transitioning !== null) return;
+      if (!data || transitioning !== null) return;
       progressRef.current?.children[next + 1].scrollIntoView({
         behavior: "smooth",
         inline: "center",
@@ -86,15 +98,149 @@ export default function Deck({ data, deckNames }: Props) {
     }
   }
 
+  function resetDeck(top: number) {
+    if (!data || !fullDeck.current) return;
+
+    const newDeck = copyDeck(fullDeck.current);
+    const newDeckModes = applyDeckModes(newDeck, modes);
+
+    setData(newDeckModes);
+
+    if (
+      top == 0 &&
+      data[top].term == applyDeckModes(fullDeck.current, modes)[0].term
+    ) {
+      return false;
+    }
+
+    return true;
+  }
+
+  function shuffleDeck(top: number) {
+    if (!data) return;
+
+    const [newData, newTop] = shuffle(data, top);
+    setData(newData);
+    return newTop;
+  }
+
+  function setCardCompleted(number: number, value: boolean) {
+    if (!data) return;
+
+    data[number].completed = value;
+    setData([...data]);
+  }
+
+  function setCardStatus(number: number, value: string) {
+    if (!data) return;
+
+    data[number].status = value;
+    setData([...data]);
+  }
+
+  function setCardFormData(number: number, key: CardFormTypes, value: string) {
+    if (!data) return;
+    const formData = data[number].formData;
+
+    if (key === "hanzi" && "hanzi" in formData) {
+      formData.hanzi = value;
+    } else if (
+      (key === "pinyin" || key === "definition") &&
+      "pinyin" in formData &&
+      "definition" in formData
+    ) {
+      formData[key] = value;
+    }
+
+    setData([...data]);
+  }
+
+  function filterDeck(options: Set<string>, top: number) {
+    if (!data || !fullDeck.current) return;
+    const union = unionDecks(prepData(fullDeck.current), data);
+
+    const filteredDeck = union.filter(
+      (item) => options.has(item.status) && modes.has(item.type)
+    );
+    setData(filteredDeck);
+
+    if (
+      filteredDeck.length > 0 &&
+      top == 0 &&
+      data[top] &&
+      filteredDeck[0].order == data[top].order
+    ) {
+      return false;
+    }
+
+    return true;
+  }
+
+  function filterDeckModes(options: Set<string>, top: number) {
+    if (!data || !fullDeck.current) return;
+    const union = unionDecks(prepData(fullDeck.current), data);
+
+    const filteredDeck = union.filter((item) => options.has(item.type));
+    console.log(filteredDeck);
+    setData(filteredDeck);
+    setModes(options);
+
+    if (
+      filteredDeck.length > 0 &&
+      top == 0 &&
+      filteredDeck[0].order == data[top].order
+    ) {
+      return false;
+    }
+
+    return true;
+  }
+
+  function flipDeck() {
+    if (!data) return;
+
+    const newDeck = data.map((card) => {
+      resetCard(card);
+      return card;
+    });
+    setData(newDeck);
+  }
+
+  // function switchDeck(newDeck: string[], top: number) {
+  //   const prevName = deckIds[0];
+  //   const prev = data[0];
+
+  //   setCurrent(newDeck);
+
+  //   const newDeckCopy = copyDeck(newDeck);
+  //   const newDeckModes = applyDeckModes(newDeckCopy, modes);
+  //   setDeck(newDeckModes);
+  //   fullDeck.current = newDeckCopy;
+
+  //   if (
+  //     newDeckCopy.length > 0 &&
+  //     top == 0 &&
+  //     prevName == newDeck[0] &&
+  //     newDeckCopy[0].order == prev.order
+  //   ) {
+  //     return false;
+  //   }
+
+  //   return true;
+  // }
+
   const handleBackClick = useCallback(() => {
+    if (!data) return;
     jumpBackward(back(top, data));
   }, [top, data, jumpBackward]);
 
   const handleForwardClick = useCallback(() => {
+    if (!data) return;
     jumpForward(forward(top, data));
   }, [top, data, jumpForward]);
 
   function handleClickFront() {
+    if (!data) return;
     handleJump(data.length - 1);
   }
 
@@ -153,6 +299,33 @@ export default function Deck({ data, deckNames }: Props) {
   }
 
   useEffect(() => {
+    async function getData() {
+      const url = `${import.meta.env.VITE_API_BASE_URL}/get-decks/`;
+      const response = await fetchWithAuth(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          deckIds: deckIds,
+          includeCards: true,
+        }),
+      });
+      const json = await response.json();
+      if (Object.keys(json).length < 1) return;
+
+      const deck = json.map((deck: Deck) => deck.cards).flat();
+      const prepped = prepData(deck);
+
+      const newDeckModes = applyDeckModes(prepped, modes);
+
+      setData(newDeckModes);
+      fullDeck.current = deck;
+    }
+    getData();
+  }, [deckIds, fetchWithAuth, modes]);
+
+  useEffect(() => {
     function handleKeyDown(e: KeyboardEvent) {
       const target = e.target as HTMLElement;
       const isTyping =
@@ -174,13 +347,26 @@ export default function Deck({ data, deckNames }: Props) {
   return (
     <div className="h-screen flex flex-col">
       <div className="flex gap-2 p-1 w-full">
+        <div className="text-xs cursor-pointer rounded-full bg-gradient-to-tr from-blue-500 to-blue-400 text-white h-[2em] w-[2em] flex items-center justify-center">
+          {user?.username.charAt(0).toUpperCase()}
+        </div>
+        <button
+          className=" cursor-pointer rounded-md mr-4"
+          onClick={() => logout()}
+        >
+          <img
+            className="h-[1.3rem] w-[1.3rem] transition-[height] active:h-[1rem]"
+            src={icons.logout}
+            alt="Logo"
+          />
+        </button>
         <button
           className=" cursor-pointer rounded-md"
           onClick={handleShuffleClick}
         >
           <img
             className="h-[1.3rem] w-[1.3rem] transition-[height] active:h-[1rem]"
-            src="/shuffle.svg"
+            src={icons.shuffle}
             alt="Logo"
           />
         </button>
@@ -190,7 +376,7 @@ export default function Deck({ data, deckNames }: Props) {
         >
           <img
             className="h-[1.3rem] w-[1.3rem] transition-[height] active:h-[1rem]"
-            src="/flip.svg"
+            src={icons.flip}
             alt="Logo"
           />
         </button>
@@ -198,7 +384,7 @@ export default function Deck({ data, deckNames }: Props) {
           name="filter"
           label="Filter"
           open={dropdown == "filter"}
-          src="/filter.svg"
+          src={icons.filter}
           setOpen={setOpen}
           handleFilterClick={handleFilterClick}
         >
@@ -211,7 +397,7 @@ export default function Deck({ data, deckNames }: Props) {
           name="mode"
           label="Set Mode"
           open={dropdown == "mode"}
-          src="/zhong.svg"
+          src={icons.zhong}
           setOpen={setOpen}
           handleFilterClick={handleModeClick}
         >
@@ -219,14 +405,14 @@ export default function Deck({ data, deckNames }: Props) {
           <CheckboxInput name="Sentences" value="sentence" checked />
           <CheckboxInput name="Hanzi" value="hanzi" />
         </Dropdown>
-        <Eye deckNames={deckNames} />
+        <Eye />
         <button
           className=" cursor-pointer rounded-md"
           onClick={handleSelectDeckClick}
         >
           <img
             className="h-[1.3rem] w-[1.3rem] transition-[height] active:h-[1rem]"
-            src="/deck.svg"
+            src={icons.deck}
             alt="Logo"
           />
         </button>
@@ -236,20 +422,22 @@ export default function Deck({ data, deckNames }: Props) {
         >
           <img
             className="h-[1.3rem] w-[1.3rem] transition-[height] active:h-[1rem]"
-            src="/reset.svg"
+            src={icons.reset}
             alt="Logo"
           />
         </button>
       </div>
       <div className="w-full flex justify-center flex-1 p-6">
-        <div className="flex w-[700px] items-center relative">
-          {data.length > 0 ? (
+        <div className="flex w-[700px] items-center relative pointer-events-none">
+          {data && data.length > 0 ? (
             <>
               <Card
                 key={data[top].term + "" + data[top].order}
                 data={data[top]}
                 number={top}
                 setCompleted={setCompleted}
+                setCardStatus={setCardStatus}
+                setCardFormData={setCardFormData}
                 transition={transitioning == "back" ? "back" : null}
               />
               {oldCard &&
@@ -260,24 +448,36 @@ export default function Deck({ data, deckNames }: Props) {
                     data={oldCard}
                     number={oldCard.number ? oldCard.number : 0}
                     setCompleted={setCompleted}
+                    setCardStatus={setCardStatus}
+                    setCardFormData={setCardFormData}
                     transition={transitioning == "forward" ? "forward" : null}
                   />
                 )}
             </>
           ) : (
-            <div className="bg-amber-300 w-full">
-              There are no cards in this deck.
+            <div className="absolute flex-none flex flex-col bottom-0 h-full justify-center items-center w-full select-none rounded-xl perspective-[1000px] z-1">
+              <div className="flex-none flex flex-col bottom-0 h-full justify-center max-h-[600px] items-center w-full select-none rounded-xl perspective-[1000px] z-1">
+                <Flashlight
+                  className="text-blue-500 text-4xl flex items-center justify-center card w-full h-full border-1 bg-blue-100 border-blue-400 rounded-xl pointer-events-auto"
+                  lightClassName="rounded-xl"
+                  style={{
+                    boxShadow: "0px 10px 10px 1px #3B82F6",
+                  }}
+                >
+                  <h1 className="z-10">{/* There are no cards loaded. */}</h1>
+                </Flashlight>
+              </div>
             </div>
           )}
         </div>
       </div>
       <div className="absolute bottom-4 w-full flex flex-col items-center">
-        {data.length > 0 && (
+        {data && data.length > 0 && (
           <div className="mb-2 text-white text-xs">
             {top + 1}/{data.length}
           </div>
         )}
-        {data.length > 1 && (
+        {data && data.length > 1 && (
           <form className="gap-2 h-8 flex justify-center">
             <button
               className="relative text-white border-1 rounded-sm w-[60px] text-xs cursor-pointer group"
@@ -288,7 +488,7 @@ export default function Deck({ data, deckNames }: Props) {
               <h1 className="relative z-2">
                 <img
                   className="h-[1rem] w-full"
-                  src="/backArrow.svg"
+                  src={icons.backArrow}
                   alt="Logo"
                 />
               </h1>
@@ -302,7 +502,7 @@ export default function Deck({ data, deckNames }: Props) {
               <h1 className="relative z-2">
                 <img
                   className="h-[1rem] w-full"
-                  src="/forwardArrow.svg"
+                  src={icons.forwardArrow}
                   alt="Logo"
                 />
               </h1>
@@ -318,7 +518,7 @@ export default function Deck({ data, deckNames }: Props) {
             }}
             ref={progressRef}
           >
-            {data.length > 0 ? (
+            {data && data.length > 0 ? (
               <>
                 <div
                   className="flex-none w-[calc(50%-37.5px)] h-full bg-gradient-to-r from-blue-300 to-blue-200 text-blue-500 cursor-pointer"

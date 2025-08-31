@@ -1,5 +1,11 @@
 import { decks } from "./generatedDecks";
 
+export type FolderType = {
+  id: string;
+  name: string;
+  parent: string | null;
+};
+
 export type DeckWindow = {
   type: "deck";
   deckNames: string[];
@@ -16,19 +22,19 @@ export type CardModes = "pinyin" | "hanzi" | "definition";
 export type CardFormTypes = "pinyin" | "definition" | "hanzi";
 
 type PrePinyin = {
-  mode: "pinyin";
+  type: "pinyin";
   pinyin: string;
   definition: string;
   toneless: string;
 };
 
 type PreHanzi = {
-  mode: "hanzi";
+  type: "hanzi";
   readings: { pinyin: string; definition: string }[];
 };
 
 type PreSentence = {
-  mode: "sentence";
+  type: "sentence";
   pinyin: string;
   definition: string;
   toneless: string;
@@ -68,7 +74,7 @@ export type CardData =
 
 export type Deck = {
   name: string;
-  folder: string;
+  parent: string;
   desc: string;
   cards: PreCardData[];
 };
@@ -77,7 +83,7 @@ export type Decks = Record<string, Deck>;
 
 export function prepData(arr: PreCardData[]): CardData[] {
   return arr.map((item, i) => {
-    if (item.mode === "pinyin") {
+    if (item.type === "pinyin") {
       return {
         ...item,
         formData: { pinyin: "", definition: "" },
@@ -85,7 +91,7 @@ export function prepData(arr: PreCardData[]): CardData[] {
         status: "default",
         order: i + 1,
       };
-    } else if (item.mode === "hanzi") {
+    } else if (item.type === "hanzi") {
       return {
         ...item,
         formData: { hanzi: "" },
@@ -105,14 +111,16 @@ export function prepData(arr: PreCardData[]): CardData[] {
   });
 }
 
-export function copyDeck(deck: string[]) {
-  return prepData(
-    deck
-      .map((name) => {
-        return decks[name].cards;
-      })
-      .flat()
-  );
+export const DEFAULT_MODES = new Set(["pinyin", "sentence"]);
+
+export function copyDeck(fullDeck: CardData[]) {
+  return prepData(fullDeck.map((card) => card));
+}
+
+export function unionDecks(deck1: CardData[], deck2: CardData[]): CardData[] {
+  return [
+    ...new Map([...deck1, ...deck2].map((item) => [item.id, item])).values(),
+  ];
 }
 
 export function seeDecks(deckNames: string[]) {
@@ -123,11 +131,11 @@ export function applyDeckModes(
   deck: CardData[],
   modes: Set<string>
 ): CardData[] {
-  return deck.filter((card) => modes.has(card.mode));
+  return deck.filter((card) => modes.has(card.type));
 }
 
 export function resetCard(card: CardData) {
-  if (card.mode == "hanzi" || card.mode == "sentence") {
+  if (card.type == "hanzi" || card.type == "sentence") {
     card.formData = { hanzi: "" };
   } else {
     card.formData = { pinyin: "", definition: "" };
