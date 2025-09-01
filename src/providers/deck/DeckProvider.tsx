@@ -1,6 +1,10 @@
 import { useState, type ReactNode } from "react";
 import { DeckContext } from "./DeckContext";
-import type { WindowTypes } from "../../decks/utilities";
+import type {
+  DeckWindow,
+  SelectionWindow,
+  WindowTypes,
+} from "../../decks/utilities";
 
 type DeckProviderProps = {
   children: ReactNode;
@@ -8,15 +12,31 @@ type DeckProviderProps = {
 
 export function DeckProvider({ children }: DeckProviderProps) {
   const [windowHidden, setWindowHidden] = useState(true);
-  const [windowData, setWindowData] = useState<WindowTypes>(null);
+  const [deckData, setDeckData] = useState<DeckWindow>({
+    type: "deck",
+    deckIds: [],
+  });
+  const [selectionData, setSelectionData] = useState<SelectionWindow>({
+    type: "selection",
+    parent: null,
+  });
+  const [current, setCurrent] = useState<"deck" | "selection" | null>("deck");
 
   function hideWindow() {
+    setCurrent(null);
     setWindowHidden(true);
   }
 
   function showWindow(data: WindowTypes) {
     setWindowHidden(false);
-    setWindowData(data);
+
+    setCurrent(data.type);
+
+    if (data.type == "deck") {
+      setDeckData(data);
+    } else {
+      setSelectionData(data);
+    }
   }
 
   return (
@@ -25,7 +45,9 @@ export function DeckProvider({ children }: DeckProviderProps) {
         windowHidden,
         hideWindow,
         showWindow,
-        windowData,
+        deckData,
+        selectionData,
+        current,
       }}
     >
       {children}

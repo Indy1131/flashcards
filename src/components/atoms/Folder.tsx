@@ -6,9 +6,15 @@ type FolderProps = {
   folder: FolderType;
   editFolder: (folder: FolderType) => void;
   onClick: (id: string | null) => void;
+  className?: string;
 };
 
-export default function Folder({ folder, editFolder, onClick }: FolderProps) {
+export default function Folder({
+  folder,
+  editFolder,
+  onClick,
+  className,
+}: FolderProps) {
   const [editing, setEditing] = useState(false);
   const [formData, setFormData] = useState({
     name: folder.name,
@@ -25,10 +31,14 @@ export default function Folder({ folder, editFolder, onClick }: FolderProps) {
   }
 
   return (
-    <div className="relative flex flex-col border-2 gap-1 rounded-md p-2 transition-all cursor-pointer h-[124px]">
-      <div className="flex items-center gap-1">
+    <div
+      className={`relative flex flex-col border-2 gap-1 rounded-md hover:bg-blue-100 p-2 transition-all cursor-pointer h-[124px] ${className} `}
+    >
+      <div className="flex items-center gap-1 select-none">
         {!editing ? (
-          <div className="flex-1" onClick={() => onClick(folder.id)}>{folder.name}</div>
+          <div className="flex-1" onClick={() => onClick(folder.id)}>
+            {folder.name}
+          </div>
         ) : (
           <div>
             <input

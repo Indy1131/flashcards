@@ -2,19 +2,14 @@ import { useState } from "react";
 import { icons } from "../icons";
 import Eye from "./Eye";
 import Scrollable from "./Scrollable";
-
-export type FakeDeck = {
-  id: string;
-  name: string;
-  desc: string;
-  parent: string | null;
-};
+import type { Deck } from "../../decks/utilities";
 
 type DeckButtonProps = {
-  deck: FakeDeck;
+  deck: Deck;
   selected?: boolean;
-  editDeck: (formData: FakeDeck) => void;
+  editDeck: (formData: Deck) => void;
   handleSelect: (id: string) => void;
+  className?: string;
 };
 
 export default function DeckButton({
@@ -22,6 +17,7 @@ export default function DeckButton({
   selected = false,
   editDeck,
   handleSelect,
+  className,
 }: DeckButtonProps) {
   const [editing, setEditing] = useState(false);
   const [formData, setFormData] = useState({
@@ -41,11 +37,11 @@ export default function DeckButton({
 
   return (
     <div
-      className={`relative flex flex-col border-2 gap-1 rounded-md p-2 transition-all cursor-pointer h-[124px] ${
-        selected && "bg-blue-500 text-white"
-      }`}
+      className={`relative flex flex-col border-2 gap-1 border-blue-500 rounded-md p-2 transition-all cursor-pointer h-[124px] ${
+        selected ? "bg-blue-500 text-white" : "hover:bg-blue-100"
+      } ${className}`}
     >
-      <div className="flex items-center gap-1">
+      <div className="flex items-center gap-1 select-none">
         {!editing ? (
           <h1 onClick={() => handleSelect(deck.id)} className="flex-1">
             {deck.name}
@@ -69,7 +65,7 @@ export default function DeckButton({
         {!editing && !selected && (
           <>
             <div className="ml-auto flex items-center">
-              <Eye />
+              <Eye deckIds={[deck.id]} />
             </div>
             <button className="cursor-pointer" onClick={() => setEditing(true)}>
               <img
@@ -89,7 +85,7 @@ export default function DeckButton({
         )}
       </div>
       <Scrollable scrollAccent="scrollbar-thumb-blue-500">
-        <p className="text-xs">{deck.desc}</p>
+        <p className="text-xs select-none">{deck.desc}</p>
       </Scrollable>
     </div>
   );

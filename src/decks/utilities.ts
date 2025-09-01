@@ -8,40 +8,42 @@ export type FolderType = {
 
 export type DeckWindow = {
   type: "deck";
-  deckNames: string[];
+  deckIds: string[];
 };
 
 export type SelectionWindow = {
   type: "selection";
+  parent: string | null;
 };
 
-export type WindowTypes = DeckWindow | SelectionWindow | null;
+export type WindowTypes = DeckWindow | SelectionWindow;
 
 export type CardModes = "pinyin" | "hanzi" | "definition";
 
 export type CardFormTypes = "pinyin" | "definition" | "hanzi";
 
-type PrePinyin = {
+export type PrePinyin = {
   type: "pinyin";
   pinyin: string;
   definition: string;
   toneless: string;
 };
 
-type PreHanzi = {
+export type PreHanzi = {
   type: "hanzi";
   readings: { pinyin: string; definition: string }[];
 };
 
-type PreSentence = {
+export type PreSentence = {
   type: "sentence";
   pinyin: string;
   definition: string;
   toneless: string;
 };
 
-type PreCard = {
+export type PreCard = {
   term: string;
+  id: string;
 };
 
 export type PreCardData =
@@ -73,10 +75,12 @@ export type CardData =
   | (PreSentence & { formData: SentenceFormData } & PreCard & CommonCardFields);
 
 export type Deck = {
+  id: string;
   name: string;
   parent: string;
   desc: string;
   cards: PreCardData[];
+  hanzi: (PreHanzi & PreCard)[];
 };
 
 export type Decks = Record<string, Deck>;

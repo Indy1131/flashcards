@@ -45,7 +45,7 @@ export default function Card({
         extra == -1 ? data.definition : data.definition.substring(0, extra)
       )?.toLowerCase();
       if (
-        data.formData.pinyin == data.toneless &&
+        data.formData.pinyin == data.term &&
         data.formData.definition.toLowerCase() == definition
       ) {
         setCardStatus(number, "correct");
@@ -93,7 +93,7 @@ export default function Card({
       back = (
         <Scrollable scrollAccent={scrollAccent} className="max-h-[200px]">
           <div
-            className={`w-full rounded-md p-3 border-1 text-red-500 transition-colors duration-500 font-medium break-words`}
+            className={`w-full rounded-md p-3 border-1 ${accent} transition-colors duration-500 font-medium break-words`}
           >
             {data.pinyin}
           </div>
@@ -134,7 +134,7 @@ export default function Card({
                   <div
                     className={`w-full rounded-md p-3 border-1 ${accent} transition-colors duration-500 font-medium flex-1`}
                   >
-                    {reading.definition}
+                    {reading.definition.join("; ")}
                   </div>
                   {/* <div className="absolute w-full bottom-0 h-[50px] bg-gradient-to-t from-white to-transparent" /> */}
                 </Fragment>
@@ -204,7 +204,7 @@ export default function Card({
                 <>
                   <input
                     className="w-full rounded-md p-3 border-1 border-blue-400"
-                    placeholder="Pinyin"
+                    placeholder="Hanzi"
                     autoComplete="off"
                     lang="zh-CN"
                     value={data.formData.pinyin}

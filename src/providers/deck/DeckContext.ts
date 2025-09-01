@@ -1,11 +1,17 @@
 import { createContext } from "react";
-import type { WindowTypes } from "../../decks/utilities";
+import type {
+  DeckWindow,
+  SelectionWindow,
+  WindowTypes,
+} from "../../decks/utilities";
 
 type DeckContextType = {
   windowHidden: boolean;
   hideWindow: () => void;
   showWindow: (data: WindowTypes) => void;
-  windowData: WindowTypes;
+  deckData: DeckWindow;
+  selectionData: SelectionWindow;
+  current: string | null;
 };
 
 export const DeckContext = createContext<DeckContextType | null>(null);

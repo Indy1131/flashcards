@@ -181,7 +181,7 @@ export default function Deck({ deckIds }: DeckProps) {
     const union = unionDecks(prepData(fullDeck.current), data);
 
     const filteredDeck = union.filter((item) => options.has(item.type));
-    console.log(filteredDeck);
+
     setData(filteredDeck);
     setModes(options);
 
@@ -277,7 +277,7 @@ export default function Deck({ deckIds }: DeckProps) {
   }
 
   function handleSelectDeckClick() {
-    showWindow({ type: "selection" });
+    showWindow({ type: "selection", parent: null });
   }
 
   function setCompleted(number: number, value: boolean) {
@@ -300,6 +300,7 @@ export default function Deck({ deckIds }: DeckProps) {
 
   useEffect(() => {
     async function getData() {
+      setTop(0);
       const url = `${import.meta.env.VITE_API_BASE_URL}/get-decks/`;
       const response = await fetchWithAuth(url, {
         method: "POST",
@@ -314,12 +315,20 @@ export default function Deck({ deckIds }: DeckProps) {
       const json = await response.json();
       if (Object.keys(json).length < 1) return;
 
-      const deck = json.map((deck: Deck) => deck.cards).flat();
+      const deck = json
+        .map((deck: Deck) => [...deck.cards, ...deck.hanzi])
+        .flat();
       const prepped = prepData(deck);
 
       const newDeckModes = applyDeckModes(prepped, modes);
 
       setData(newDeckModes);
+      setTop(0);
+      progressRef.current?.children[0].scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+        block: "nearest",
+      });
       fullDeck.current = deck;
     }
     getData();
@@ -345,8 +354,8 @@ export default function Deck({ deckIds }: DeckProps) {
   }, [handleForwardClick, handleBackClick]);
 
   return (
-    <div className="h-screen flex flex-col">
-      <div className="flex gap-2 p-1 w-full">
+    <div className="h-screen flex flex-col items-center">
+      <div className="select-none flex gap-2 p-1 w-full max-w-[1200px]">
         <div className="text-xs cursor-pointer rounded-full bg-gradient-to-tr from-blue-500 to-blue-400 text-white h-[2em] w-[2em] flex items-center justify-center">
           {user?.username.charAt(0).toUpperCase()}
         </div>
@@ -405,7 +414,7 @@ export default function Deck({ deckIds }: DeckProps) {
           <CheckboxInput name="Sentences" value="sentence" checked />
           <CheckboxInput name="Hanzi" value="hanzi" />
         </Dropdown>
-        <Eye />
+        <Eye deckIds={deckIds} />
         <button
           className=" cursor-pointer rounded-md"
           onClick={handleSelectDeckClick}

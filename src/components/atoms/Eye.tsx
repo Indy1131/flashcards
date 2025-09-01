@@ -2,14 +2,14 @@ import { useDeck } from "../../providers/deck/useDeck";
 import { icons } from "../icons";
 
 type Props = {
-  deckNames: string[];
+  deckIds: string[];
 };
 
-export default function Eye({ deckNames }: Props) {
+export default function Eye({ deckIds }: Props) {
   const { showWindow } = useDeck();
 
   function handleClick() {
-    showWindow({ type: "deck", deckNames });
+    showWindow({ type: "deck", deckIds });
   }
 
   return (

@@ -32,10 +32,18 @@ function App() {
     setCurrent(newIds);
   }
 
+  function refreshDeck() {
+    setCurrent([...current]);
+  }
+
   return (
     <DeckProvider>
       <div className="h-screen bg-gradient-to-t from-blue-500 to-white overflow-hidden m-0 p-0">
-        <Window changeDecks={changeDecks} />
+        <Window
+          changeDecks={changeDecks}
+          refreshDeck={refreshDeck}
+          viewedIds={current}
+        />
         <Deck deckIds={current} />
       </div>
     </DeckProvider>
