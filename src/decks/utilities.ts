@@ -148,7 +148,7 @@ export function resetCard(card: CardData) {
   card.completed = false;
   card.status = "default";
 
-  return card;
+  return { ...card };
 }
 
 export function shuffle(array: CardData[], top: number): [CardData[], number] {

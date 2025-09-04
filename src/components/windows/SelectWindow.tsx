@@ -228,9 +228,6 @@ export default function SelectWindow({
             : "opacity-0 transition-none"
         }`}
       >
-        <div className="col-span-full text-3xl">Folders</div>
-
-        {!data || (data.folders.length < 1 && <h1>No Folders</h1>)}
         {data &&
           data.folders.map((folder) => (
             <Folder
@@ -240,11 +237,6 @@ export default function SelectWindow({
               onClick={handleFolderClick}
             />
           ))}
-        <div className="col-span-full h-[40px]">
-          <CreateFolder handleCreate={handleCreateFolder} />
-        </div>
-        <div className="col-span-full text-3xl mt-20">Decks</div>
-        {!data || (data.decks.length < 1 && <h1>No Decks</h1>)}
         {data &&
           data.decks.map((deck) => (
             <DeckButton
@@ -255,7 +247,8 @@ export default function SelectWindow({
               handleSelect={handleSelect}
             />
           ))}
-        <div className="col-span-full h-[40px] mb-20">
+        <div className="col-span-full h-[100px] flex flex-col gap-2">
+          <CreateFolder handleCreate={handleCreateFolder} />
           <CreateDeck handleCreate={handleCreateDeck} />
         </div>
       </Scrollable>
