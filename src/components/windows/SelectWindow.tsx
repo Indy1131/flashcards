@@ -9,7 +9,7 @@ import Scrollable from "../atoms/Scrollable";
 import CreateDeck from "../atoms/CreateDeck";
 
 type SelectWindowProps = {
-  changeDecks: (newIds: string[]) => void;
+  changeDecks: (newIds: string[], special: boolean) => void;
   parentProp: string | null;
 };
 
@@ -115,6 +115,13 @@ export default function SelectWindow({
     setParent(id);
   }
 
+  function handleLoadFavoritesClick() {
+    if (prev) return;
+
+    hideWindow();
+    changeDecks(["favorites"], true);
+  }
+
   useEffect(() => {
     async function getData() {
       await new Promise((resolve) => setTimeout(resolve, 150));
@@ -176,6 +183,17 @@ export default function SelectWindow({
 
   return (
     <div className="relative flex flex-col h-full">
+      <div className="flex my-3 gap-2">
+        <div
+          className="cursor-pointer bg-blue-500 text-white p-2 rounded-md"
+          onClick={handleLoadFavoritesClick}
+        >
+          Load Favorites
+        </div>
+        <div className="cursor-pointer bg-blue-500 text-white p-2 rounded-md">
+          Load Recent
+        </div>
+      </div>
       <div className="flex gap-2 items-center justify-between w-full h-[2rem] mb-2">
         <div className="flex-1 relative flex items-center h-full">
           <h1

@@ -33,7 +33,7 @@ export default function CreateDeck({ handleCreate }: CreateFolderProps) {
     return (
       <button
         onClick={handleCreateClick}
-        className="bg-blue-500 text-white rounded-md py-2 w-[200px]"
+        className="cursor-pointer bg-blue-500 text-white rounded-md py-2 w-[200px]"
       >
         New Deck
       </button>

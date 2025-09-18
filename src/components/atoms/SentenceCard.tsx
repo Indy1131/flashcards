@@ -19,6 +19,7 @@ type SentenceCardProps = {
     formData: { term: string; definition: string }
   ) => void;
   handleDelete: (deckId: string, cardId: string) => void;
+  handleFavorite: (deckId: string, cardId: string, value: boolean) => void;
 };
 
 export default function SentenceCard({
@@ -30,6 +31,7 @@ export default function SentenceCard({
   handleCreate,
   handleEdit,
   handleDelete,
+  handleFavorite,
 }: SentenceCardProps) {
   const [formData, setFormData] = useState({ term: "", definition: "" });
   const [editing, setEditing] = useState(false);
@@ -137,6 +139,17 @@ export default function SentenceCard({
             alt="Logo"
           />
         </button>
+        <button
+          className=" cursor-pointer flex items-center justify-center"
+          type="button"
+          onClick={() => handleFavorite(deckId, card.id, !card.favorite)}
+        >
+          <img
+            className="h-[1.3rem] w-[1.3rem] transition-[height] active:h-[1rem]"
+            src={card.favorite ? icons.star : icons.starEmpty}
+            alt="Logo"
+          />
+        </button>
       </>
     );
     content = (
@@ -153,7 +166,7 @@ export default function SentenceCard({
         </div>
       </>
     );
-    grid = "grid-cols-[64px_50px_1fr_1fr]";
+    grid = "grid-cols-[100px_50px_1fr_1fr]";
   }
 
   return (

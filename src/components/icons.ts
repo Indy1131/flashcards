@@ -12,6 +12,8 @@ import zhong from "../assets/icons/zhong.svg";
 import logout from "../assets/icons/logout.svg";
 import pencil from "../assets/icons/pencil.svg";
 import trash from "../assets/icons/trash.svg";
+import starEmpty from "../assets/icons/star-empty.svg";
+import star from "../assets/icons/star.svg";
 
 export const icons = {
   backArrow,
@@ -28,4 +30,6 @@ export const icons = {
   logout,
   pencil,
   trash,
+  starEmpty,
+  star,
 };

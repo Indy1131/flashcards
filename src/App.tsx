@@ -21,15 +21,29 @@ function App() {
     getData();
   }, [fetchWithAuth]);
 
-  function changeDecks(newIds: string[]) {
-    const url = `${import.meta.env.VITE_API_BASE_URL}/set-last-viewed/`;
-    fetchWithAuth(url, {
-      headers: { "Content-Type": "application/json" },
-      method: "POST",
-      body: JSON.stringify({ newIds: newIds }),
-    });
+  async function changeDecks(newIds: string[], special = false) {
+    if (special) {
+      const url = `${import.meta.env.VITE_API_BASE_URL}/load-special/`;
+      const response = await fetchWithAuth(url, {
+        headers: { "Content-Type": "application/json" },
+        method: "POST",
+        body: JSON.stringify({ type: newIds[0] }),
+      });
+      const json = await response.json();
 
-    setCurrent(newIds);
+      if (response.status != 200) return;
+
+      setCurrent([json.id]);
+    } else {
+      const url = `${import.meta.env.VITE_API_BASE_URL}/set-last-viewed/`;
+      fetchWithAuth(url, {
+        headers: { "Content-Type": "application/json" },
+        method: "POST",
+        body: JSON.stringify({ newIds }),
+      });
+
+      setCurrent(newIds);
+    }
   }
 
   function refreshDeck() {

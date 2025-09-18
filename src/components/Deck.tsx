@@ -159,9 +159,15 @@ export default function Deck({ deckIds }: DeckProps) {
     if (!data || !fullDeck.current) return;
     const union = unionDecks(prepData(fullDeck.current), data);
 
-    const filteredDeck = union.filter(
-      (item) => options.has(item.status) && modes.has(item.type)
-    );
+    const filteredDeck = union.filter((item) => {
+      const favoritesOnly = options.has("favorite");
+
+      return (
+        options.has(item.status) &&
+        modes.has(item.type) &&
+        (!favoritesOnly || item.favorite)
+      );
+    });
     setData(filteredDeck);
 
     if (
@@ -205,29 +211,6 @@ export default function Deck({ deckIds }: DeckProps) {
     });
     setData(newDeck);
   }
-
-  // function switchDeck(newDeck: string[], top: number) {
-  //   const prevName = deckIds[0];
-  //   const prev = data[0];
-
-  //   setCurrent(newDeck);
-
-  //   const newDeckCopy = copyDeck(newDeck);
-  //   const newDeckModes = applyDeckModes(newDeckCopy, modes);
-  //   setDeck(newDeckModes);
-  //   fullDeck.current = newDeckCopy;
-
-  //   if (
-  //     newDeckCopy.length > 0 &&
-  //     top == 0 &&
-  //     prevName == newDeck[0] &&
-  //     newDeckCopy[0].order == prev.order
-  //   ) {
-  //     return false;
-  //   }
-
-  //   return true;
-  // }
 
   const handleBackClick = useCallback(() => {
     if (!data) return;
@@ -288,6 +271,27 @@ export default function Deck({ deckIds }: DeckProps) {
     setTimeout(() => {
       setTransitioning(null);
     }, 500);
+  }
+
+  function setFavorite(id: string, value: boolean) {
+    if (!data) return;
+
+    const url = `${import.meta.env.VITE_API_BASE_URL}/set-favorite/`;
+    fetchWithAuth(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        id,
+        value,
+      }),
+    });
+
+    const card = data.find((card) => card.id == id);
+    if (card) card.favorite = value;
+
+    setData([...data]);
   }
 
   function setOpen(name: string) {
@@ -401,6 +405,7 @@ export default function Deck({ deckIds }: DeckProps) {
           <CheckboxInput name="Guesses" value="guess" checked />
           <CheckboxInput name="Incorrect" value="incorrect" checked />
           <CheckboxInput name="Correct" value="correct" checked />
+          <CheckboxInput name="Favorite" value="favorite" />
         </Dropdown>
         <Dropdown
           name="mode"
@@ -447,6 +452,7 @@ export default function Deck({ deckIds }: DeckProps) {
                 setCompleted={setCompleted}
                 setCardStatus={setCardStatus}
                 setCardFormData={setCardFormData}
+                setFavorite={setFavorite}
                 transition={transitioning == "back" ? "back" : null}
               />
               {oldCard &&
@@ -459,6 +465,7 @@ export default function Deck({ deckIds }: DeckProps) {
                     setCompleted={setCompleted}
                     setCardStatus={setCardStatus}
                     setCardFormData={setCardFormData}
+                    setFavorite={setFavorite}
                     transition={transitioning == "forward" ? "forward" : null}
                   />
                 )}

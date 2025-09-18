@@ -5,6 +5,7 @@
   0% {
     right: 0;
     z-index: 10;
+    opacity: 1;
   }
 
   49.9% {
@@ -12,8 +13,8 @@
   }
 
   50% {
-    right: 500px;
-    transform: rotateY(45deg);
+    right: 600px;
+    transform: rotateY(60deg);
     z-index: 0;
   }
 
@@ -28,17 +29,16 @@
   0% {
     right: 0;
     z-index: 0;
-    opacity: 0.6;
+    opacity: 0;
   }
 
   49.9% {
     z-index: 0;
-    opacity: 0.6;
   }
 
   50% {
-    right: 450px;
-    transform: rotateY(45deg);
+    right: 600px;
+    transform: rotateY(60deg);
     z-index: 10;
   }
 

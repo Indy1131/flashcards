@@ -5,7 +5,7 @@ import SelectWindow from "../windows/SelectWindow";
 import { icons } from "../icons";
 
 type WindowProps = {
-  changeDecks: (newIds: string[]) => void;
+  changeDecks: (newIds: string[], special: boolean) => void;
   refreshDeck: () => void;
   viewedIds: string[];
 };

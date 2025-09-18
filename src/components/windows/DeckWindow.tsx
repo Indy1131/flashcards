@@ -184,6 +184,30 @@ export default function DeckWindow({ deckIds, viewedIds, refreshDeck }: Props) {
     setData(decks);
   }
 
+  function handleFavorite(deckId: string, cardId: string, value: boolean) {
+    const url = `${import.meta.env.VITE_API_BASE_URL}/set-favorite/`;
+    fetchWithAuth(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        id: cardId,
+        value,
+      }),
+    });
+
+    if (!data) return;
+
+    const decks = data.map((item) => item);
+    const curr = decks.find((info) => info.id == deckId);
+    const card = curr.cards.find((card) => card.id === cardId);
+    if (card) card.favorite = value;
+
+    setData(decks);
+    checkRefresh(deckId);
+  }
+
   if (!data) return <h1>Loading</h1>;
 
   return (
@@ -235,6 +259,7 @@ export default function DeckWindow({ deckIds, viewedIds, refreshDeck }: Props) {
                             key={i}
                             handleDelete={handleDelete}
                             handleEdit={handleEdit}
+                            handleFavorite={handleFavorite}
                           />
                         );
                       case "sentence":
@@ -246,6 +271,7 @@ export default function DeckWindow({ deckIds, viewedIds, refreshDeck }: Props) {
                             key={i}
                             handleDelete={handleDelete}
                             handleEdit={handleEdit}
+                            handleFavorite={handleFavorite}
                           />
                         );
                       default:
@@ -256,10 +282,9 @@ export default function DeckWindow({ deckIds, viewedIds, refreshDeck }: Props) {
                   deck.hanzi.map((card, i) => {
                     return (
                       <div
-                        className="w-full grid grid-cols-[64px_50px__1fr_2fr] border-2 rounded-xl"
+                        className="w-full grid grid-cols-[150px_1fr_2fr] border-2 rounded-xl"
                         key={i}
                       >
-                        <div />
                         <div className="border-r-2 flex py-1 px-2 justify-center">
                           {i + 1 + deck.cards.length}
                         </div>

@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import Scrollable from "./atoms/Scrollable";
 import Flashlight from "./atoms/Flashlight";
+import { icons } from "./icons";
 
 import type { CardData, CardFormTypes, CardModes } from "../decks/utilities";
 
@@ -8,6 +9,7 @@ type Props = {
   data: CardData;
   number: number;
   setCompleted: (number: number, value: boolean) => void;
+  setFavorite: (id: string, value: boolean) => void;
   setCardStatus: (number: number, value: string) => void;
   setCardFormData: (number: number, key: CardFormTypes, value: string) => void;
   transition?: string | null;
@@ -19,6 +21,7 @@ export default function Card({
   setCompleted,
   setCardStatus,
   setCardFormData,
+  setFavorite,
   transition,
 }: Props) {
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
@@ -67,6 +70,10 @@ export default function Card({
 
     setCompleted(number, true);
     setCardStatus(number, "guess");
+  }
+
+  function handleFavoriteClick() {
+    setFavorite(data.id, !data.favorite);
   }
 
   const accent =
@@ -250,20 +257,28 @@ export default function Card({
               </div>
             </form>
           </div>
-          <div
-            className="card-back justify-between flex flex-col p-5 pt-10 gap-5 cursor-pointer"
-            onClick={handleUnFlip}
-          >
-            <Scrollable
-              scrollAccent={scrollAccent}
-              className={`absolute w-full h-full font-medium text-6xl ${accent} z-40 transition-colors duration-500 items-center`}
+          <div className="card-back justify-between flex flex-col p-5 pt-10 gap-5 cursor-pointer">
+            <button
+              className="h-[2rem] w-[2rem] pointer-events-auto cursor-pointer absolute top-3 left-4 p-1 flex items-center justify-center"
+              onClick={handleFavoriteClick}
             >
-              {data.term}
-            </Scrollable>
-            <div className="bottom-5 w-full flex flex-col gap-3">{back}</div>
+              <img
+                className="h-[1.6rem] w-[1.6rem] transition-[height] active:h-[1.1rem]"
+                src={data && data.favorite ? icons.star : icons.starEmpty}
+                alt="Logo"
+              />
+            </button>
+            <div onClick={handleUnFlip} className="flex-1 flex flex-col w-full h-full">
+              <Scrollable
+                scrollAccent={scrollAccent}
+                className={`absolute w-full h-full font-medium text-6xl ${accent} z-40 transition-colors duration-500 items-center`}
+              >
+                {data.term}
+              </Scrollable>
+              <div className="bottom-5 w-full flex flex-col gap-3">{back}</div>
+            </div>
           </div>
         </Flashlight>
-
         <h1
           className={`pointer-events-none absolute top-3 right-4 font-medium ${accent} transition-colors duration-500`}
         >

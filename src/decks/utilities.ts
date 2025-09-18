@@ -31,7 +31,7 @@ export type PrePinyin = {
 
 export type PreHanzi = {
   type: "hanzi";
-  readings: { pinyin: string; definition: string }[];
+  readings: { pinyin: string; definition: string[] }[];
 };
 
 export type PreSentence = {
@@ -44,6 +44,7 @@ export type PreSentence = {
 export type PreCard = {
   term: string;
   id: string;
+  favorite: boolean;
 };
 
 export type PreCardData =
