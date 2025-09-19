@@ -419,6 +419,16 @@ export default function Deck({ deckIds }: DeckProps) {
           <CheckboxInput name="Sentences" value="sentence" checked />
           <CheckboxInput name="Hanzi" value="hanzi" />
         </Dropdown>
+        <button
+          className=" cursor-pointer rounded-md ml-auto"
+          onClick={handleSelectDeckClick}
+        >
+          <img
+            className="h-[1.3rem] w-[1.3rem] transition-[height] active:h-[1rem]"
+            src={icons.school}
+            alt="Logo"
+          />
+        </button>
         <Eye deckIds={deckIds} />
         <button
           className=" cursor-pointer rounded-md"

@@ -14,7 +14,7 @@ export default function Eye({ deckIds }: Props) {
 
   return (
     <button
-      className=" cursor-pointer rounded-md ml-auto"
+      className=" cursor-pointer rounded-md"
       onClick={handleClick}
     >
       <img

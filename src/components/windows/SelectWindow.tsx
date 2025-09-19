@@ -7,6 +7,7 @@ import { useDeck } from "../../providers/deck/useDeck";
 import CreateFolder from "../atoms/CreateFolder";
 import Scrollable from "../atoms/Scrollable";
 import CreateDeck from "../atoms/CreateDeck";
+import { icons } from "../icons";
 
 type SelectWindowProps = {
   changeDecks: (newIds: string[], special: boolean) => void;
@@ -183,27 +184,32 @@ export default function SelectWindow({
 
   return (
     <div className="relative flex flex-col h-full">
-      <div className="flex my-3 gap-2">
-        <div
-          className="cursor-pointer bg-blue-500 text-white p-2 rounded-md"
+      <div className="border-2 rounded-md p-2 mb-2">
+        <button
+          className="cursor-pointer flex items-center"
           onClick={handleLoadFavoritesClick}
         >
-          Load Favorites
-        </div>
-        <div className="cursor-pointer bg-blue-500 text-white p-2 rounded-md">
-          Load Recent
-        </div>
+          <img
+            src={icons.starEmpty}
+            className="w-[1.6rem] h-[1.6rem]"
+            alt="Filter"
+          />
+        </button>
       </div>
-      <div className="flex gap-2 items-center justify-between w-full h-[2rem] mb-2">
-        <div className="flex-1 relative flex items-center h-full">
-          <h1
-            className={`text-4xl duration-[${TRANSITION_DURATION}ms] ${
-              dataVisible
-                ? "opacity-100 transition-opacity"
-                : "opacity-0 transition-none"
-            }
-          `}
-          >
+      <button
+        onClick={() => handleGoBack(data?.prevId || null)}
+        className="text-blue-500 w-[100px] h-[40px] flex items-center text-sm cursor-pointer rounded-md"
+      >
+        <img
+          className="h-[1.5rem] w-[1.5rem] inline-block mr-2"
+          src={icons.backArrowBlue}
+          alt="Logo"
+        />
+        Back
+      </button>
+      <div className="flex gap-2 items-center justify-between w-full mb-2">
+        <div className="flex-1 relative flex items-center h-full border-1 rounded-md">
+          <h1 className="text-4xl font-semibold py-1 px-2">
             {data ? data.name : "Loading"}
           </h1>
         </div>

@@ -309,7 +309,8 @@ export default function DeckWindow({ deckIds, viewedIds, refreshDeck }: Props) {
                               return (
                                 <div
                                   className={`grid grid-cols-[60px_1fr] w-full ${
-                                    i != card.readings.length - 1 && "h-full border-b-1"
+                                    i != card.readings.length - 1 &&
+                                    "h-full border-b-1"
                                   } ${card.readings.length == 1 && "h-full"}`}
                                 >
                                   <div className="flex justify-center items-center border-r-1 py-1 px-2">
@@ -326,12 +327,12 @@ export default function DeckWindow({ deckIds, viewedIds, refreshDeck }: Props) {
                       );
                     })}
                 </div>
-                <div className="flex items-center gap-2 mb-4 h-[46px]">
+                <div className="flex items-center gap-2 mb-4">
                   {creating != deck.id ? (
-                    <>
+                    <div className="flex gap-2 h-[46px] py-1">
                       <button
                         onClick={() => handleCreateClick(deck.id, "pinyin")}
-                        className="cursor-pointer text-blue-500 border-2 rounded-md py-2 text-sm flex pr-2"
+                        className="cursor-pointer text-blue-500 border-2 rounded-md py-2 text-sm flex items-center pr-2"
                       >
                         <img
                           className="h-[1.3rem] w-[1.3rem] transition-[height] active:h-[1rem]"
@@ -342,7 +343,7 @@ export default function DeckWindow({ deckIds, viewedIds, refreshDeck }: Props) {
                       </button>
                       <button
                         onClick={() => handleCreateClick(deck.id, "sentence")}
-                        className="cursor-pointer text-blue-500 border-2 rounded-md py-2 text-sm flex pr-2"
+                        className="cursor-pointer text-blue-500 border-2 rounded-md py-2 text-sm flex items-center pr-2"
                       >
                         <img
                           className="h-[1.3rem] w-[1.3rem] transition-[height] active:h-[1rem]"
@@ -351,7 +352,7 @@ export default function DeckWindow({ deckIds, viewedIds, refreshDeck }: Props) {
                         />
                         Sentence Card
                       </button>
-                    </>
+                    </div>
                   ) : createType == "pinyin" ? (
                     <PinyinCard
                       deckId={deck.id}
