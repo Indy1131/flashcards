@@ -25,6 +25,7 @@ export default function Window({
   }
 
   function handleCloseClick() {
+    console.log("clicked");
     hideWindow();
   }
 
@@ -36,15 +37,15 @@ export default function Window({
       onClick={handlePaddingClick}
     >
       <Flashlight
-        className="w-full max-w-[1400px] h-full relative bg-blue-100 border-blue-500 border-1 rounded-xl"
+        className="w-full max-w-[1920px] h-full relative bg-blue-100 border-blue-500 border-1 rounded-xl"
         lightClassName="rounded-xl "
         style={{
           boxShadow: "0px 15px 15px 1px #3B82F6",
         }}
-        percent={70}
+        percent={80}
       >
         <div className="absolute w-full h-full text-blue-500 flex flex-col">
-          <button className="rounded-md h-[1.5rem] m-2">
+          <button className="h-[1.5rem] m-2 w-[1.3rem] pointer-events-auto cursor-pointer z-20">
             <img
               className="cursor-pointer h-[1.3rem] w-[1.3rem] transition-[height] active:h-[1rem]"
               onClick={handleCloseClick}
@@ -53,7 +54,7 @@ export default function Window({
             />
           </button>
           <div
-            className={`transition-all absolute w-full h-full p-2 pt-8 flex flex-col ${
+            className={`transition-all absolute w-full h-full p-4 pt-10 flex flex-col ${
               current == "deck"
                 ? "opacity-100"
                 : "opacity-0 pointer-events-none"
@@ -66,7 +67,7 @@ export default function Window({
             />
           </div>
           <div
-            className={`transition-all absolute w-full h-full p-2 pt-8 ${
+            className={`transition-all absolute w-full h-full p-4 pt-10 ${
               current == "selection"
                 ? "opacity-100"
                 : "opacity-0 pointer-events-none"

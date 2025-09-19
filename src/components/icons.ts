@@ -14,6 +14,8 @@ import pencil from "../assets/icons/pencil.svg";
 import trash from "../assets/icons/trash.svg";
 import starEmpty from "../assets/icons/star-empty.svg";
 import star from "../assets/icons/star.svg";
+import backArrowBlue from "../assets/icons/backArrowBlue.svg";
+import plus from "../assets/icons/plus.svg";
 
 export const icons = {
   backArrow,
@@ -32,4 +34,6 @@ export const icons = {
   trash,
   starEmpty,
   star,
+  backArrowBlue,
+  plus,
 };

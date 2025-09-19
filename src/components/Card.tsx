@@ -258,17 +258,22 @@ export default function Card({
             </form>
           </div>
           <div className="card-back justify-between flex flex-col p-5 pt-10 gap-5 cursor-pointer">
-            <button
-              className="h-[2rem] w-[2rem] pointer-events-auto cursor-pointer absolute top-3 left-4 p-1 flex items-center justify-center"
-              onClick={handleFavoriteClick}
+            {data.type != "hanzi" && (
+              <button
+                className="h-[2rem] w-[2rem] pointer-events-auto cursor-pointer absolute top-3 left-4 p-1 flex items-center justify-center"
+                onClick={handleFavoriteClick}
+              >
+                <img
+                  className="h-[1.6rem] w-[1.6rem] transition-[height] active:h-[1.1rem]"
+                  src={data && data.favorite ? icons.star : icons.starEmpty}
+                  alt="Logo"
+                />
+              </button>
+            )}
+            <div
+              onClick={handleUnFlip}
+              className="flex-1 flex flex-col w-full h-full"
             >
-              <img
-                className="h-[1.6rem] w-[1.6rem] transition-[height] active:h-[1.1rem]"
-                src={data && data.favorite ? icons.star : icons.starEmpty}
-                alt="Logo"
-              />
-            </button>
-            <div onClick={handleUnFlip} className="flex-1 flex flex-col w-full h-full">
               <Scrollable
                 scrollAccent={scrollAccent}
                 className={`absolute w-full h-full font-medium text-6xl ${accent} z-40 transition-colors duration-500 items-center`}

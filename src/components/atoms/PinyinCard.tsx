@@ -76,9 +76,9 @@ export default function PinyinCard({
       <>
         <button
           type="submit"
-          className=" cursor-pointer flex items-center justify-center bg-blue-500 border-2 border-blue-500 text-white py-1 px-2 rounded-md text-sm"
+          className={`cursor-pointer ${creating && "flex-1"} flex items-center justify-center bg-blue-500 border-2 border-blue-500 text-white py-1 px-2 rounded-md text-sm`}
         >
-          {editing ? "Apply" : "Create"}
+          {editing ? "Apply" : "Create Vocab"}
         </button>
         <button
           className="cursor-pointer flex items-center justify-center text-blue-500 border-2 py-1 px-2 rounded-md text-sm"
@@ -91,29 +91,29 @@ export default function PinyinCard({
     );
     content = (
       <>
-        <div className="p-2 border-r-2">
+        <div className={`${editing && "border-r-1"} flex items-center px-2`}>
           <input
             placeholder="Term"
             value={formData.term}
             onChange={handleChange}
             name="term"
-            className="border-2 rounded-md w-full px-2 auto"
+            className="border-1 rounded-md w-full px-2 auto"
             autoComplete="off"
-          ></input>
+          />
         </div>
-        <div className="p-2">
+        <div className="flex items-center px-2">
           <input
             placeholder="Definition"
             value={formData.definition}
             onChange={handleChange}
             name="definition"
-            className="border-2 rounded-md w-full px-2"
+            className="border-1 rounded-md w-full px-2"
             autoComplete="off"
-          ></input>
+          />
         </div>
       </>
     );
-    grid = "grid-cols-[164px_1fr_1fr]";
+    grid = creating ? "grid-cols-[200px_1fr_1fr]" : "grid-cols-[150px_1fr_1fr]";
   } else {
     buttons = (
       <>
@@ -154,13 +154,13 @@ export default function PinyinCard({
     );
     content = (
       <>
-        <div className="rounded-l-md border-r-2 flex items-center py-1 px-2 justify-center">
+        <div className="rounded-l-md border-r-1 flex items-center py-1 px-2 justify-center">
           {i + 1}
         </div>
-        <div className="border-r-2 flex items-center py-1 px-2 text-3xl">
+        <div className="border-r-1 flex items-center py-1 px-2 text-3xl">
           {card.term}
         </div>
-        <div className="border-r-2 flex items-center py-1 px-2">
+        <div className="border-r-1 flex items-center py-1 px-2">
           {card.pinyin}
         </div>
         <div className="py-1 px-2 flex items-center">{card.definition}</div>
@@ -171,10 +171,16 @@ export default function PinyinCard({
 
   return (
     <form
-      className={`w-full grid ${grid} border-2 rounded-xl`}
+      className={`w-full grid items-stretch min-h-[46px] relative ${grid} ${
+        i % 2 != 0 && !creating ? "bg-blue-200/50" : "break-all bg-transparent"
+      }`}
       onSubmit={handleSubmit}
     >
-      <div className="h-full border-r-2 flex items-center justify-center gap-2">
+      <div
+        className={`h-full ${
+          !creating && "border-r-1"
+        } flex items-center justify-center gap-2`}
+      >
         {buttons}
       </div>
       {content}

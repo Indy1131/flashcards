@@ -212,7 +212,7 @@ export default function DeckWindow({ deckIds, viewedIds, refreshDeck }: Props) {
 
   return (
     <>
-      <div className="">
+      <div className="border-2 rounded-md p-2 mb-2">
         <Dropdown
           name="filter"
           label="Filter"
@@ -234,98 +234,122 @@ export default function DeckWindow({ deckIds, viewedIds, refreshDeck }: Props) {
           data.map((deck) => {
             return (
               <Fragment key={deck.name}>
-                <h1 className="text-4xl mt-4 ml-2 font-semibold">
-                  {deck.name}
-                </h1>
-                <div className="flex gap-4 mb-4 ml-2">
-                  <p>{deck.desc}</p>
-                </div>
                 <button
                   onClick={() => handleGoBackClick(deck.parent)}
-                  className="bg-blue-500 rounded-md text-white w-[200px] text-sm py-2 cursor-pointer"
+                  className="text-blue-500 w-[100px] flex items-center text-sm cursor-pointer rounded-md"
                 >
-                  See folder
+                  <img
+                    className="h-[1.5rem] w-[1.5rem] inline-block mr-2"
+                    src={icons.backArrowBlue}
+                    alt="Logo"
+                  />
+                  Back
                 </button>
-                {deck.cards
-                  .filter((card) => modes.has(card.type))
-                  .map((card, i) => {
-                    switch (card.type) {
-                      case "pinyin":
-                        return (
-                          <PinyinCard
-                            deckId={deck.id}
-                            card={card}
-                            i={i}
-                            key={i}
-                            handleDelete={handleDelete}
-                            handleEdit={handleEdit}
-                            handleFavorite={handleFavorite}
-                          />
-                        );
-                      case "sentence":
-                        return (
-                          <SentenceCard
-                            deckId={deck.id}
-                            card={card}
-                            i={i}
-                            key={i}
-                            handleDelete={handleDelete}
-                            handleEdit={handleEdit}
-                            handleFavorite={handleFavorite}
-                          />
-                        );
-                      default:
-                        return <h1>error</h1>;
-                    }
-                  })}
-                {modes.has("hanzi") &&
-                  deck.hanzi.map((card, i) => {
-                    return (
-                      <div
-                        className="w-full grid grid-cols-[150px_1fr_2fr] border-2 rounded-xl"
-                        key={i}
-                      >
-                        <div className="border-r-2 flex py-1 px-2 justify-center">
-                          {i + 1 + deck.cards.length}
-                        </div>
-                        <div className="border-r-2 flex py-1 px-2 text-3xl">
-                          {card.term}
-                        </div>
-                        <div className="flex flex-col items-center">
-                          {card.readings.map((reading, i) => {
-                            return (
-                              <div
-                                className={`grid grid-cols-[60px_1fr] w-full ${
-                                  i != card.readings.length - 1 && "border-b-2"
-                                } ${card.readings.length == 1 && "h-full"}`}
-                              >
-                                <div className="flex justify-center items-center border-r-2 py-1 px-2">
-                                  {reading.pinyin}
+                <div className="grid divide-y divide-amber-blue-500 border-x-1 border-1 rounded-md">
+                  <div className="text-blue-500">
+                    <h1 className="text-4xl font-semibold py-1 px-2 border-b-1">
+                      {deck.name}
+                    </h1>
+                    <div className="text-sm py-1 px-2 border-blue-500">
+                      <p>{deck.desc}</p>
+                    </div>
+                  </div>
+                  {deck.cards
+                    .filter((card) => modes.has(card.type))
+                    .map((card, i) => {
+                      switch (card.type) {
+                        case "pinyin":
+                          return (
+                            <PinyinCard
+                              deckId={deck.id}
+                              card={card}
+                              i={i}
+                              key={i}
+                              handleDelete={handleDelete}
+                              handleEdit={handleEdit}
+                              handleFavorite={handleFavorite}
+                            />
+                          );
+                        case "sentence":
+                          return (
+                            <SentenceCard
+                              deckId={deck.id}
+                              card={card}
+                              i={i}
+                              key={i}
+                              handleDelete={handleDelete}
+                              handleEdit={handleEdit}
+                              handleFavorite={handleFavorite}
+                            />
+                          );
+                        default:
+                          return <h1>error</h1>;
+                      }
+                    })}
+                  {modes.has("hanzi") &&
+                    deck.hanzi.map((card, i) => {
+                      return (
+                        <div
+                          className={`w-full grid grid-cols-[100px_50px_1fr_2fr] ${
+                            (i + 1 + deck.cards.length) % 2 == 0
+                              ? "bg-blue-200/50"
+                              : "bg-transparent"
+                          }`}
+                          key={i}
+                        >
+                          <div className="border-r-1" />
+                          <div className="border-r-1 flex py-1 px-2 justify-center">
+                            {i + 1 + deck.cards.length}
+                          </div>
+                          <div className="border-r-1 flex py-1 px-2 text-3xl">
+                            {card.term}
+                          </div>
+                          <div className="flex flex-col items-center">
+                            {card.readings.map((reading, i) => {
+                              return (
+                                <div
+                                  className={`grid grid-cols-[60px_1fr] w-full ${
+                                    i != card.readings.length - 1 && "h-full border-b-1"
+                                  } ${card.readings.length == 1 && "h-full"}`}
+                                >
+                                  <div className="flex justify-center items-center border-r-1 py-1 px-2">
+                                    {reading.pinyin}
+                                  </div>
+                                  <div className="flex items-center py-1 px-2">
+                                    {reading.definition.join("; ")}
+                                  </div>
                                 </div>
-                                <div className="flex items-center py-1 px-2">
-                                  {reading.definition.join("; ")}
-                                </div>
-                              </div>
-                            );
-                          })}
+                              );
+                            })}
+                          </div>
                         </div>
-                      </div>
-                    );
-                  })}
-                <div className="flex items-center h-[60px] gap-2 mb-20">
+                      );
+                    })}
+                </div>
+                <div className="flex items-center gap-2 mb-4 h-[46px]">
                   {creating != deck.id ? (
                     <>
                       <button
                         onClick={() => handleCreateClick(deck.id, "pinyin")}
-                        className="cursor-pointer bg-blue-500 text-white w-[200px] rounded-md py-2 text-sm"
+                        className="cursor-pointer text-blue-500 border-2 rounded-md py-2 text-sm flex pr-2"
                       >
-                        Create Pinyin
+                        <img
+                          className="h-[1.3rem] w-[1.3rem] transition-[height] active:h-[1rem]"
+                          src={icons.plus}
+                          alt="Logo"
+                        />
+                        Vocab Card
                       </button>
                       <button
                         onClick={() => handleCreateClick(deck.id, "sentence")}
-                        className="cursor-pointer bg-blue-500 text-white w-[200px] rounded-md py-2 text-sm"
+                        className="cursor-pointer text-blue-500 border-2 rounded-md py-2 text-sm flex pr-2"
                       >
-                        Create Sentence
+                        <img
+                          className="h-[1.3rem] w-[1.3rem] transition-[height] active:h-[1rem]"
+                          src={icons.plus}
+                          alt="Logo"
+                        />
+                        Sentence Card
                       </button>
                     </>
                   ) : createType == "pinyin" ? (
