@@ -17,6 +17,8 @@ import star from "../assets/icons/star.svg";
 import backArrowBlue from "../assets/icons/backArrowBlue.svg";
 import plus from "../assets/icons/plus.svg";
 import school from "../assets/icons/school.svg";
+import folder from "../assets/icons/folder.svg";
+import load from "../assets/icons/load.svg";
 
 export const icons = {
   backArrow,
@@ -38,4 +40,6 @@ export const icons = {
   backArrowBlue,
   plus,
   school,
+  folder,
+  load,
 };

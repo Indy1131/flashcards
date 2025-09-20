@@ -28,13 +28,11 @@ export default function SelectWindow({
   parentProp,
 }: SelectWindowProps) {
   const [parent, setParent] = useState<string | null>(parentProp);
-
   const [selected, setSelected] = useState(new Set<string>());
   const [data, setData] = useState<Data | null>(null);
-
   const [prev, setPrev] = useState<Data | null>(null);
-
-  const [dataVisible, setDataVisible] = useState(true);
+  const [createType, setCreateType] = useState<string>("folder");
+  const [creating, setCreating] = useState(false);
 
   const { fetchWithAuth } = useAuth();
   const { hideWindow } = useDeck();
@@ -183,20 +181,144 @@ export default function SelectWindow({
   }
 
   return (
-    <div className="relative flex flex-col h-full">
+    <>
       <div className="border-2 rounded-md p-2 mb-2">
         <button
-          className="cursor-pointer flex items-center"
+          className="cursor-pointer flex items-center h-[1.3rem]"
           onClick={handleLoadFavoritesClick}
         >
           <img
             src={icons.starEmpty}
-            className="w-[1.6rem] h-[1.6rem]"
+            className="relative z-20 cursor-pointer h-[1.3rem] w-[1.3rem] transition-[height] active:h-[1rem]"
             alt="Filter"
           />
         </button>
       </div>
-      <button
+      <div>
+        {parent ? (
+          <button
+            onClick={() => handleGoBack(data?.prevId || null)}
+            className="
+            text-blue-500 w-[100px] flex items-center text-sm cursor-pointer rounded-md mb-[.75rem]"
+          >
+            <img
+              className="h-[1.5rem] w-[1.5rem] inline-block mr-2"
+              src={icons.backArrowBlue}
+              alt="Logo"
+            />
+            Back
+          </button>
+        ) : (
+          <div className="text-xs h-[calc(1.5rem+12px)] pb-1 pl-2 flex items-end">
+            {/* This is the root directory. */}
+          </div>
+        )}
+        <div className="text-blue-500  border-1 rounded-t-md">
+          <h1 className="text-4xl font-semibold py-1 px-2 border-b-1 flex items-center">
+            <img
+              className="h-[1.5rem] w-[1.5rem] inline-block mr-2"
+              src={icons.folder}
+              alt="Logo"
+            />
+            {data ? data.name : "Loading"}
+
+            <div
+              className={`ml-auto text-sm transition-opacity flex gap-2 ${
+                selected.size > 0 ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <button
+                onClick={handleLoadSelected}
+                className="cursor-pointer text-white bg-blue-500 border-blue-500 border-2 rounded-md py-1 text-sm flex items-center pr-2"
+              >
+                <img
+                  className="h-[1.3rem] w-[1.3rem] transition-[height] mx-1 active:h-[1rem]"
+                  src={icons.load}
+                  alt="Logo"
+                />
+                Load Selection
+              </button>
+              <button
+                onClick={handleClearSelectedClick}
+                className="cursor-pointer text-blue-500 border-2 rounded-md py-1 text-sm flex items-center pr-2"
+              >
+                <img
+                  className="h-[1.3rem] w-[1.3rem] transition-[height] mx-1 active:h-[1rem]"
+                  src={icons.trash}
+                  alt="Logo"
+                />
+                Clear Selection
+              </button>
+            </div>
+          </h1>
+          <div className="w-full text-sm py-1 px-2 border-blue-500">
+            <p className="text-right">{selected.size} Decks Selected</p>
+          </div>
+        </div>
+        <Scrollable
+          scrollAccent="scrollbar-thumb-blue-500"
+          className="gap-[0px]"
+        >
+          <div className="grid divide-y-1 border-b-1 rounded-b-md border-x-1 overflow-hidden">
+            {data &&
+              data.folders.map((folder, i) => (
+                <Folder
+                  folder={folder}
+                  i={i}
+                  key={folder.id}
+                  editFolder={editFolder}
+                  onClick={handleFolderClick}
+                />
+              ))}
+            {data &&
+              data.decks.map((deck, i) => (
+                <DeckButton
+                  deck={deck}
+                  i={i}
+                  selected={selected.has(deck.id)}
+                  key={deck.id}
+                  editDeck={editDeck}
+                  handleSelect={handleSelect}
+                />
+              ))}
+          </div>
+          <div className="flex items-center gap-2 mb-4 mt-[12px]">
+            {!creating ? (
+              <div className="flex gap-2 h-[46px] py-1">
+                <button
+                  onClick={() => handleCreateClick(deck.id, "pinyin")}
+                  className="cursor-pointer text-blue-500 border-2 rounded-md py-2 text-sm flex items-center pr-2"
+                >
+                  <img
+                    className="h-[1.3rem] w-[1.3rem] transition-[height] active:h-[1rem]"
+                    src={icons.plus}
+                    alt="Logo"
+                  />
+                  Folder
+                </button>
+                <button
+                  onClick={() => handleCreateClick(deck.id, "sentence")}
+                  className="cursor-pointer text-blue-500 border-2 rounded-md py-2 text-sm flex items-center pr-2"
+                >
+                  <img
+                    className="h-[1.3rem] w-[1.3rem] transition-[height] active:h-[1rem]"
+                    src={icons.plus}
+                    alt="Logo"
+                  />
+                  Deck
+                </button>
+              </div>
+            ) : createType == "pinyin" ? (
+              // TDOD
+              <h1>Pinyin Card Creation Form</h1>
+            ) : (
+              // TODO
+              <h1>Sentence Card Creation Form</h1>
+            )}
+          </div>
+        </Scrollable>
+      </div>
+      {/* <button
         onClick={() => handleGoBack(data?.prevId || null)}
         className="text-blue-500 w-[100px] h-[40px] flex items-center text-sm cursor-pointer rounded-md"
       >
@@ -275,38 +397,7 @@ export default function SelectWindow({
           <CreateFolder handleCreate={handleCreateFolder} />
           <CreateDeck handleCreate={handleCreateDeck} />
         </div>
-      </Scrollable>
-
-      {/* <div
-        className={`duration-[${TRANSITION_DURATION}ms] will-change-opacity invisible absolute w-full grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-2 pointer-events-none ${
-          prev
-            ? "visible transition-opacity opacity-0"
-            : "transition-none opacity-100"
-        }`}
-      >
-        {!prev || (prev.folders.length < 1 && <h1>No Folders</h1>)}
-        {prev &&
-          prev.folders.map((folder) => (
-            <Folder
-              folder={folder}
-              key={folder.id}
-              editFolder={editFolder}
-              onClick={handleFolderClick}
-            />
-          ))}
-        <div className="col-span-full text-3xl">Decks</div>
-        {!prev || (prev.decks.length < 1 && <h1>No Decks</h1>)}
-        {prev &&
-          prev.decks.map((deck) => (
-            <DeckButton
-              deck={deck}
-              selected={selected.has(deck.id)}
-              key={deck.id}
-              editDeck={editDeck}
-              handleSelect={handleSelect}
-            />
-          ))}
-      </div> */}
-    </div>
+      </Scrollable> */}
+    </>
   );
 }

@@ -175,7 +175,7 @@ export default function SentenceCard({
 
   return (
     <form
-      className={`w-full grid items-stretch min-h-[76px] relative ${grid} ${
+      className={`w-full grid items-stretch ${!creating ? "min-h-[76px]" : "min-h-[46px]"} relative ${grid} ${
         i % 2 != 0 && !creating ? "bg-blue-200/50" : "break-all bg-transparent"
       }`}
       onSubmit={handleSubmit}

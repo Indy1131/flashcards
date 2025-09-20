@@ -25,7 +25,6 @@ export default function Window({
   }
 
   function handleCloseClick() {
-    console.log("clicked");
     hideWindow();
   }
 
@@ -56,8 +55,8 @@ export default function Window({
           <div
             className={`transition-all absolute w-full h-full p-4 pt-10 flex flex-col ${
               current == "deck"
-                ? "opacity-100"
-                : "opacity-0 pointer-events-none"
+                ? "opacity-100 z-10"
+                : "opacity-0 pointer-events-none z-[-1]"
             }`}
           >
             <DeckWindow
@@ -69,8 +68,8 @@ export default function Window({
           <div
             className={`transition-all absolute w-full h-full p-4 pt-10 ${
               current == "selection"
-                ? "opacity-100"
-                : "opacity-0 pointer-events-none"
+                ? "opacity-100 z-10"
+                : "opacity-0 pointer-events-none z-[-1]"
             }`}
           >
             <SelectWindow

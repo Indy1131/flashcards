@@ -33,7 +33,7 @@ export default function CreateFolder({ handleCreate }: CreateFolderProps) {
     return (
       <button
         onClick={handleCreateClick}
-        className="cursor-pointer bg-blue-500 text-white rounded-md py-2 w-[200px]"
+        className="cursor-pointer bg-blue-500 text-white py-2 w-[200px]"
       >
         New Folder
       </button>
@@ -42,7 +42,7 @@ export default function CreateFolder({ handleCreate }: CreateFolderProps) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="grid grid-cols-[164px_1fr] border-2 rounded-md max-w-[600px]"
+      className="grid grid-cols-[164px_1fr] border-1 max-w-[600px]"
     >
       <div className="flex items-center gap-2 justify-center border-r-2">
         <button

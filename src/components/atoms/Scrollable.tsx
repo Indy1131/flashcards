@@ -33,9 +33,9 @@ export default function Scrollable({
 
   return (
     <div
-      className={`relative ${className} ${
+      className={`relative ${
         hasScrollbar && "pr-4"
-      } w-full flex flex-col gap-3 overflow-y-scroll scrollbar ${scrollAccent} always-scrollbar select-auto`}
+      } w-full flex flex-col gap-3 overflow-y-scroll scrollbar ${scrollAccent} always-scrollbar select-auto ${className}`}
       ref={containerRef}
     >
       {children}

@@ -247,7 +247,12 @@ export default function DeckWindow({ deckIds, viewedIds, refreshDeck }: Props) {
                 </button>
                 <div className="grid divide-y divide-amber-blue-500 border-x-1 border-1 rounded-md">
                   <div className="text-blue-500">
-                    <h1 className="text-4xl font-semibold py-1 px-2 border-b-1">
+                    <h1 className="text-4xl font-semibold py-1 px-2 border-b-1 flex items-center">
+                      <img
+                        className="h-[1.5rem] w-[1.5rem] inline-block mr-2"
+                        src={icons.deck}
+                        alt="Logo"
+                      />
                       {deck.name}
                     </h1>
                     <div className="text-sm py-1 px-2 border-blue-500">
