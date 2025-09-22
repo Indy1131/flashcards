@@ -46,7 +46,12 @@ function App() {
     }
   }
 
-  function refreshDeck() {
+  function refreshDeck(newCurrent?: string[]) {
+    if (newCurrent) {
+      setCurrent([...newCurrent]);
+      return;
+    }
+
     setCurrent([...current]);
   }
 

@@ -13,7 +13,7 @@ import SentenceCard from "../atoms/SentenceCard";
 type Props = {
   deckIds?: string[];
   viewedIds: string[];
-  refreshDeck: () => void;
+  refreshDeck: (newCurrent?: string[]) => void;
 };
 
 export default function DeckWindow({ deckIds, viewedIds, refreshDeck }: Props) {
@@ -261,7 +261,10 @@ export default function DeckWindow({ deckIds, viewedIds, refreshDeck }: Props) {
                   </div>
                   {deck.cards
                     .filter((card) => modes.has(card.type))
-                    .map((card, i) => {
+                    .map((card, i, arr) => {
+                      const isLast = modes.has("hanzi")
+                        ? false
+                        : i === arr.length - 1;
                       switch (card.type) {
                         case "pinyin":
                           return (
@@ -273,6 +276,7 @@ export default function DeckWindow({ deckIds, viewedIds, refreshDeck }: Props) {
                               handleDelete={handleDelete}
                               handleEdit={handleEdit}
                               handleFavorite={handleFavorite}
+                              className={isLast ? "rounded-b-md" : ""}
                             />
                           );
                         case "sentence":
@@ -285,6 +289,7 @@ export default function DeckWindow({ deckIds, viewedIds, refreshDeck }: Props) {
                               handleDelete={handleDelete}
                               handleEdit={handleEdit}
                               handleFavorite={handleFavorite}
+                              className={isLast ? "rounded-b-md" : ""}
                             />
                           );
                         default:
@@ -293,14 +298,15 @@ export default function DeckWindow({ deckIds, viewedIds, refreshDeck }: Props) {
                     })}
                   {modes.has("hanzi") &&
                     deck.hanzi.map((card, i) => {
+                      const isLast = i === deck.hanzi.length - 1;
                       return (
                         <div
                           className={`w-full grid grid-cols-[100px_50px_1fr_2fr] ${
-                            (i + 1 + deck.cards.length) % 2 == 0
+                            (i + 1 + deck.cards.length) % 2 != 0
                               ? "bg-blue-200/50"
                               : "bg-transparent"
-                          }`}
-                          key={i}
+                          } ${isLast ? "rounded-b-md" : ""}`}
+                          key={"hanzi" + i}
                         >
                           <div className="border-r-1" />
                           <div className="border-r-1 flex py-1 px-2 justify-center">
@@ -332,48 +338,50 @@ export default function DeckWindow({ deckIds, viewedIds, refreshDeck }: Props) {
                       );
                     })}
                 </div>
-                <div className="flex items-center gap-2 mb-4">
-                  {creating != deck.id ? (
-                    <div className="flex gap-2 h-[46px] py-1">
-                      <button
-                        onClick={() => handleCreateClick(deck.id, "pinyin")}
-                        className="cursor-pointer text-blue-500 border-2 rounded-md py-2 text-sm flex items-center pr-2"
-                      >
-                        <img
-                          className="h-[1.3rem] w-[1.3rem] transition-[height] active:h-[1rem]"
-                          src={icons.plus}
-                          alt="Logo"
-                        />
-                        Vocab Card
-                      </button>
-                      <button
-                        onClick={() => handleCreateClick(deck.id, "sentence")}
-                        className="cursor-pointer text-blue-500 border-2 rounded-md py-2 text-sm flex items-center pr-2"
-                      >
-                        <img
-                          className="h-[1.3rem] w-[1.3rem] transition-[height] active:h-[1rem]"
-                          src={icons.plus}
-                          alt="Logo"
-                        />
-                        Sentence Card
-                      </button>
-                    </div>
-                  ) : createType == "pinyin" ? (
-                    <PinyinCard
-                      deckId={deck.id}
-                      creating={true}
-                      cancel={handleStopCreate}
-                      handleCreate={handleCreate}
-                    />
-                  ) : (
-                    <SentenceCard
-                      deckId={deck.id}
-                      creating={true}
-                      cancel={handleStopCreate}
-                      handleCreate={handleCreate}
-                    />
-                  )}
-                </div>
+                {!deck.is_special && (
+                  <div className="flex items-center gap-2 mb-4">
+                    {creating != deck.id ? (
+                      <div className="flex gap-2 h-[46px] py-1">
+                        <button
+                          onClick={() => handleCreateClick(deck.id, "pinyin")}
+                          className="cursor-pointer text-blue-500 border-2 rounded-md py-2 text-sm flex items-center pr-2"
+                        >
+                          <img
+                            className="h-[1.3rem] w-[1.3rem] transition-[height] active:h-[1rem]"
+                            src={icons.plus}
+                            alt="Logo"
+                          />
+                          Vocab Card
+                        </button>
+                        <button
+                          onClick={() => handleCreateClick(deck.id, "sentence")}
+                          className="cursor-pointer text-blue-500 border-2 rounded-md py-2 text-sm flex items-center pr-2"
+                        >
+                          <img
+                            className="h-[1.3rem] w-[1.3rem] transition-[height] active:h-[1rem]"
+                            src={icons.plus}
+                            alt="Logo"
+                          />
+                          Sentence Card
+                        </button>
+                      </div>
+                    ) : createType == "pinyin" ? (
+                      <PinyinCard
+                        deckId={deck.id}
+                        creating={true}
+                        cancel={handleStopCreate}
+                        handleCreate={handleCreate}
+                      />
+                    ) : (
+                      <SentenceCard
+                        deckId={deck.id}
+                        creating={true}
+                        cancel={handleStopCreate}
+                        handleCreate={handleCreate}
+                      />
+                    )}
+                  </div>
+                )}
               </Fragment>
             );
           })}

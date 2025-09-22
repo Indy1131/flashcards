@@ -2,11 +2,19 @@ import { useState } from "react";
 import { icons } from "../icons";
 import type { Deck } from "../../decks/utilities";
 import Eye from "./Eye";
+import { usePopup } from "../../providers/popup/usePopup";
+
+type FolderOption = { id: string; name: string };
 
 type DeckButtonProps = {
   deck: Deck;
   selected?: boolean;
-  editDeck: (formData: Deck) => void;
+  editDeck: (formData: {
+    id: string;
+    name: string;
+    desc: string;
+    parent: string;
+  }) => void;
   deleteDeck: (id: string) => void;
   handleSelect: (id: string) => void;
   i: number;
@@ -18,6 +26,8 @@ type DeckButtonProps = {
     parent: string;
   }) => void;
   className?: string;
+  folderOptions?: FolderOption[]; // <-- Add this prop
+  moveDeck?: (id: string, newParent: string) => void; // <-- Add this prop
 };
 
 export default function DeckButton({
@@ -31,6 +41,8 @@ export default function DeckButton({
   cancel,
   handleCreate,
   className,
+  folderOptions = [],
+  moveDeck,
 }: DeckButtonProps) {
   const [formData, setFormData] = useState({
     name: deck?.name || "",
@@ -38,8 +50,16 @@ export default function DeckButton({
     parent: deck?.parent || "",
   });
   const [editing, setEditing] = useState(false);
+  const [moving, setMoving] = useState(false);
+  const [selectedFolder, setSelectedFolder] = useState(
+    deck ? deck.parent : null
+  );
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+  const { showPopup } = usePopup();
+
+  function handleChange(
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   }
 
@@ -50,6 +70,8 @@ export default function DeckButton({
       editDeck({ id: deck.id, ...formData });
     } else if (creating && handleCreate) {
       handleCreate(formData);
+    } else if (moving) {
+      setMoving(false);
     }
     setFormData({ name: "", desc: "", parent: "" });
   }
@@ -60,12 +82,29 @@ export default function DeckButton({
     setFormData({ name: deck.name, desc: deck.desc, parent: deck.parent });
   }
 
+  function handleMoveClick(e: React.MouseEvent<HTMLButtonElement>) {
+    e.preventDefault();
+    setMoving(true);
+    setSelectedFolder(deck.parent);
+  }
+
   function handleCancel() {
     if (cancel) {
       cancel();
     } else {
       setEditing(false);
+      setMoving(false);
     }
+  }
+
+  function handleDeleteClick() {
+    showPopup({
+      title: "Delete Deck?",
+      description: `Are you sure you want to delete "${deck.name}"? This will delete all cards associated with "${deck.name}." This action cannot be undone.`,
+      acceptText: "Delete",
+      declineText: "Cancel",
+      onAccept: () => deleteDeck(deck.id),
+    });
   }
 
   let buttons;
@@ -77,7 +116,9 @@ export default function DeckButton({
       <>
         <button
           type="submit"
-          className="cursor-pointer flex items-center justify-center bg-blue-500 border-2 border-blue-500 text-white py-1 px-2 rounded-md text-sm"
+          className={`cursor-pointer ${
+            creating && "flex-1"
+          } flex items-center justify-center bg-blue-500 border-2 border-blue-500 text-white py-1 px-2 rounded-md text-sm`}
         >
           {editing ? "Apply" : "Create Deck"}
         </button>
@@ -92,21 +133,26 @@ export default function DeckButton({
     );
     content = (
       <>
-        <div className="rounded-l-md border-r-1 flex items-center py-1 px-2 justify-center">
-          {i + 1}
-        </div>
-        <div className="border-r-1 flex items-center py-1 px-2 break-all whitespace-normal">
+        <div
+          className={` ${
+            !creating && "border-r-1"
+          } flex items-center py-1 px-2 break-all whitespace-normal`}
+        >
           <input
-            className="bg-white border-2 w-full"
+            className="border-1 rounded-md w-full px-2"
             value={formData.name}
             onChange={handleChange}
             name="name"
             placeholder="Deck Name"
           />
         </div>
-        <div className="py-1 px-2 flex items-center break-all whitespace-normal">
+        <div
+          className={` ${
+            !creating && "border-r-1"
+          } flex items-center py-1 px-2 break-all whitespace-normal`}
+        >
           <input
-            className="bg-white border-2 w-full"
+            className="border-1 rounded-md w-full px-2"
             value={formData.desc}
             onChange={handleChange}
             name="desc"
@@ -115,7 +161,50 @@ export default function DeckButton({
         </div>
       </>
     );
-    grid = creating ? "grid-cols-[200px_1fr_1fr]" : "grid-cols-[150px_1fr_1fr]";
+    grid = creating ? "grid-cols-[200px_1fr_1fr]" : "grid-cols-[1fr_1fr_150px]";
+  } else if (moving) {
+    buttons = (
+      <>
+        <button
+          type="button"
+          className="cursor-pointer flex-1 flex items-center justify-center bg-blue-500 border-2 border-blue-500 text-white py-1 px-2 rounded-md text-sm"
+          onClick={() => {
+            if (moveDeck) {
+              moveDeck(deck.id, selectedFolder);
+            }
+            setMoving(false);
+          }}
+        >
+          Move
+        </button>
+        <button
+          className="cursor-pointer flex items-center justify-center text-blue-500 border-2 py-1 px-2 rounded-md text-sm"
+          onClick={handleCancel}
+          type="button"
+        >
+          Cancel
+        </button>
+      </>
+    );
+    content = (
+      <div className="flex items-center py-1 px-2 w-full">
+        <select
+          className="border-1 rounded-md w-full px-2"
+          name="parent"
+          value={selectedFolder ? selectedFolder : "Root"}
+          onChange={(e) => setSelectedFolder(e.target.value)}
+        >
+          {folderOptions.map((folder) => {
+            return (
+              <option key={folder.id} value={folder.id}>
+                {folder.name}
+              </option>
+            );
+          })}
+        </select>
+      </div>
+    );
+    grid = "grid-cols-[1fr_150px]";
   } else {
     buttons = (
       <>
@@ -125,10 +214,21 @@ export default function DeckButton({
         <button
           className="cursor-pointer flex items-center justify-center"
           type="button"
+          onClick={handleMoveClick}
+        >
+          <img
+            className="h-[1.3rem] w-[1.3rem] transition-[height]"
+            src={icons.move}
+            alt="Move"
+          />
+        </button>
+        <button
+          className="cursor-pointer flex items-center justify-center"
+          type="button"
           onClick={handleEditClick}
         >
           <img
-            className="h-[1.3rem] w-[1.3rem] transition-[height] active:h-[1rem]"
+            className="h-[1.3rem] w-[1.3rem] transition-[height]"
             src={icons.pencil}
             alt="Edit"
           />
@@ -136,10 +236,10 @@ export default function DeckButton({
         <button
           className="cursor-pointer flex items-center justify-center"
           type="button"
-          onClick={() => deleteDeck(deck.id)}
+          onClick={handleDeleteClick}
         >
           <img
-            className="h-[1.3rem] w-[1.3rem] transition-[height] active:h-[1rem]"
+            className="h-[1.3rem] w-[1.3rem] transition-[height]"
             src={icons.trash}
             alt="Delete"
           />
@@ -165,16 +265,16 @@ export default function DeckButton({
           </div>
         </div>
         <div
-          className="cursor-pointer flex items-center justify-end"
+          className="select-none cursor-pointer flex items-center justify-end"
           onClick={() => handleSelect(deck.id)}
         >
           <img
-            className="h-[1.3rem] w-[1.3rem] transition-[height] active:h-[1rem]"
+            className="h-[1.3rem] w-[1.3rem] transition-[height]"
             src={icons.deck}
             alt="Edit"
           />
         </div>
-        <div className="flex items-center w-full overflow-hidden">
+        <div className="flex items-center w-full overflow-hidden cursor-pointer">
           <div
             className="select-none flex items-center py-1 pl-2 whitespace-nowrap cursor-pointer pointer-events-auto"
             onClick={() => handleSelect(deck.id)}
@@ -182,28 +282,41 @@ export default function DeckButton({
             {deck.name}
           </div>
           <div
-            className="text-blue-500/90 truncate overflow-hidden whitespace-nowrap flex-1 pl-2 py-1 text-xs"
+            className="flex flex-1 h-full items-center"
             onClick={() => handleSelect(deck.id)}
           >
-            {deck.desc}
+            <div className="text-blue-500/90 select-none truncate overflow-hidden whitespace-nowrap flex-1 pl-2 py-1 text-xs">
+              {deck.desc}
+            </div>
           </div>
         </div>
       </>
     );
-    grid = "grid-cols-[50px_30px_1fr_96px]";
+    grid = "grid-cols-[50px_30px_1fr_124px]";
   }
 
   return (
     <form
       className={`w-full grid items-stretch min-h-[46px] relative ${grid} ${
-        i % 2 !== 0 && !creating ? "bg-blue-200/50" : "break-all bg-transparent"
+        i % 2 == 0 && !creating ? "bg-blue-200/50" : "break-all bg-transparent"
       } ${className || ""}`}
       onSubmit={handleSubmit}
     >
+      {creating && (
+        <div
+          className={`select-none h-full flex items-center justify-end pr-2 gap-2`}
+        >
+          {buttons}
+        </div>
+      )}
       {content}
-      <div className={`h-full flex items-center justify-end pr-2 gap-2`}>
-        {buttons}
-      </div>
+      {!creating && (
+        <div
+          className={`select-none h-full flex items-center justify-end pr-2 gap-2`}
+        >
+          {buttons}
+        </div>
+      )}
     </form>
   );
 }

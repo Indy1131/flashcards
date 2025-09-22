@@ -20,6 +20,7 @@ type PinyinCardProps = {
   ) => void;
   handleDelete: (deckId: string, cardId: string) => void;
   handleFavorite: (deckId: string, cardId: string, value: boolean) => void;
+  className?: string;
 };
 
 export default function PinyinCard({
@@ -32,6 +33,7 @@ export default function PinyinCard({
   handleEdit,
   handleDelete,
   handleFavorite,
+  className,
 }: PinyinCardProps) {
   const [formData, setFormData] = useState({ term: "", definition: "" });
   const [editing, setEditing] = useState(false);
@@ -76,7 +78,9 @@ export default function PinyinCard({
       <>
         <button
           type="submit"
-          className={`cursor-pointer ${creating && "flex-1"} flex items-center justify-center bg-blue-500 border-2 border-blue-500 text-white py-1 px-2 rounded-md text-sm`}
+          className={`cursor-pointer ${
+            creating && "flex-1"
+          } flex items-center justify-center bg-blue-500 border-2 border-blue-500 text-white py-1 px-2 rounded-md text-sm`}
         >
           {editing ? "Apply" : "Create Vocab"}
         </button>
@@ -171,8 +175,8 @@ export default function PinyinCard({
 
   return (
     <form
-      className={`w-full grid items-stretch min-h-[46px] relative ${grid} ${
-        i % 2 != 0 && !creating ? "bg-blue-200/50" : "break-all bg-transparent"
+      className={`w-full grid items-stretch min-h-[46px] ${className} relative ${grid} ${
+        i % 2 == 0 && !creating ? "bg-blue-200/50" : "break-all bg-transparent"
       }`}
       onSubmit={handleSubmit}
     >

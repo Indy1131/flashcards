@@ -317,7 +317,10 @@ export default function Deck({ deckIds }: DeckProps) {
         }),
       });
       const json = await response.json();
-      if (Object.keys(json).length < 1) return;
+      if (Object.keys(json).length < 1) {
+        setData([]);
+        return;
+      }
 
       const deck = json
         .map((deck: Deck) => [...deck.cards, ...deck.hanzi])

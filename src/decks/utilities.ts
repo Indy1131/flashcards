@@ -78,6 +78,7 @@ export type CardData =
 export type Deck = {
   id: string;
   name: string;
+  is_special: boolean;
   parent: string;
   desc: string;
   cards: PreCardData[];

@@ -19,6 +19,8 @@ import plus from "../assets/icons/plus.svg";
 import school from "../assets/icons/school.svg";
 import folder from "../assets/icons/folder.svg";
 import load from "../assets/icons/load.svg";
+import warning from "../assets/icons/warning.svg";
+import move from "../assets/icons/move.svg";
 
 export const icons = {
   backArrow,
@@ -42,4 +44,6 @@ export const icons = {
   school,
   folder,
   load,
+  warning,
+  move,
 };

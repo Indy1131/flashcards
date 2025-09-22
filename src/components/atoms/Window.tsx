@@ -3,10 +3,11 @@ import DeckWindow from "../windows/DeckWindow";
 import Flashlight from "./Flashlight";
 import SelectWindow from "../windows/SelectWindow";
 import { icons } from "../icons";
+import { useState } from "react";
 
 type WindowProps = {
   changeDecks: (newIds: string[], special: boolean) => void;
-  refreshDeck: () => void;
+  refreshDeck: (newCurrent?: string[]) => void;
   viewedIds: string[];
 };
 
@@ -17,23 +18,39 @@ export default function Window({
 }: WindowProps) {
   const { windowHidden, hideWindow, deckData, selectionData, current } =
     useDeck();
+  const [isClosing, setIsClosing] = useState(false);
 
   function handlePaddingClick(e: React.MouseEvent<HTMLDivElement>) {
     if (e.target === e.currentTarget) {
-      hideWindow();
+      setIsClosing(true);
+      setTimeout(() => {
+        hideWindow();
+        setIsClosing(false);
+      }, 200);
     }
   }
 
   function handleCloseClick() {
-    hideWindow();
+    setIsClosing(true);
+    setTimeout(() => {
+      hideWindow();
+      setIsClosing(false);
+    }, 200);
   }
+
+  const visible = !windowHidden && !isClosing;
+  const closing = isClosing;
 
   return (
     <div
-      className={`top-0 overflow-hidden fixed w-screen h-screen flex justify-center items-center p-8 pb-10 backdrop-blur-xs z-200 transition-opacity ${
-        windowHidden ? "opacity-0 pointer-events-none" : "opacity-100"
+      className={`top-0 overflow-hidden fixed w-screen h-screen flex justify-center items-center p-8 pb-10 backdrop-blur-xs z-200 transition-opacity duration-200 ${
+        visible
+          ? "visible opacity-100 pointer-events-auto"
+          : closing
+          ? "visible opacity-0 pointer-events-none"
+          : "invisible opacity-0 pointer-events-none"
       }`}
-      onClick={handlePaddingClick}
+      onMouseDown={handlePaddingClick}
     >
       <Flashlight
         className="w-full max-w-[1920px] h-full relative bg-blue-100 border-blue-500 border-1 rounded-xl"
@@ -66,7 +83,7 @@ export default function Window({
             />
           </div>
           <div
-            className={`transition-all absolute w-full h-full p-4 pt-10 ${
+            className={`transition-all absolute w-full h-full p-4 pt-10 flex flex-col ${
               current == "selection"
                 ? "opacity-100 z-10"
                 : "opacity-0 pointer-events-none z-[-1]"
@@ -75,6 +92,8 @@ export default function Window({
             <SelectWindow
               changeDecks={changeDecks}
               parentProp={selectionData.parent}
+              viewedIds={viewedIds}
+              refreshDeck={refreshDeck}
             />
           </div>
         </div>

@@ -73,6 +73,7 @@ export default function Card({
   }
 
   function handleFavoriteClick() {
+    console.log("hello?");
     setFavorite(data.id, !data.favorite);
   }
 

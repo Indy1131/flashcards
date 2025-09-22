@@ -14,7 +14,7 @@
 
   50% {
     right: 600px;
-    transform: rotateY(60deg);
+    transform: rotateY(-60deg);
     z-index: 0;
   }
 
@@ -38,7 +38,7 @@
 
   50% {
     right: 600px;
-    transform: rotateY(60deg);
+    transform: rotateY(-60deg);
     z-index: 10;
   }
 
