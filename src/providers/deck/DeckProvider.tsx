@@ -29,13 +29,16 @@ export function DeckProvider({ children }: DeckProviderProps) {
 
   function showWindow(data: WindowTypes) {
     setWindowHidden(false);
-
     setCurrent(data.type);
 
     if (data.type == "deck") {
-      setDeckData(data);
+      if (data.deckIds) {
+        setDeckData(data);
+      }
     } else {
-      setSelectionData(data);
+      if (data.parent) {
+        setSelectionData(data);
+      }
     }
   }
 

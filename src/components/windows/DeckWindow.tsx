@@ -11,12 +11,15 @@ import { useDeck } from "../../providers/deck/useDeck";
 import SentenceCard from "../atoms/SentenceCard";
 
 type Props = {
-  deckIds?: string[];
+  deckData?: {
+    type: "deck";
+    deckIds: string[];
+  } | null;
   viewedIds: string[];
   refreshDeck: (newCurrent?: string[]) => void;
 };
 
-export default function DeckWindow({ deckIds, viewedIds, refreshDeck }: Props) {
+export default function DeckWindow({ deckData, viewedIds, refreshDeck }: Props) {
   const [data, setData] = useState<Deck[] | null>(null);
   const [dropdown, setDropdown] = useState<string | null>(null);
   const [modes, setModes] = useState(DEFAULT_MODES);
@@ -40,7 +43,7 @@ export default function DeckWindow({ deckIds, viewedIds, refreshDeck }: Props) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          deckIds: deckIds,
+          deckIds: deckData?.deckIds,
           includeCards: true,
         }),
       });
@@ -49,7 +52,7 @@ export default function DeckWindow({ deckIds, viewedIds, refreshDeck }: Props) {
     }
 
     getData();
-  }, [deckIds, fetchWithAuth]);
+  }, [deckData, fetchWithAuth]);
 
   function setOpen(name: string) {
     if (dropdown == name) {

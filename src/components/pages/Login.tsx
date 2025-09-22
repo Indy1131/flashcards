@@ -85,10 +85,10 @@ export default function Login() {
             </button>
             <Link
               to="/signup"
-              className="border-2 text-blue-500 py-2 rounded-md cursor-pointer flex justify-center"
+              className="text-blue-500 py-2 rounded-md cursor-pointer flex justify-center hover:underline"
               type="button"
             >
-              Sign up
+              Don't have an account? Sign Up
             </Link>
           </form>
         </div>

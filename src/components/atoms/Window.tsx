@@ -22,15 +22,15 @@ export default function Window({
 
   function handlePaddingClick(e: React.MouseEvent<HTMLDivElement>) {
     if (e.target === e.currentTarget) {
-      setIsClosing(true);
-      setTimeout(() => {
-        hideWindow();
-        setIsClosing(false);
-      }, 200);
+      windowTransitionClose();
     }
   }
 
   function handleCloseClick() {
+    windowTransitionClose();
+  }
+
+  function windowTransitionClose() {
     setIsClosing(true);
     setTimeout(() => {
       hideWindow();
@@ -77,7 +77,7 @@ export default function Window({
             }`}
           >
             <DeckWindow
-              deckIds={deckData.deckIds}
+              deckData={deckData}
               viewedIds={viewedIds}
               refreshDeck={refreshDeck}
             />
@@ -91,9 +91,10 @@ export default function Window({
           >
             <SelectWindow
               changeDecks={changeDecks}
-              parentProp={selectionData.parent}
+              deckData={selectionData}
               viewedIds={viewedIds}
               refreshDeck={refreshDeck}
+              windowTransitionClose={windowTransitionClose}
             />
           </div>
         </div>

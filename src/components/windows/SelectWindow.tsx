@@ -8,10 +8,11 @@ import Scrollable from "../atoms/Scrollable";
 import { icons } from "../icons";
 
 type SelectWindowProps = {
-  changeDecks: (newIds: string[], special?: boolean) => void;
-  parentProp: string | null;
+  changeDecks: (newIds: string[], special: boolean) => void;
+  deckData: { parent: string | null; type: "selection" } | null;
   viewedIds: string[];
   refreshDeck: (newCurrent?: string[]) => void;
+  windowTransitionClose: () => void;
 };
 
 type Data = {
@@ -24,18 +25,18 @@ type Data = {
 
 export default function SelectWindow({
   changeDecks,
-  parentProp,
+  deckData,
   viewedIds,
   refreshDeck,
+  windowTransitionClose,
 }: SelectWindowProps) {
-  const [parent, setParent] = useState<string | null>(parentProp);
+  const [parent, setParent] = useState<string | null>(deckData?.parent || null);
   const [selected, setSelected] = useState(new Set<string>());
   const [data, setData] = useState<Data | null>(null);
   const [createType, setCreateType] = useState<string>("folder");
   const [creating, setCreating] = useState(false);
 
   const { fetchWithAuth } = useAuth();
-  const { hideWindow } = useDeck();
 
   function checkRefresh(deckId: string) {
     if (viewedIds.find((id) => id == deckId))
@@ -43,8 +44,8 @@ export default function SelectWindow({
   }
 
   useEffect(() => {
-    setParent(parentProp);
-  }, [parentProp]);
+    setParent(deckData?.parent || null);
+  }, [deckData]);
 
   function editFolder(formData: { id: string; name: string }) {
     const url = `${import.meta.env.VITE_API_BASE_URL}/edit-folder/`;
@@ -158,7 +159,7 @@ export default function SelectWindow({
   }
 
   function handleLoadSelected() {
-    hideWindow();
+    windowTransitionClose();
     changeDecks(Array.from(selected));
   }
 
@@ -171,12 +172,13 @@ export default function SelectWindow({
   }
 
   function handleLoadFavoritesClick() {
-    hideWindow();
+    windowTransitionClose();
     changeDecks(["favorites"], true);
   }
 
   useEffect(() => {
     async function getData() {
+      // setData(null);
       await new Promise((resolve) => setTimeout(resolve, 150));
 
       const url = `${import.meta.env.VITE_API_BASE_URL}/get-folder-contents/${
@@ -184,12 +186,7 @@ export default function SelectWindow({
       }`;
       const response = await fetchWithAuth(url);
       const json = await response.json();
-      // setDataVisible(false);
-      // setPrev(data);
       setData(json);
-      // setTimeout(() => {
-      //   setPrev(null);
-      // }, TRANSITION_DURATION);
     }
     getData();
   }, [parent, fetchWithAuth]);
